@@ -1,0 +1,822 @@
+{
+    "llm": "openai/gpt-oss-120b",
+    "start_year": 1900,
+    "end_year": 2005,
+    "countries": [
+        "China",
+        "USSR"
+    ],
+    "max_events": 200,
+    "langs": [
+        "en",
+        "fr",
+        "ru",
+        "zh",
+        "ar",
+        "he"
+    ],
+    "search_engine": "exa",
+    "datetime": "2025-08-11T17:17:02.238906",
+    "seeds": [
+        {
+            "name": "Sino-Soviet War",
+            "url": "https://en.wikipedia.org/wiki/Sino-Soviet_War"
+        },
+        {
+            "name": "Sino-Soviet border conflict",
+            "url": "https://en.wikipedia.org/wiki/Zhenbao_Island_incident"
+        },
+        {
+            "name": "List of proxy wars",
+            "url": "https://en.wikipedia.org/wiki/List_of_proxy_wars"
+        },
+        {
+            "name": "User:Compassionate727/Drafts/List of proxy wars (2nd draft) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Compassionate727/Drafts/List_of_proxy_wars_(2nd_draft)"
+        },
+        {
+            "name": "Tielieketi",
+            "url": "https://en.wikipedia.org/wiki/Tielieketi"
+        },
+        {
+            "name": "Category:Diplomatic incidents - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Diplomatic_incidents"
+        },
+        {
+            "name": "珍宝岛事件",
+            "url": "https://zh.wikipedia.org/wiki/%E7%8F%8D%E5%AE%9D%E5%B2%9B%E4%BA%8B%E4%BB%B6"
+        },
+        {
+            "name": "Soviet espionage in the United States",
+            "url": "https://en.wikipedia.org/wiki/Soviet_espionage_in_the_United_States"
+        },
+        {
+            "name": "China–North Korea relations",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93North_Korea_relations"
+        },
+        {
+            "name": "Talk:Sino-Soviet border conflict - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Sino-Soviet_border_conflict"
+        },
+        {
+            "name": "Пограничный конфликт на острове Даманском",
+            "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%84%D0%BB%D0%B8%D0%BA%D1%82_%D0%BD%D0%B0_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%B5_%D0%94%D0%B0%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%BC"
+        },
+        {
+            "name": "Category:China–United States military relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China%E2%80%93United_States_military_relations"
+        },
+        {
+            "name": "List of Chinese spy cases in the United States",
+            "url": "https://en.wikipedia.org/wiki/List_of_Chinese_spy_cases_in_the_United_States"
+        },
+        {
+            "name": "User:Regnator/sandbox/space - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Regnator/sandbox/space"
+        },
+        {
+            "name": "Category:Chinese spies - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Chinese_spies"
+        },
+        {
+            "name": "中俄边界谈判",
+            "url": "https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E4%BF%84%E8%BE%B9%E7%95%8C%E8%B0%88%E5%88%A4"
+        },
+        {
+            "name": "Battle of Dawan Cheng",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Dawan_Cheng"
+        },
+        {
+            "name": "Outline of the military history of the People's Republic of China",
+            "url": "https://en.wikipedia.org/wiki/Outline_of_the_military_history_of_the_People's_Republic_of_China"
+        },
+        {
+            "name": "Soviet invasion of Xinjiang",
+            "url": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Xinjiang"
+        },
+        {
+            "name": "List of border conflicts",
+            "url": "https://en.wikipedia.org/wiki/Border_conflict"
+        },
+        {
+            "name": "Category:China–Russian Empire relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China%E2%80%93Russian_Empire_relations"
+        },
+        {
+            "name": "Пограничный конфликт у озера Жаланашколь",
+            "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%84%D0%BB%D0%B8%D0%BA%D1%82_%D1%83_%D0%BE%D0%B7%D0%B5%D1%80%D0%B0_%D0%96%D0%B0%D0%BB%D0%B0%D0%BD%D0%B0%D1%88%D0%BA%D0%BE%D0%BB%D1%8C"
+        },
+        {
+            "name": "Category:Battles involving China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_involving_China"
+        },
+        {
+            "name": "Category:People convicted of spying for the People's Republic of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:People_convicted_of_spying_for_the_People's_Republic_of_China"
+        },
+        {
+            "name": "Lu Dongsheng",
+            "url": "https://en.wikipedia.org/wiki/Lu_Dongsheng"
+        },
+        {
+            "name": "Category:Wars involving China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Wars_involving_China"
+        },
+        {
+            "name": "Korean War",
+            "url": "https://en.wikipedia.org/wiki/Korean_War"
+        },
+        {
+            "name": "Category:Espionage in the United States - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Espionage_in_the_United_States"
+        },
+        {
+            "name": "Counterintelligence failures",
+            "url": "https://en.wikipedia.org/wiki/Counterintelligence_failures"
+        },
+        {
+            "name": "Talk:Treaty of Aigun - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Treaty_of_Aigun"
+        },
+        {
+            "name": "Category:Espionage scandals and incidents - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Espionage_scandals_and_incidents"
+        },
+        {
+            "name": "Military history of China",
+            "url": "https://en.wikipedia.org/wiki/Military_History_of_China"
+        },
+        {
+            "name": "Afghanistan–China relations",
+            "url": "https://en.wikipedia.org/wiki/Afghanistan%E2%80%93China_relations"
+        },
+        {
+            "name": "Hainan Island incident",
+            "url": "https://en.wikipedia.org/wiki/Hainan_Island_incident"
+        },
+        {
+            "name": "China and the United Nations",
+            "url": "https://en.wikipedia.org/wiki/China_and_the_United_Nations"
+        },
+        {
+            "name": "Sino-Russian border conflicts",
+            "url": "https://en.wikipedia.org/wiki/Sino-Russian_border_conflicts"
+        },
+        {
+            "name": "Template:Foreign relations of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template:Foreign_relations_of_China"
+        },
+        {
+            "name": "Китайский погром в Благовещенске",
+            "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%B3%D1%80%D0%BE%D0%BC_%D0%B2_%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D1%81%D0%BA%D0%B5"
+        },
+        {
+            "name": "border conflict china - Search results - Wikipedia",
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:Search&limit=20&offset=0&profile=default&search=border+conflict+china&ns0=1"
+        },
+        {
+            "name": "Chinese space program",
+            "url": "https://en.wikipedia.org/wiki/Chinese_space_program"
+        },
+        {
+            "name": "Portal:China/Anniversaries/March/March 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Portal:China/Anniversaries/March/March_2"
+        },
+        {
+            "name": "American espionage in China",
+            "url": "https://en.wikipedia.org/wiki/American_espionage_in_China"
+        },
+        {
+            "name": "Talk:Albanian–Chinese split - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Sino-Albanian_split"
+        },
+        {
+            "name": "Battle of Tutung",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Tutung"
+        },
+        {
+            "name": "Category:Wars involving the People's Republic of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Wars_involving_the_People%27s_Republic_of_China"
+        },
+        {
+            "name": "History of foreign relations of the People's Republic of China",
+            "url": "https://en.wikipedia.org/wiki/History_of_foreign_relations_of_the_People%27s_Republic_of_China"
+        },
+        {
+            "name": "Category:Soviet spies - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Soviet_spies"
+        },
+        {
+            "name": "History of China–United States relations",
+            "url": "https://en.wikipedia.org/wiki/History_of_China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "User:JustinTime55/sandbox/Space Race - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:JustinTime55/sandbox/Space_Race"
+        },
+        {
+            "name": "64th Fighter Aviation Corps",
+            "url": "https://en.wikipedia.org/wiki/64th_Fighter_Aviation_Corps"
+        },
+        {
+            "name": "List of conflicts related to the Cold War",
+            "url": "https://en.wikipedia.org/wiki/List_of_conflicts_related_to_the_Cold_War"
+        },
+        {
+            "name": "List of American spies",
+            "url": "https://en.wikipedia.org/wiki/List_of_American_spies"
+        },
+        {
+            "name": "China–Laos relations",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93Laos_relations"
+        },
+        {
+            "name": "List of wars involving the Soviet Union",
+            "url": "https://en.wikipedia.org/wiki/List_of_wars_involving_the_Soviet_Union"
+        },
+        {
+            "name": "Chinese Spies: From Chairman Mao to Xi Jinping",
+            "url": "https://en.wikipedia.org/wiki/Chinese_Spies:_From_Chairman_Mao_to_Xi_Jinping"
+        },
+        {
+            "name": "中國的最後警告",
+            "url": "https://zh.wikipedia.org/zh-tw/%E4%B8%AD%E5%9C%8B%E7%9A%84%E6%9C%80%E5%BE%8C%E8%AD%A6%E5%91%8A"
+        },
+        {
+            "name": "Category:Proxy wars - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Proxy_wars"
+        },
+        {
+            "name": "Cold War espionage",
+            "url": "https://en.wikipedia.org/wiki/Cold_War_espionage"
+        },
+        {
+            "name": "Soviet Union and the United Nations",
+            "url": "https://en.wikipedia.org/wiki/Soviet_Union_and_the_United_Nations"
+        },
+        {
+            "name": "List of Eastern Bloc agents in the United States",
+            "url": "https://en.wikipedia.org/wiki/List_of_Eastern_Bloc_agents_in_the_United_States"
+        },
+        {
+            "name": "Category:Foreign relations of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Foreign_relations_of_China"
+        },
+        {
+            "name": "Category:Soviet spies against the United States - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Soviet_spies_against_the_United_States"
+        },
+        {
+            "name": "Wikipedia:WikiProject Timeline of spaceflight/ST - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Timeline_of_spaceflight/ST"
+        },
+        {
+            "name": "中華民國國軍中的中共間諜列表",
+            "url": "https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E8%BB%8D%E4%B8%AD%E7%9A%84%E4%B8%AD%E5%85%B1%E9%96%93%E8%AB%9C%E5%88%97%E8%A1%A8"
+        },
+        {
+            "name": "The Wars for Asia, 1911–1949",
+            "url": "https://en.wikipedia.org/wiki/The_Wars_for_Asia,_1911-1949"
+        },
+        {
+            "name": "1989 Sino-Soviet Summit",
+            "url": "https://en.wikipedia.org/wiki/1989_Sino-Soviet_Summit"
+        },
+        {
+            "name": "Foreign relations of China (disambiguation)",
+            "url": "https://en.wikipedia.org/wiki/Foreign_relations_of_China_(disambiguation)"
+        },
+        {
+            "name": "Category:Military history of the People's Republic of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_history_of_the_People's_Republic_of_China"
+        },
+        {
+            "name": "Chinese submarine 361",
+            "url": "https://en.wikipedia.org/wiki/Ming_361_Incident"
+        },
+        {
+            "name": "Category:Cold War weapons of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Cold_War_weapons_of_China"
+        },
+        {
+            "name": "中国人民志愿军",
+            "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%BF%97%E6%84%BF%E5%86%9B"
+        },
+        {
+            "name": "Russian espionage in the United States",
+            "url": "https://en.wikipedia.org/wiki/Russian_espionage_in_the_United_States"
+        },
+        {
+            "name": "China–United Kingdom relations",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93United_Kingdom_relations"
+        },
+        {
+            "name": "Category:China–India military relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China%E2%80%93India_military_relations"
+        },
+        {
+            "name": "Military history of the Soviet Union",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_the_Soviet_Union"
+        },
+        {
+            "name": "Treaty on Friendship, Cooperation and Mutual Assistance between China and the DPRK",
+            "url": "https://en.wikipedia.org/wiki/Treaty_on_Friendship,_Cooperation_and_Mutual_Assistance_between_China_and_the_DPRK"
+        },
+        {
+            "name": "Laos–Soviet Union relations",
+            "url": "https://en.wikipedia.org/wiki/Laos%E2%80%93Soviet_Union_relations"
+        },
+        {
+            "name": "Accession of the People's Republic of China to the United Nations",
+            "url": "https://en.wikipedia.org/wiki/Accession_of_the_People's_Republic_of_China_to_the_United_Nations"
+        },
+        {
+            "name": "Larry Wu-tai Chin",
+            "url": "https://en.wikipedia.org/wiki/Larry_Wu-tai_Chin"
+        },
+        {
+            "name": "Second Phase Offensive",
+            "url": "https://en.wikipedia.org/wiki/Second_Phase_Offensive"
+        },
+        {
+            "name": "2001 Sino-Russian Treaty of Friendship",
+            "url": "https://en.wikipedia.org/wiki/2001_Sino-Russian_Treaty_of_Friendship"
+        },
+        {
+            "name": "Wikipedia:Featured article candidates/Sino-Soviet Split - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Featured_article_candidates/Sino-Soviet_Split"
+        },
+        {
+            "name": "Guanganmen incident",
+            "url": "https://en.wikipedia.org/wiki/Guanganmen_incident"
+        },
+        {
+            "name": "The Chinese Road",
+            "url": "https://en.wikipedia.org/wiki/The_Chinese_Road"
+        },
+        {
+            "name": "Category:Military campaigns involving China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_campaigns_involving_China"
+        },
+        {
+            "name": "Chinese spring offensive",
+            "url": "https://en.wikipedia.org/wiki/Chinese_spring_offensive"
+        },
+        {
+            "name": "中美关系史",
+            "url": "https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E7%BE%8E%E5%85%B3%E7%B3%BB%E5%8F%B2"
+        },
+        {
+            "name": "Space race (disambiguation)",
+            "url": "https://en.wikipedia.org/wiki/Space_Race_(TV)"
+        },
+        {
+            "name": "History of foreign relations of China",
+            "url": "https://en.wikipedia.org/wiki/History_of_foreign_relations_of_China"
+        },
+        {
+            "name": "North Korea–Russia relations",
+            "url": "https://en.wikipedia.org/wiki/North_Korea%E2%80%93Russia_relations"
+        },
+        {
+            "name": "1946 United Nations Secretary-General selection",
+            "url": "https://en.wikipedia.org/wiki/1946_United_Nations_Secretary-General_selection"
+        },
+        {
+            "name": "Human spaceflight programs",
+            "url": "https://en.wikipedia.org/wiki/Human_spaceflight_programs"
+        },
+        {
+            "name": "Sino-Soviet relations from 1969 to 1991",
+            "url": "https://en.wikipedia.org/wiki/Sino-Soviet_relations_from_1969_to_1991"
+        },
+        {
+            "name": "1978 Iranian Chinook shootdown",
+            "url": "https://en.wikipedia.org/wiki/1978_Iranian_Chinook_shootdown"
+        },
+        {
+            "name": "Category:Wars involving the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Wars_involving_the_Soviet_Union"
+        },
+        {
+            "name": "United Nations General Assembly Resolution 505",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_General_Assembly_Resolution_505"
+        },
+        {
+            "name": "List of wars and battles involving China",
+            "url": "https://en.wikipedia.org/wiki/List_of_Chinese_wars_and_battles"
+        },
+        {
+            "name": "Timeline of the 2020–2022 China–India skirmishes",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_2020_China%E2%80%93India_border_standoff"
+        },
+        {
+            "name": "Lists of space exploration milestones, 1957–1969",
+            "url": "https://en.wikipedia.org/wiki/List_of_space_exploration_milestones,_1957%E2%80%931969"
+        },
+        {
+            "name": "Taiwan and the United Nations",
+            "url": "https://en.wikipedia.org/wiki/Taiwan_and_the_United_Nations"
+        },
+        {
+            "name": "Sino-North Korean Treaty of Friendship, Co-operation, and Mutual Assistance",
+            "url": "https://en.wikipedia.org/wiki/Sino-North_Korean_Mutual_Aid_and_Cooperation_Friendship_Treaty"
+        },
+        {
+            "name": "Talk:Zhenbao Island - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Zhenbao_Island"
+        },
+        {
+            "name": "Africa–Soviet Union relations",
+            "url": "https://en.wikipedia.org/wiki/Africa%E2%80%93Soviet_Union_relations"
+        },
+        {
+            "name": "朝鲜战争",
+            "url": "https://zh.wikipedia.org/wiki/%E6%9C%9D%E9%B2%9C%E6%88%98%E4%BA%89"
+        },
+        {
+            "name": "1991 Sino-Soviet Border Agreement",
+            "url": "https://en.wikipedia.org/wiki/1991_Sino-Soviet_Border_Agreement"
+        },
+        {
+            "name": "Talk:Treaty of Kyakhta (1915) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Treaty_of_Kyakhta_(1915)"
+        },
+        {
+            "name": "List of military accidents in China",
+            "url": "https://en.wikipedia.org/wiki/List_of_military_accidents_in_China"
+        },
+        {
+            "name": "Opening Campaign",
+            "url": "https://en.wikipedia.org/wiki/Opening_Campaign"
+        },
+        {
+            "name": "United Nations Security Council Resolution 88",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_88"
+        },
+        {
+            "name": "Talk:1971 United Nations Secretary-General selection - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:1971_United_Nations_Secretary-General_selection"
+        },
+        {
+            "name": "Soviet troops in Mongolia",
+            "url": "https://en.wikipedia.org/wiki/Soviet_troops_in_Mongolia"
+        },
+        {
+            "name": "Category:International incidents - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:International_incidents"
+        },
+        {
+            "name": "Battle of the Ch'ongch'on River",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Ch'ongch'on_River"
+        },
+        {
+            "name": "Category:Chinese Civil War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Chinese_Civil_War"
+        },
+        {
+            "name": "1969 in China",
+            "url": "https://en.wikipedia.org/wiki/1969_in_China"
+        },
+        {
+            "name": "User:BigRandy73/sandbox - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:BigRandy73/sandbox"
+        },
+        {
+            "name": "MiG Alley",
+            "url": "https://en.wikipedia.org/wiki/MiG_Alley"
+        },
+        {
+            "name": "United Nations General Assembly Resolution 505 (VI)",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_General_Assembly_Resolution_505_(VI)"
+        },
+        {
+            "name": "Sino-Korean Border Agreement",
+            "url": "https://en.wikipedia.org/wiki/Sino-Korean_Border_Agreement"
+        },
+        {
+            "name": "Operation Zet",
+            "url": "https://en.wikipedia.org/wiki/Operation_Zet"
+        },
+        {
+            "name": "Report of the Officials on the Boundary Question",
+            "url": "https://en.wikipedia.org/wiki/Report_of_the_Officials_on_the_Boundary_Question"
+        },
+        {
+            "name": "Eugene Ivanov",
+            "url": "https://en.wikipedia.org/wiki/Eugene_Ivanov"
+        },
+        {
+            "name": "Korean War order of battle",
+            "url": "https://en.wikipedia.org/wiki/Korean_War_order_of_battle"
+        },
+        {
+            "name": "Luo Guibo",
+            "url": "https://en.wikipedia.org/wiki/Luo_Guibo"
+        },
+        {
+            "name": "List of World War II weapons of China",
+            "url": "https://en.wikipedia.org/wiki/List_of_World_War_II_weapons_of_China"
+        },
+        {
+            "name": "Category:20th-century military history of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:20th-century_military_history_of_China"
+        },
+        {
+            "name": "Sino-Third World relations",
+            "url": "https://en.wikipedia.org/wiki/Sino-Third_World_relations"
+        },
+        {
+            "name": "September 11 Great Armed Clan Feud of Matian",
+            "url": "https://en.wikipedia.org/wiki/September_11_Great_Armed_Clan_Feud_of_Matian"
+        },
+        {
+            "name": "2007 Chinese anti-satellite missile test",
+            "url": "https://en.wikipedia.org/wiki/2007_Chinese_anti-satellite_missile_test"
+        },
+        {
+            "name": "Portal:History of science/Article/14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Portal:History_of_science/Article/14"
+        },
+        {
+            "name": "History of science and technology in the People's Republic of China",
+            "url": "https://en.wikipedia.org/wiki/History_of_science_and_technology_in_the_People's_Republic_of_China"
+        },
+        {
+            "name": "Category:China–United States relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Tanks of China",
+            "url": "https://en.wikipedia.org/wiki/Tanks_of_China"
+        },
+        {
+            "name": "Peace Mission 2005",
+            "url": "https://en.wikipedia.org/wiki/Peace_Mission_2005"
+        },
+        {
+            "name": "Military history of China before 1912",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_China_before_1912"
+        },
+        {
+            "name": "Timeline of the Chinese Civil War",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Chinese_Civil_War"
+        },
+        {
+            "name": "Nathu La and Cho La clashes",
+            "url": "https://en.wikipedia.org/wiki/Nathu_La_and_Cho_La_clashes"
+        },
+        {
+            "name": "Wikipedia:Articles for deletion/Hainan Island incident - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Hainan_Island_incident"
+        },
+        {
+            "name": "Cultural Revolution",
+            "url": "https://en.wikipedia.org/wiki/Cultural_Revolution"
+        },
+        {
+            "name": "Talk:Soviet invasion of Xinjiang - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Soviet_invasion_of_Xinjiang"
+        },
+        {
+            "name": "Chinese Civil War",
+            "url": "https://en.wikipedia.org/wiki/Chinese_Civil_War"
+        },
+        {
+            "name": "Sino-Vietnamese conflicts (1979–1991)",
+            "url": "https://en.wikipedia.org/wiki/Sino-Vietnamese_conflicts_(1979-1991)"
+        },
+        {
+            "name": "Third Indochina War",
+            "url": "https://en.wikipedia.org/wiki/Third_Indochina_War"
+        },
+        {
+            "name": "Afghanistan–Russia relations",
+            "url": "https://en.wikipedia.org/wiki/Afghanistan%E2%80%93Russia_relations"
+        },
+        {
+            "name": "Varyag",
+            "url": "https://en.wikipedia.org/wiki/Varyag"
+        },
+        {
+            "name": "China–United States relations",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Category:Cold War military equipment of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Cold_War_military_equipment_of_China"
+        },
+        {
+            "name": "Sino-Vietnamese War",
+            "url": "https://en.wikipedia.org/wiki/Sino-Vietnamese_War"
+        },
+        {
+            "name": "Stalin and Mao",
+            "url": "https://en.wikipedia.org/wiki/Stalin_and_Mao"
+        },
+        {
+            "name": "Spaceflight before 1951",
+            "url": "https://en.wikipedia.org/wiki/Spaceflight_before_1951"
+        },
+        {
+            "name": "Sino-African relations",
+            "url": "https://en.wikipedia.org/wiki/Sino-African_relations"
+        },
+        {
+            "name": "Foreign interventions by China",
+            "url": "https://en.wikipedia.org/wiki/Foreign_interventions_by_China"
+        },
+        {
+            "name": "Talk:Amur Annexation - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Amur_Annexation"
+        },
+        {
+            "name": "Yi–Ta incident",
+            "url": "https://en.wikipedia.org/wiki/Yi%E2%80%93Ta_incident"
+        },
+        {
+            "name": "People's Volunteer Army",
+            "url": "https://en.wikipedia.org/wiki/People's_Volunteer_Army"
+        },
+        {
+            "name": "Expulsion of Soviets from Albania",
+            "url": "https://en.wikipedia.org/wiki/Expulsion_of_Soviets_from_Albania"
+        },
+        {
+            "name": "History of Laos",
+            "url": "https://en.wikipedia.org/wiki/History_of_Laos"
+        },
+        {
+            "name": "Inner Mongolia incident - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Inner_Mongolia_incident"
+        },
+        {
+            "name": "Sino-Indian border dispute",
+            "url": "https://en.wikipedia.org/wiki/Sino-Indian_border_dispute"
+        },
+        {
+            "name": "Moscow Sun Yat-sen University",
+            "url": "https://en.wikipedia.org/wiki/Moscow_Sun_Yat-sen_University"
+        },
+        {
+            "name": "Talk:Sino-Russian relations since 1991 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Sino-Russian_relations_since_1991"
+        },
+        {
+            "name": "List of Chinese military equipment in World War II",
+            "url": "https://en.wikipedia.org/wiki/List_of_Chinese_military_equipment_in_World_War_II"
+        },
+        {
+            "name": "Sino-Soviet relations",
+            "url": "https://en.wikipedia.org/wiki/Sino-Soviet_relations"
+        },
+        {
+            "name": "History of Laos (1945–present)",
+            "url": "https://en.wikipedia.org/wiki/History_of_Laos_(1945%E2%80%93present)"
+        },
+        {
+            "name": "Hangzhou incident",
+            "url": "https://en.wikipedia.org/wiki/Hangzhou_incident"
+        },
+        {
+            "name": "The Great Gamble",
+            "url": "https://en.wikipedia.org/wiki/The_Great_Gamble"
+        },
+        {
+            "name": "Korean Air Lines Flight 902",
+            "url": "https://en.wikipedia.org/wiki/Korean_Air_Lines_Flight_902"
+        },
+        {
+            "name": "Category:Military equipment of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_equipment_of_China"
+        },
+        {
+            "name": "Timeline of the Space Race",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Space_Race"
+        },
+        {
+            "name": "The Great Game (Hopkirk book)",
+            "url": "https://en.wikipedia.org/wiki/The_Great_Game_(Hopkirk_book)"
+        },
+        {
+            "name": "History of Laos (1945–present) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/History_of_Laos_since_1945"
+        },
+        {
+            "name": "1981 Armenia mid-air collision",
+            "url": "https://en.wikipedia.org/wiki/1981_Armenia_mid-air_collision"
+        },
+        {
+            "name": "Russia and the United Nations",
+            "url": "https://en.wikipedia.org/wiki/Russia_and_the_United_Nations"
+        },
+        {
+            "name": "The China War",
+            "url": "https://en.wikipedia.org/wiki/The_China_War"
+        },
+        {
+            "name": "United Nations Security Council Resolution 345",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_345"
+        },
+        {
+            "name": "Category:Weapons of the People's Republic of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Weapons_of_the_People's_Republic_of_China"
+        },
+        {
+            "name": "Military history of Laos",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_Laos"
+        },
+        {
+            "name": "Hammer and Rifle",
+            "url": "https://en.wikipedia.org/wiki/Hammer_and_Rifle"
+        },
+        {
+            "name": "Sino-Indian War",
+            "url": "https://en.wikipedia.org/wiki/Sino-Indian_War"
+        },
+        {
+            "name": "Technological and industrial history of China",
+            "url": "https://en.wikipedia.org/wiki/Technological_and_industrial_history_of_China"
+        },
+        {
+            "name": "Talk:Soviet Middle Eastern foreign policy during the Cold War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Soviet_Middle_Eastern_foreign_policy_during_the_Cold_War"
+        },
+        {
+            "name": "Lake Khasan",
+            "url": "https://en.wikipedia.org/wiki/Lake_Khasan"
+        },
+        {
+            "name": "Talk:The Chinese Road - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:The_Chinese_Road"
+        },
+        {
+            "name": "中越战争",
+            "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%B6%8A%E6%88%98%E4%BA%89"
+        },
+        {
+            "name": "Category:Afghanistan–China relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Afghanistan%E2%80%93China_relations"
+        },
+        {
+            "name": "Battle of Baitag Bogd",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Baitag_Bogd"
+        },
+        {
+            "name": "United Nations General Assembly Resolution 1668 (XVI)",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_General_Assembly_Resolution_1668_(XVI)"
+        },
+        {
+            "name": "Chinese Soviet Republic",
+            "url": "https://en.wikipedia.org/wiki/Chinese_Soviet_Republic"
+        },
+        {
+            "name": "Vlora incident",
+            "url": "https://en.wikipedia.org/wiki/Vlora_incident"
+        },
+        {
+            "name": "Катастрофа Boeing 707 в Карелии",
+            "url": "https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%86%D0%B8%D0%B4%D0%B5%D0%BD%D1%82_%D1%81_%D1%8E%D0%B6%D0%BD%D0%BE%D0%BA%D0%BE%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B8%D0%BC_%D0%91%D0%BE%D0%B8%D0%BD%D0%B3%D0%BE%D0%BC_(1978)?uselang=en"
+        },
+        {
+            "name": "2023 Black Sea drone incident",
+            "url": "https://en.wikipedia.org/wiki/2023_Black_Sea_drone_incident"
+        },
+        {
+            "name": "Timeline of the Cold War",
+            "url": "https://en.wikipedia.org/wiki/Cold_War_Timeline"
+        },
+        {
+            "name": "Comparison of US and Chinese Military Armed Forces - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Comparison_of_US_and_Chinese_Military_Armed_Forces"
+        },
+        {
+            "name": "Yakov Malik",
+            "url": "https://en.wikipedia.org/wiki/Yakov_Malik"
+        },
+        {
+            "name": "Foreign relations of Laos",
+            "url": "https://en.wikipedia.org/wiki/Foreign_relations_of_Laos"
+        },
+        {
+            "name": "User:Effer/China as an emerging superpower - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Effer/China_as_an_emerging_superpower"
+        },
+        {
+            "name": "United Nations General Assembly Resolution 1668",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_General_Assembly_Resolution_1668"
+        },
+        {
+            "name": "China–Russia border",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93Russia_border"
+        },
+        {
+            "name": "UFO sightings in China",
+            "url": "https://en.wikipedia.org/wiki/UFO_sightings_in_China"
+        },
+        {
+            "name": "The Soviet Basic Thesis on the Middle East Conflict",
+            "url": "https://en.wikipedia.org/wiki/The_Soviet_Basic_Thesis_on_the_Middle_East_Conflict"
+        }
+    ]
+}

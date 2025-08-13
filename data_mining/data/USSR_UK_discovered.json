@@ -1,0 +1,822 @@
+{
+    "llm": "openai/gpt-oss-120b",
+    "start_year": 1900,
+    "end_year": 2005,
+    "countries": [
+        "USSR",
+        "UK"
+    ],
+    "max_events": 200,
+    "langs": [
+        "en",
+        "fr",
+        "ru",
+        "zh",
+        "ar",
+        "he"
+    ],
+    "search_engine": "exa",
+    "datetime": "2025-08-11T17:34:47.518674",
+    "seeds": [
+        {
+            "name": "International response to the Spanish Civil War",
+            "url": "https://en.wikipedia.org/wiki/Foreign_involvement_in_the_Spanish_Civil_War"
+        },
+        {
+            "name": "Convoy PQ 13",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_13"
+        },
+        {
+            "name": "British Battalion",
+            "url": "https://en.wikipedia.org/wiki/British_Battalion"
+        },
+        {
+            "name": "Convoy PQ 15",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_15"
+        },
+        {
+            "name": "Russian convoy",
+            "url": "https://en.wikipedia.org/wiki/Russian_convoys"
+        },
+        {
+            "name": "Convoy PQ 11",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_11"
+        },
+        {
+            "name": "British Armoured Car Expeditionary Force",
+            "url": "https://en.wikipedia.org/wiki/British_Armoured_Car_Expeditionary_Force"
+        },
+        {
+            "name": "Convoy JW 56A",
+            "url": "https://en.wikipedia.org/wiki/Convoy_JW_56A"
+        },
+        {
+            "name": "Convoy JW 51A",
+            "url": "https://en.wikipedia.org/wiki/Convoy_JW_51A"
+        },
+        {
+            "name": "Convoy JW 54A",
+            "url": "https://en.wikipedia.org/wiki/Convoy_JW_54A"
+        },
+        {
+            "name": "Category:British people of the Spanish Civil War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:British_people_of_the_Spanish_Civil_War"
+        },
+        {
+            "name": "Convoy JW 58",
+            "url": "https://en.wikipedia.org/wiki/Convoy_JW_58"
+        },
+        {
+            "name": "Convoy PQ 5",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_5"
+        },
+        {
+            "name": "Convoy PQ 4",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ4"
+        },
+        {
+            "name": "Spanish Civil War",
+            "url": "https://en.wikipedia.org/wiki/Spanish_Civil_War"
+        },
+        {
+            "name": "Convoy JW 54B - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Convoy_JW_54B"
+        },
+        {
+            "name": "Convoy PQ 3",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_3"
+        },
+        {
+            "name": "Convoy PQ 9/10",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_9"
+        },
+        {
+            "name": "Convoy JW 56B",
+            "url": "https://en.wikipedia.org/wiki/Convoy_JW_56B"
+        },
+        {
+            "name": "Convoy QP 15",
+            "url": "https://en.wikipedia.org/wiki/Convoy_QP_15"
+        },
+        {
+            "name": "Convoy QP 10",
+            "url": "https://en.wikipedia.org/wiki/Convoy_QP_10"
+        },
+        {
+            "name": "Convoy PQ 2",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ2"
+        },
+        {
+            "name": "Blockade of Germany (1939–1945)",
+            "url": "https://en.wikipedia.org/wiki/Blockade_of_Germany_(1939%E2%80%931945)"
+        },
+        {
+            "name": "Category:Soviet Union–Spain relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Soviet_Union%E2%80%93Spain_relations"
+        },
+        {
+            "name": "Convoy PQ 14",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_14"
+        },
+        {
+            "name": "Moscow Gold (Spain)",
+            "url": "https://en.wikipedia.org/wiki/Moscow_gold"
+        },
+        {
+            "name": "Scottish volunteers in the Spanish Civil War",
+            "url": "https://en.wikipedia.org/wiki/Scottish_volunteers_in_the_Spanish_Civil_War"
+        },
+        {
+            "name": "Convoy QP 1",
+            "url": "https://en.wikipedia.org/wiki/Convoy_QP_1"
+        },
+        {
+            "name": "International Brigades",
+            "url": "https://en.wikipedia.org/wiki/International_Brigades"
+        },
+        {
+            "name": "Convoy PQ 6",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_6"
+        },
+        {
+            "name": "British campaign in the Baltic (1918–1919)",
+            "url": "https://en.wikipedia.org/wiki/British_campaign_in_the_Baltic_(1918%E2%80%931919)"
+        },
+        {
+            "name": "Convoy QP 3",
+            "url": "https://en.wikipedia.org/wiki/Convoy_QP_3"
+        },
+        {
+            "name": "The Spanish Civil War and the British Left",
+            "url": "https://en.wikipedia.org/wiki/The_Spanish_Civil_War_and_the_British_Left"
+        },
+        {
+            "name": "Southern Russia intervention",
+            "url": "https://en.wikipedia.org/wiki/Southern_Russia_intervention"
+        },
+        {
+            "name": "Convoy PQ 7",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_7"
+        },
+        {
+            "name": "XV International Brigade",
+            "url": "https://en.wikipedia.org/wiki/XV_International_Brigade"
+        },
+        {
+            "name": "Blockade of Germany",
+            "url": "https://en.wikipedia.org/wiki/Blockade_of_Germany"
+        },
+        {
+            "name": "Convoy QP 13",
+            "url": "https://en.wikipedia.org/wiki/Convoy_QP_13"
+        },
+        {
+            "name": "American Expeditionary Force, North Russia",
+            "url": "https://en.wikipedia.org/wiki/American_Expeditionary_Force,_North_Russia"
+        },
+        {
+            "name": "List of wars involving the Soviet Union",
+            "url": "https://en.wikipedia.org/wiki/List_of_wars_involving_the_Soviet_Union"
+        },
+        {
+            "name": "Convoy PQ 16",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_16"
+        },
+        {
+            "name": "Talk:South Atlantic conflict - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:South_Atlantic_conflict"
+        },
+        {
+            "name": "Canadian Siberian Expeditionary Force",
+            "url": "https://en.wikipedia.org/wiki/Canadian_Siberian_Expeditionary_Force"
+        },
+        {
+            "name": "The Spanish Civil War (book)",
+            "url": "https://en.wikipedia.org/wiki/The_Spanish_Civil_War_(book)"
+        },
+        {
+            "name": "Category:British people of the Russian Civil War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:British_people_of_the_Russian_Civil_War"
+        },
+        {
+            "name": "United Kingdom sanctions",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom_sanctions"
+        },
+        {
+            "name": "Category:Battles involving the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_involving_the_Soviet_Union"
+        },
+        {
+            "name": "Falkland Islands sovereignty dispute",
+            "url": "https://en.wikipedia.org/wiki/Falkland_Islands_sovereignty_dispute"
+        },
+        {
+            "name": "Timeline of the British Army 1900–1999",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_British_Army_1900%E2%80%931999"
+        },
+        {
+            "name": "Anatoly Zotov",
+            "url": "https://en.wikipedia.org/wiki/Anatoly_Zotov"
+        },
+        {
+            "name": "Arthur Borton",
+            "url": "https://en.wikipedia.org/wiki/Arthur_Borton"
+        },
+        {
+            "name": "Lincoln Battalion",
+            "url": "https://en.wikipedia.org/wiki/Lincoln_Battalion"
+        },
+        {
+            "name": "Unlikely Warriors",
+            "url": "https://en.wikipedia.org/wiki/Unlikely_Warriors"
+        },
+        {
+            "name": "Category:Wars involving the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Wars_involving_the_Soviet_Union"
+        },
+        {
+            "name": "The Battle for Spain",
+            "url": "https://en.wikipedia.org/wiki/The_Battle_for_Spain"
+        },
+        {
+            "name": "Australia in the Allied intervention in the Russian Civil War",
+            "url": "https://en.wikipedia.org/wiki/Australia_in_the_Allied_intervention_in_the_Russian_Civil_War"
+        },
+        {
+            "name": "Richard John Andrews",
+            "url": "https://en.wikipedia.org/wiki/Richard_John_Andrews"
+        },
+        {
+            "name": "Mackenzie–Papineau Battalion",
+            "url": "https://en.wikipedia.org/wiki/Mackenzie%E2%80%93Papineau_Battalion"
+        },
+        {
+            "name": "Yankee Squadron",
+            "url": "https://en.wikipedia.org/wiki/Yankee_Squadron"
+        },
+        {
+            "name": "User:Jackyd101/British colonial wars - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Jackyd101/British_colonial_wars"
+        },
+        {
+            "name": "Category:Military operations involving the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_operations_involving_the_United_Kingdom"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_2"
+        },
+        {
+            "name": "Japanese intervention in Siberia",
+            "url": "https://en.wikipedia.org/wiki/Japanese_intervention_in_Siberia"
+        },
+        {
+            "name": "Russian Commercial and Industrial Bank v Comptoir d'Estcompte de Mulhouse",
+            "url": "https://en.wikipedia.org/wiki/Russian_Commercial_and_Industrial_Bank_v_Comptoir_d'Estcompte_de_Mulhouse"
+        },
+        {
+            "name": "List of Anglo-Indian wars",
+            "url": "https://en.wikipedia.org/wiki/List_of_Anglo-Indian_wars"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_5"
+        },
+        {
+            "name": "Alfred Knox",
+            "url": "https://en.wikipedia.org/wiki/Alfred_Knox"
+        },
+        {
+            "name": "Central Powers intervention in the Russian Civil War",
+            "url": "https://en.wikipedia.org/wiki/Central_Powers_intervention_in_the_Russian_Civil_War"
+        },
+        {
+            "name": "Battle of Jarama",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Jarama"
+        },
+        {
+            "name": "Гражданская война в России",
+            "url": "https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B2_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8"
+        },
+        {
+            "name": "Foreign interventions by the Soviet Union",
+            "url": "https://en.wikipedia.org/wiki/Foreign_interventions_by_the_Soviet_Union"
+        },
+        {
+            "name": "1981 Armenia mid-air collision",
+            "url": "https://en.wikipedia.org/wiki/1981_Armenia_mid-air_collision"
+        },
+        {
+            "name": "Milk for Spain",
+            "url": "https://en.wikipedia.org/wiki/Milk_for_Spain"
+        },
+        {
+            "name": "History of the Falkland Islands",
+            "url": "https://en.wikipedia.org/wiki/History_of_the_Falkland_Islands"
+        },
+        {
+            "name": "List of blockades",
+            "url": "https://en.wikipedia.org/wiki/List_of_blockades"
+        },
+        {
+            "name": "Category:British spies against the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:British_spies_against_the_Soviet_Union"
+        },
+        {
+            "name": "Первая советско-украинская война",
+            "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B2%D0%B0%D1%8F_%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%BE-%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D0%BE%D0%B9%D0%BD%D0%B0"
+        },
+        {
+            "name": "Anglo-Russian Commission",
+            "url": "https://en.wikipedia.org/wiki/Anglo-Russian_Commission"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 8 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_8"
+        },
+        {
+            "name": "List of International Brigades personnel",
+            "url": "https://en.wikipedia.org/wiki/List_of_International_Brigades_personnel"
+        },
+        {
+            "name": "Cambridge Five",
+            "url": "https://en.wikipedia.org/wiki/Cambridge_Five"
+        },
+        {
+            "name": "Category:Battles of the Russian Civil War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_of_the_Russian_Civil_War"
+        },
+        {
+            "name": "259th Battalion, Canadian Rifles, CEF (Siberia) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/259th_Battalion,_Canadian_Rifles,_CEF_(Siberia)"
+        },
+        {
+            "name": "Southern Front of the Russian Civil War",
+            "url": "https://en.wikipedia.org/wiki/Southern_Front_of_the_Russian_Civil_War"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_1"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 7 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_7"
+        },
+        {
+            "name": "Fred Copeman - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Fred_Copeman"
+        },
+        {
+            "name": "Северо-Кавказская операция (1918—1919)",
+            "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BE-%D0%9A%D0%B0%D0%B2%D0%BA%D0%B0%D0%B7%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F_(1918%E2%80%941919)"
+        },
+        {
+            "name": "International Brigades order of battle",
+            "url": "https://en.wikipedia.org/wiki/Order_of_battle_of_the_International_Brigades"
+        },
+        {
+            "name": "George Drever",
+            "url": "https://en.wikipedia.org/wiki/George_Drever"
+        },
+        {
+            "name": "Central Asian Front of the Russian Civil War",
+            "url": "https://en.wikipedia.org/wiki/Central_Asian_Front_of_the_Russian_Civil_War"
+        },
+        {
+            "name": "Anglo-Soviet invasion of Iran",
+            "url": "https://en.wikipedia.org/wiki/Invasion_of_Iran_%281941%29"
+        },
+        {
+            "name": "Category:Military history of the British Empire - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_history_of_the_British_Empire"
+        },
+        {
+            "name": "236th Brigade (United Kingdom)",
+            "url": "https://en.wikipedia.org/wiki/236th_Brigade_(United_Kingdom)"
+        },
+        {
+            "name": "Robert Soblen",
+            "url": "https://en.wikipedia.org/wiki/Robert_Soblen"
+        },
+        {
+            "name": "POUM",
+            "url": "https://en.wikipedia.org/wiki/POUM"
+        },
+        {
+            "name": "Talk:1982 invasion of the Falkland Islands - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk%3A1982_invasion_of_the_Falkland_Islands"
+        },
+        {
+            "name": "Одесская операция (1919)",
+            "url": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F_(1919)"
+        },
+        {
+            "name": "ILP Contingent",
+            "url": "https://en.wikipedia.org/wiki/ILP_Contingent"
+        },
+        {
+            "name": "Блокада Ленинграда",
+            "url": "https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D0%BA%D0%B0%D0%B4%D0%B0_%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0"
+        },
+        {
+            "name": "Portland Spy Ring",
+            "url": "https://en.wikipedia.org/wiki/Portland_Spy_Ring"
+        },
+        {
+            "name": "German involvement in the Spanish Civil War",
+            "url": "https://en.wikipedia.org/wiki/German_involvement_in_the_Spanish_Civil_War"
+        },
+        {
+            "name": "American Expeditionary Force, Siberia",
+            "url": "https://en.wikipedia.org/wiki/American_Expeditionary_Force_Siberia"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 13 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_13"
+        },
+        {
+            "name": "Template talk:USSR conflicts - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template_talk:USSR_conflicts"
+        },
+        {
+            "name": "Murmansk Legion",
+            "url": "https://en.wikipedia.org/wiki/Murmansk_Legion"
+        },
+        {
+            "name": "Revolutions and interventions in Hungary (1918–1920)",
+            "url": "https://en.wikipedia.org/wiki/Revolutions_and_interventions_in_Hungary_(1918%E2%80%931920)"
+        },
+        {
+            "name": "SS Podolsk",
+            "url": "https://en.wikipedia.org/wiki/SS_Podolsk"
+        },
+        {
+            "name": "Category:Territorial disputes of the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Territorial_disputes_of_the_Soviet_Union"
+        },
+        {
+            "name": "Timeline of conflict in Anglo-Saxon Britain",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_conflict_in_Anglo-Saxon_Britain"
+        },
+        {
+            "name": "Portland spy ring",
+            "url": "https://en.wikipedia.org/wiki/Portland_spy_ring"
+        },
+        {
+            "name": "No. 151 Wing RAF",
+            "url": "https://en.wikipedia.org/wiki/No._151_Wing_RAF"
+        },
+        {
+            "name": "List of battles of the Polish–Soviet War",
+            "url": "https://en.wikipedia.org/wiki/List_of_battles_of_the_Polish%E2%80%93Soviet_War"
+        },
+        {
+            "name": "Chagos Archipelago sovereignty dispute",
+            "url": "https://en.wikipedia.org/wiki/Chagos_Archipelago_sovereignty_dispute"
+        },
+        {
+            "name": "William Seeds",
+            "url": "https://en.wikipedia.org/wiki/William_Seeds"
+        },
+        {
+            "name": "Category:Non-combat military operations involving the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Non-combat_military_operations_involving_the_United_Kingdom"
+        },
+        {
+            "name": "Argentina–United Kingdom relations",
+            "url": "https://en.wikipedia.org/wiki/Argentina%E2%80%93United_Kingdom_relations"
+        },
+        {
+            "name": "Gordon Vereker",
+            "url": "https://en.wikipedia.org/wiki/Gordon_Vereker"
+        },
+        {
+            "name": "Category:Battles of the Polish–Soviet War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_of_the_Polish%E2%80%93Soviet_War"
+        },
+        {
+            "name": "Allied technological cooperation during World War II",
+            "url": "https://en.wikipedia.org/wiki/Allied_technological_cooperation_during_World_War_II"
+        },
+        {
+            "name": "Melita Norwood",
+            "url": "https://en.wikipedia.org/wiki/Melita_Norwood"
+        },
+        {
+            "name": "Blockade of Germany (1914–1919)",
+            "url": "https://en.wikipedia.org/wiki/Blockade_of_Germany_(1914%E2%80%931919)"
+        },
+        {
+            "name": "Propaganda in the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/Propaganda_in_the_United_Kingdom"
+        },
+        {
+            "name": "1988 Black Sea bumping incident",
+            "url": "https://en.wikipedia.org/wiki/1988_Black_Sea_bumping_incident"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 14 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_14"
+        },
+        {
+            "name": "Voskhod 2",
+            "url": "https://en.wikipedia.org/wiki/Voskhod_2"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_3"
+        },
+        {
+            "name": "Talk:United Nations Security Council Resolution 502 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:United_Nations_Security_Council_Resolution_502"
+        },
+        {
+            "name": "Convoy PQ 8",
+            "url": "https://en.wikipedia.org/wiki/Convoy_PQ_8"
+        },
+        {
+            "name": "List of Russian physicists",
+            "url": "https://en.wikipedia.org/wiki/Soviet_physics"
+        },
+        {
+            "name": "Blockade of the Eastern Mediterranean",
+            "url": "https://en.wikipedia.org/wiki/Blockade_of_the_Eastern_Mediterranean"
+        },
+        {
+            "name": "Ukrainian War of Independence",
+            "url": "https://en.wikipedia.org/wiki/Ukrainian_War_of_Independence"
+        },
+        {
+            "name": "User:Central Data Bank/Baku Offensive - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Central_Data_Bank/Baku_Offensive"
+        },
+        {
+            "name": "Category:20th-century military history of the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:20th-century_military_history_of_the_United_Kingdom"
+        },
+        {
+            "name": "Talk:Action of June 5, 1984 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Action_of_June_5,_1984"
+        },
+        {
+            "name": "26 Baku Commissars",
+            "url": "https://en.wikipedia.org/wiki/26_Baku_Commissars"
+        },
+        {
+            "name": "Science at the Crossroads",
+            "url": "https://en.wikipedia.org/wiki/Science_at_the_Crossroads"
+        },
+        {
+            "name": "Military history of the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_the_United_Kingdom"
+        },
+        {
+            "name": "Yuri Modin",
+            "url": "https://en.wikipedia.org/wiki/Yuri_Modin"
+        },
+        {
+            "name": "Alaska boundary dispute",
+            "url": "https://en.wikipedia.org/wiki/Alaska_boundary_dispute"
+        },
+        {
+            "name": "Roger Tredwell",
+            "url": "https://en.wikipedia.org/wiki/Roger_Tredwell"
+        },
+        {
+            "name": "Kim Philby",
+            "url": "https://en.wikipedia.org/wiki/Kim_Philby"
+        },
+        {
+            "name": "Soyuz 7K-T No.39",
+            "url": "https://en.wikipedia.org/wiki/Soyuz_18a"
+        },
+        {
+            "name": "Timeline of the Cold War",
+            "url": "https://en.wikipedia.org/wiki/Cold_War_Timeline"
+        },
+        {
+            "name": "Category:Wars involving the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Wars_involving_the_United_Kingdom"
+        },
+        {
+            "name": "List of military operations",
+            "url": "https://en.wikipedia.org/wiki/List_of_military_operations"
+        },
+        {
+            "name": "Soyuz 1",
+            "url": "https://en.wikipedia.org/wiki/Soyuz_1"
+        },
+        {
+            "name": "Category:Military history of the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_history_of_the_Soviet_Union"
+        },
+        {
+            "name": "Robert Hodgson (diplomat)",
+            "url": "https://en.wikipedia.org/wiki/Robert_MacLeod_Hodgson"
+        },
+        {
+            "name": "Soviet atomic bomb project",
+            "url": "https://en.wikipedia.org/wiki/Soviet_atomic_bomb_project"
+        },
+        {
+            "name": "List of conflicts related to the Cold War",
+            "url": "https://en.wikipedia.org/wiki/List_of_conflicts_related_to_the_Cold_War"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 10 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_10"
+        },
+        {
+            "name": "Soviet involvement in regime change",
+            "url": "https://en.wikipedia.org/wiki/Soviet_involvement_in_regime_change"
+        },
+        {
+            "name": "History of the British Army",
+            "url": "https://en.wikipedia.org/wiki/History_of_the_British_Army"
+        },
+        {
+            "name": "Timeline of British history",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_British_history"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_6"
+        },
+        {
+            "name": "Template:Campaignbox Anglo-Saxon invasions - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template:Campaignbox_Anglo-Saxon_invasions"
+        },
+        {
+            "name": "List of wars involving the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/List_of_wars_involving_the_United_Kingdom"
+        },
+        {
+            "name": "Aretas Akers-Douglas, 2nd Viscount Chilston",
+            "url": "https://en.wikipedia.org/wiki/Aretas_Akers-Douglas,_2nd_Viscount_Chilston"
+        },
+        {
+            "name": "Beira Patrol",
+            "url": "https://en.wikipedia.org/wiki/Beira_Patrol"
+        },
+        {
+            "name": "Evgenevka incident",
+            "url": "https://en.wikipedia.org/wiki/Evgenevka_incident"
+        },
+        {
+            "name": "SS Charlotte Cords",
+            "url": "https://en.wikipedia.org/wiki/SS_Nikolay_Bauman"
+        },
+        {
+            "name": "Timeline of the British Army 1800–1899",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_British_Army_1800%E2%80%931899"
+        },
+        {
+            "name": "Category:Ships sunk by Soviet submarines - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Ships_sunk_by_Soviet_submarines"
+        },
+        {
+            "name": "Soyuz 21",
+            "url": "https://en.wikipedia.org/wiki/Soyuz_21"
+        },
+        {
+            "name": "Great Rapprochement",
+            "url": "https://en.wikipedia.org/wiki/Great_Rapprochement"
+        },
+        {
+            "name": "Rudolf Abel - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Rudolf_Abel"
+        },
+        {
+            "name": "British propaganda during World War II",
+            "url": "https://en.wikipedia.org/wiki/British_propaganda_during_World_War_II"
+        },
+        {
+            "name": "Military history of Britain",
+            "url": "https://en.wikipedia.org/wiki/British_military_defeats"
+        },
+        {
+            "name": "Talk:History of the Falkland Islands/Archive 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:History_of_the_Falkland_Islands/Archive_3"
+        },
+        {
+            "name": "Geoffrey Prime",
+            "url": "https://en.wikipedia.org/wiki/Geoffrey_Prime"
+        },
+        {
+            "name": "Frank Bossard",
+            "url": "https://en.wikipedia.org/wiki/Frank_Bossard"
+        },
+        {
+            "name": "Category:Non-combat military operations involving the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Non-combat_military_operations_involving_the_Soviet_Union"
+        },
+        {
+            "name": "Template:History of the Soviet Union - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template:History_of_the_Soviet_Union"
+        },
+        {
+            "name": "1964 T-39 shootdown incident",
+            "url": "https://en.wikipedia.org/wiki/1964_T-39_shootdown_incident"
+        },
+        {
+            "name": "Falkland Islands",
+            "url": "https://en.wikipedia.org/wiki/Falklands"
+        },
+        {
+            "name": "Category:Battles involving the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_involving_the_United_Kingdom"
+        },
+        {
+            "name": "Talk:Iran crisis of 1946 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Iran_crisis_of_1946"
+        },
+        {
+            "name": "Cyprus Seven Trial",
+            "url": "https://en.wikipedia.org/wiki/Cyprus_Seven_Trial"
+        },
+        {
+            "name": "Operation Dervish (1941)",
+            "url": "https://en.wikipedia.org/wiki/Operation_Dervish_(1941)"
+        },
+        {
+            "name": "Odessa Operation (1919)",
+            "url": "https://en.wikipedia.org/wiki/Odessa_Operation_(1919)"
+        },
+        {
+            "name": "David Kelly (diplomat)",
+            "url": "https://en.wikipedia.org/wiki/David_Victor_Kelly"
+        },
+        {
+            "name": "SS Metallurg Baykov",
+            "url": "https://en.wikipedia.org/wiki/SS_Metallurg_Baykov"
+        },
+        {
+            "name": "Timeline of the British Army",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_British_Army"
+        },
+        {
+            "name": "Lost Cosmonauts",
+            "url": "https://en.wikipedia.org/wiki/Lost_Cosmonauts"
+        },
+        {
+            "name": "Катастрофа Boeing 707 в Карелии",
+            "url": "https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%86%D0%B8%D0%B4%D0%B5%D0%BD%D1%82_%D1%81_%D1%8E%D0%B6%D0%BD%D0%BE%D0%BA%D0%BE%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B8%D0%BC_%D0%91%D0%BE%D0%B8%D0%BD%D0%B3%D0%BE%D0%BC_(1978)?uselang=en"
+        },
+        {
+            "name": "Timeline of events preceding World War II",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_events_preceding_World_War_II"
+        },
+        {
+            "name": "Category:Military operations involving Great Britain - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_operations_involving_Great_Britain"
+        },
+        {
+            "name": "Russian Alsos",
+            "url": "https://en.wikipedia.org/wiki/Russian_Alsos"
+        },
+        {
+            "name": "Anti-Bolshevik propaganda",
+            "url": "https://en.wikipedia.org/wiki/Anti-Bolshevik_propaganda"
+        },
+        {
+            "name": "History of Russia (1894–1917)",
+            "url": "https://en.wikipedia.org/wiki/History_of_Russia_(1894%E2%80%931917)"
+        },
+        {
+            "name": "Who Paid the Piper?",
+            "url": "https://en.wikipedia.org/wiki/Who_Paid_the_Piper%3F"
+        },
+        {
+            "name": "Пограничный конфликт у озера Жаланашколь",
+            "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%84%D0%BB%D0%B8%D0%BA%D1%82_%D1%83_%D0%BE%D0%B7%D0%B5%D1%80%D0%B0_%D0%96%D0%B0%D0%BB%D0%B0%D0%BD%D0%B0%D1%88%D0%BA%D0%BE%D0%BB%D1%8C"
+        },
+        {
+            "name": "Soviet submarine K-56 (1965)",
+            "url": "https://en.wikipedia.org/wiki/Soviet_submarine_K-56_(1965)"
+        },
+        {
+            "name": "Talk:Hostile Waters (film) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Hostile_Waters_(film)"
+        },
+        {
+            "name": "Michael Bettaney",
+            "url": "https://en.wikipedia.org/wiki/Michael_Bettany"
+        },
+        {
+            "name": "Operation Tamarisk",
+            "url": "https://en.wikipedia.org/wiki/Operation_Tamarisk"
+        },
+        {
+            "name": "Operation Surgeon",
+            "url": "https://en.wikipedia.org/wiki/Operation_Surgeon"
+        },
+        {
+            "name": "Oleg Lyalin",
+            "url": "https://en.wikipedia.org/wiki/Oleg_Lyalin"
+        },
+        {
+            "name": "Great Game",
+            "url": "https://en.wikipedia.org/wiki/Great_Game"
+        }
+    ]
+}

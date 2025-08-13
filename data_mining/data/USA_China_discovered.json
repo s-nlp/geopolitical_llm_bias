@@ -1,0 +1,822 @@
+{
+    "llm": "openai/gpt-oss-120b",
+    "start_year": 1900,
+    "end_year": 2005,
+    "countries": [
+        "USA",
+        "China"
+    ],
+    "max_events": 200,
+    "langs": [
+        "en",
+        "fr",
+        "ru",
+        "zh",
+        "ar",
+        "he"
+    ],
+    "search_engine": "exa",
+    "datetime": "2025-08-11T16:43:02.211438",
+    "seeds": [
+        {
+            "name": "Category:China–United States military relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China%E2%80%93United_States_military_relations"
+        },
+        {
+            "name": "China during World War I",
+            "url": "https://en.wikipedia.org/wiki/China_during_World_War_I"
+        },
+        {
+            "name": "Embassy of China, Belgrade",
+            "url": "https://en.wikipedia.org/wiki/Embassy_of_China,_Belgrade"
+        },
+        {
+            "name": "Talk:United States bombing of the Chinese embassy in Belgrade - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:United_States_bombing_of_the_Chinese_embassy_in_Belgrade"
+        },
+        {
+            "name": "Battle of the Twin Tunnels",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Twin_Tunnels"
+        },
+        {
+            "name": "Battle of Unsan",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Unsan"
+        },
+        {
+            "name": "United States sanctions against China",
+            "url": "https://en.wikipedia.org/wiki/United_States_sanctions_against_China"
+        },
+        {
+            "name": "Battle of the Ch'ongch'on River",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Ch'ongch'on_River"
+        },
+        {
+            "name": "Korean War",
+            "url": "https://en.wikipedia.org/wiki/Korean_War"
+        },
+        {
+            "name": "User:Jim101/Battle of Ch'ongch'on River - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Jim101/Battle_of_Ch'ongch'on_River"
+        },
+        {
+            "name": "China Sky (film)",
+            "url": "https://en.wikipedia.org/wiki/China_Sky_(film)"
+        },
+        {
+            "name": "Battle of Jackson Heights",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Jackson_Heights"
+        },
+        {
+            "name": "Battle of Wawon",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Wawon"
+        },
+        {
+            "name": "Export Administration Regulations",
+            "url": "https://en.wikipedia.org/wiki/Export_Administration_Regulations"
+        },
+        {
+            "name": "Battle of White Horse Hill",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_White_Horse"
+        },
+        {
+            "name": "Export control",
+            "url": "https://en.wikipedia.org/wiki/Export_control"
+        },
+        {
+            "name": "Category:China in World War I - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China_in_World_War_I"
+        },
+        {
+            "name": "Battle of Pork Chop Hill",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Pork_Chop_Hill"
+        },
+        {
+            "name": "Allegations of intellectual property infringement by China",
+            "url": "https://en.wikipedia.org/wiki/Allegations_of_intellectual_property_infringement_by_China"
+        },
+        {
+            "name": "Timeline of the United States diplomatic history",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_United_States_diplomatic_history"
+        },
+        {
+            "name": "Battle of the Soyang River",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Soyang_River"
+        },
+        {
+            "name": "Battle of the Berlin Outposts and Boulder City",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Berlin_Outposts_and_Boulder_City"
+        },
+        {
+            "name": "List of US arms sales to Taiwan",
+            "url": "https://en.wikipedia.org/wiki/List_of_US_arms_sales_to_Taiwan"
+        },
+        {
+            "name": "United States national missile defense",
+            "url": "https://en.wikipedia.org/wiki/United_States_national_missile_defense"
+        },
+        {
+            "name": "Battle of Triangle Hill",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Triangle_Hill"
+        },
+        {
+            "name": "Battle of Yangcun",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Yangcun"
+        },
+        {
+            "name": "Export Administration Act of 1979",
+            "url": "https://en.wikipedia.org/wiki/Export_Administration_Act_of_1979"
+        },
+        {
+            "name": "Battle of Chipyong-ni",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Chipyong-ni"
+        },
+        {
+            "name": "History of China–United States relations",
+            "url": "https://en.wikipedia.org/wiki/History_of_China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Battle of Pakchon",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Pakchon"
+        },
+        {
+            "name": "The Battle of China",
+            "url": "https://en.wikipedia.org/wiki/The_Battle_of_China"
+        },
+        {
+            "name": "Battle of Kumsong",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Kumsong"
+        },
+        {
+            "name": "User:Jim101/Battle of Chosin Reservoir - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Jim101/Battle_of_Chosin_Reservoir"
+        },
+        {
+            "name": "Titan Rain",
+            "url": "https://en.wikipedia.org/wiki/Titan_Rain"
+        },
+        {
+            "name": "Dragon Seed (film)",
+            "url": "https://en.wikipedia.org/wiki/Dragon_Seed_(film)"
+        },
+        {
+            "name": "Eight-Nation Alliance",
+            "url": "https://en.wikipedia.org/wiki/Eight-Nation_Alliance"
+        },
+        {
+            "name": "Battle of Bunker Hill (1952)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Bunker_Hill_(1952)"
+        },
+        {
+            "name": "Export restriction",
+            "url": "https://en.wikipedia.org/wiki/Export_restriction"
+        },
+        {
+            "name": "Battle of Old Baldy",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Old_Baldy"
+        },
+        {
+            "name": "Allegations of intellectual property theft by China",
+            "url": "https://en.wikipedia.org/wiki/Allegations_of_intellectual_property_theft_by_China"
+        },
+        {
+            "name": "Timeline of Japan–United States relations",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_Japan%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Battle of Onjong",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Onjong"
+        },
+        {
+            "name": "Battle of the Samichon River",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Samichon_River"
+        },
+        {
+            "name": "Second Phase Offensive",
+            "url": "https://en.wikipedia.org/wiki/Second_Phase_Offensive"
+        },
+        {
+            "name": "Imperial decree of declaration of war against foreign powers",
+            "url": "https://en.wikipedia.org/wiki/Imperial_decree_of_declaration_of_war_against_foreign_powers"
+        },
+        {
+            "name": "China–United States relations",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Betrayal from the East",
+            "url": "https://en.wikipedia.org/wiki/Betrayal_from_the_East"
+        },
+        {
+            "name": "Timeline of the Qing dynasty",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Qing_dynasty"
+        },
+        {
+            "name": "Intellectual property in China",
+            "url": "https://en.wikipedia.org/wiki/Intellectual_property_in_China"
+        },
+        {
+            "name": "Outline of the military history of the People's Republic of China",
+            "url": "https://en.wikipedia.org/wiki/Outline_of_the_military_history_of_the_People's_Republic_of_China"
+        },
+        {
+            "name": "Export of cryptography from the United States",
+            "url": "https://en.wikipedia.org/wiki/Export_of_cryptography_from_the_United_States"
+        },
+        {
+            "name": "Category:Military history of China during World War II - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_history_of_China_during_World_War_II"
+        },
+        {
+            "name": "Korean War order of battle: Chinese",
+            "url": "https://en.wikipedia.org/wiki/Korean_War_order_of_battle:_Chinese"
+        },
+        {
+            "name": "Taiyuan massacre",
+            "url": "https://en.wikipedia.org/wiki/Taiyuan_Massacre"
+        },
+        {
+            "name": "Category:20th-century military history of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:20th-century_military_history_of_China"
+        },
+        {
+            "name": "Yinhe incident",
+            "url": "https://en.wikipedia.org/wiki/Yinhe_incident"
+        },
+        {
+            "name": "Category:China–United States relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Cyberwarfare and China",
+            "url": "https://en.wikipedia.org/wiki/Cyberwarfare_and_China"
+        },
+        {
+            "name": "Battle of Beijing",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Peking"
+        },
+        {
+            "name": "Military history of China",
+            "url": "https://en.wikipedia.org/wiki/Military_History_of_China"
+        },
+        {
+            "name": "United States in the Korean War",
+            "url": "https://en.wikipedia.org/wiki/United_States_in_the_Korean_War"
+        },
+        {
+            "name": "US Mexico Trade Dispute - Stainless Steel Sheets and Coils dumping",
+            "url": "https://en.wikipedia.org/wiki/US_Mexico_Trade_Dispute_-_Stainless_Steel_Sheets_and_Coils_dumping"
+        },
+        {
+            "name": "The Story of the Fourteenth Air Force",
+            "url": "https://en.wikipedia.org/wiki/The_Story_of_the_14th_Air_Force"
+        },
+        {
+            "name": "List of wars and battles involving China",
+            "url": "https://en.wikipedia.org/wiki/List_of_Chinese_wars_and_battles"
+        },
+        {
+            "name": "User:Blackmane/Boxer Origins - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Blackmane/Boxer_Origins"
+        },
+        {
+            "name": "Oberlin Band (China)",
+            "url": "https://en.wikipedia.org/wiki/Oberlin_Band_(China)"
+        },
+        {
+            "name": "Boxer movement",
+            "url": "https://en.wikipedia.org/wiki/Boxer_movement"
+        },
+        {
+            "name": "Chinese Labour Corps",
+            "url": "https://en.wikipedia.org/wiki/Chinese_Labour_Corps"
+        },
+        {
+            "name": "Category:Sanctions against China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Sanctions_against_China"
+        },
+        {
+            "name": "Seymour Expedition",
+            "url": "https://en.wikipedia.org/wiki/Seymour_Expedition"
+        },
+        {
+            "name": "The Hundred-Year Marathon",
+            "url": "https://en.wikipedia.org/wiki/The_Hundred-Year_Marathon"
+        },
+        {
+            "name": "International Traffic in Arms Regulations",
+            "url": "https://en.wikipedia.org/wiki/International_Traffic_in_Arms_Regulations"
+        },
+        {
+            "name": "Military history of the United States",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_the_United_States"
+        },
+        {
+            "name": "Purple Storm",
+            "url": "https://en.wikipedia.org/wiki/Purple_Storm"
+        },
+        {
+            "name": "Chinese spring offensive",
+            "url": "https://en.wikipedia.org/wiki/Chinese_spring_offensive"
+        },
+        {
+            "name": "George C. Remey",
+            "url": "https://en.wikipedia.org/wiki/George_C._Remey"
+        },
+        {
+            "name": "Oscar J. Upham",
+            "url": "https://en.wikipedia.org/wiki/Oscar_J._Upham"
+        },
+        {
+            "name": "Cyberwarfare by China",
+            "url": "https://en.wikipedia.org/wiki/Cyberwarfare_by_China"
+        },
+        {
+            "name": "China Girl (1942 film)",
+            "url": "https://en.wikipedia.org/wiki/China_Girl_(1942_film)"
+        },
+        {
+            "name": "Template:Boxer Rebellion - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template:Boxer_Rebellion"
+        },
+        {
+            "name": "Gaselee Expedition",
+            "url": "https://en.wikipedia.org/wiki/Gasalee_Expedition"
+        },
+        {
+            "name": "Republic of China declaration of war on Germany",
+            "url": "https://en.wikipedia.org/wiki/Republic_of_China_declaration_of_war_on_Germany"
+        },
+        {
+            "name": "Intelsat 708",
+            "url": "https://en.wikipedia.org/wiki/Intelsat_708"
+        },
+        {
+            "name": "George Seward",
+            "url": "https://en.wikipedia.org/wiki/George_Seward"
+        },
+        {
+            "name": "Category:Wars involving China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Wars_involving_China"
+        },
+        {
+            "name": "Fishing industry in China",
+            "url": "https://en.wikipedia.org/wiki/Fishing_industry_in_China"
+        },
+        {
+            "name": "Root–Takahira Agreement",
+            "url": "https://en.wikipedia.org/wiki/Root-Takahira_agreement"
+        },
+        {
+            "name": "Kosmos 2261",
+            "url": "https://en.wikipedia.org/wiki/Kosmos_2261"
+        },
+        {
+            "name": "2002 United States steel tariff",
+            "url": "https://en.wikipedia.org/wiki/2002_United_States_steel_tariff"
+        },
+        {
+            "name": "Category:Battles of the Boxer Rebellion - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_of_the_Boxer_Rebellion"
+        },
+        {
+            "name": "Kosmos 2251",
+            "url": "https://en.wikipedia.org/wiki/Kosmos-2251"
+        },
+        {
+            "name": "China Venture",
+            "url": "https://en.wikipedia.org/wiki/China_Venture"
+        },
+        {
+            "name": "Category:Chinese people of World War II - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Chinese_people_of_World_War_II"
+        },
+        {
+            "name": "United States in World War I",
+            "url": "https://en.wikipedia.org/wiki/United_States_in_World_War_I"
+        },
+        {
+            "name": "United States in World War II",
+            "url": "https://en.wikipedia.org/wiki/United_States_in_World_War_II"
+        },
+        {
+            "name": "2010 Chinese anti-ballistic missile test",
+            "url": "https://en.wikipedia.org/wiki/2010_Chinese_anti-ballistic_missile_test"
+        },
+        {
+            "name": "List of space debris producing events",
+            "url": "https://en.wikipedia.org/wiki/List_of_space_debris_producing_events"
+        },
+        {
+            "name": "Battle of the Taku Forts (1900)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Taku_Forts_(1900)"
+        },
+        {
+            "name": "Multi Fibre Arrangement",
+            "url": "https://en.wikipedia.org/wiki/Bra_wars"
+        },
+        {
+            "name": "Flying Tigers",
+            "url": "https://en.wikipedia.org/wiki/Flying_Tigers"
+        },
+        {
+            "name": "Coordinating Committee for Multilateral Export Controls",
+            "url": "https://en.wikipedia.org/wiki/Coordinating_Committee_for_Multilateral_Export_Controls"
+        },
+        {
+            "name": "Korean War order of battle",
+            "url": "https://en.wikipedia.org/wiki/Korean_War_order_of_battle"
+        },
+        {
+            "name": "Siege of the International Legations",
+            "url": "https://en.wikipedia.org/wiki/Siege_of_the_International_Legations"
+        },
+        {
+            "name": "American Volunteer Group",
+            "url": "https://en.wikipedia.org/wiki/American_Volunteer_Group"
+        },
+        {
+            "name": "Battle of Peking (1900)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Peking_(1900)"
+        },
+        {
+            "name": "Richard B. Paddock",
+            "url": "https://en.wikipedia.org/wiki/Richard_B._Paddock"
+        },
+        {
+            "name": "Chi Mak",
+            "url": "https://en.wikipedia.org/wiki/Chi_Mak"
+        },
+        {
+            "name": "Yang Yü (diplomat)",
+            "url": "https://en.wikipedia.org/wiki/Yang_Y%C3%BC_(diplomat)"
+        },
+        {
+            "name": "Talk:Dumping (pricing policy)/Archives/2013 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Dumping_(pricing_policy)/Archives/2013"
+        },
+        {
+            "name": "Iran Nonproliferation Act of 2000",
+            "url": "https://en.wikipedia.org/wiki/Iran_Nonproliferation_Act_of_2000"
+        },
+        {
+            "name": "List of border conflicts",
+            "url": "https://en.wikipedia.org/wiki/Border_conflict"
+        },
+        {
+            "name": "Katrina Leung",
+            "url": "https://en.wikipedia.org/wiki/Katrina_Leung"
+        },
+        {
+            "name": "Template:India China border timeline - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template:India_China_border_timeline"
+        },
+        {
+            "name": "Category:American military personnel killed in the Korean War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:American_military_personnel_killed_in_the_Korean_War"
+        },
+        {
+            "name": "Military history of the United States during World War II",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_the_United_States_during_World_War_II"
+        },
+        {
+            "name": "Category:Battles involving China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_involving_China"
+        },
+        {
+            "name": "Category:Military history of the People's Republic of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_history_of_the_People's_Republic_of_China"
+        },
+        {
+            "name": "Baltimore crisis",
+            "url": "https://en.wikipedia.org/wiki/Baltimore_crisis"
+        },
+        {
+            "name": "United States–China Relations Act of 2000",
+            "url": "https://en.wikipedia.org/wiki/United_States%E2%80%93China_Relations_Act_of_2000"
+        },
+        {
+            "name": "Chinese government sanctions",
+            "url": "https://en.wikipedia.org/wiki/Chinese_government_sanctions"
+        },
+        {
+            "name": "Sino-American Cooperative Organization",
+            "url": "https://en.wikipedia.org/wiki/Sino-American_Cooperative_Organization"
+        },
+        {
+            "name": "Export Management and Compliance Program",
+            "url": "https://en.wikipedia.org/wiki/Export_Management_and_Compliance_Program"
+        },
+        {
+            "name": "Chinese-American service in World War II",
+            "url": "https://en.wikipedia.org/wiki/Chinese-American_service_in_World_War_II"
+        },
+        {
+            "name": "Gregg Bergersen",
+            "url": "https://en.wikipedia.org/wiki/Gregg_Bergersen"
+        },
+        {
+            "name": "Battle of Tientsin",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Tientsin"
+        },
+        {
+            "name": "China (1943 film)",
+            "url": "https://en.wikipedia.org/wiki/China_(1943_film)"
+        },
+        {
+            "name": "Zeroing (trade)",
+            "url": "https://en.wikipedia.org/wiki/Zeroing_(trade)"
+        },
+        {
+            "name": "History of Sino-Russian relations",
+            "url": "https://en.wikipedia.org/wiki/History_of_Sino-Russian_relations"
+        },
+        {
+            "name": "History of foreign relations of China",
+            "url": "https://en.wikipedia.org/wiki/History_of_foreign_relations_of_China"
+        },
+        {
+            "name": "Aerial engagements of the Second Sino-Japanese War",
+            "url": "https://en.wikipedia.org/wiki/Aerial_engagements_of_the_Second_Sino-Japanese_War"
+        },
+        {
+            "name": "East Asia–United States relations",
+            "url": "https://en.wikipedia.org/wiki/East_Asia%E2%80%93United_States_relations"
+        },
+        {
+            "name": "The Mountain Road",
+            "url": "https://en.wikipedia.org/wiki/The_Mountain_Road"
+        },
+        {
+            "name": "Category:Battles of the Korean War involving China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_of_the_Korean_War_involving_China"
+        },
+        {
+            "name": "Timeline of the Chinese Civil War",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Chinese_Civil_War"
+        },
+        {
+            "name": "Taiwan Strait Crises",
+            "url": "https://en.wikipedia.org/wiki/Taiwan_Strait_Crises"
+        },
+        {
+            "name": "United States government sanctions",
+            "url": "https://en.wikipedia.org/wiki/United_States_government_sanctions"
+        },
+        {
+            "name": "China–United States trade war",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93United_States_trade_war"
+        },
+        {
+            "name": "United States bombing of the Chinese embassy in Belgrade",
+            "url": "https://en.wikipedia.org/wiki/United_States_bombing_of_the_Chinese_embassy_in_Belgrade"
+        },
+        {
+            "name": "Night Plane from Chungking",
+            "url": "https://en.wikipedia.org/wiki/Night_Plane_from_Chungking"
+        },
+        {
+            "name": "Satellite collision",
+            "url": "https://en.wikipedia.org/wiki/Space_collision"
+        },
+        {
+            "name": "Military history of China before 1912",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_China_before_1912"
+        },
+        {
+            "name": "DF-31",
+            "url": "https://en.wikipedia.org/wiki/DF-31"
+        },
+        {
+            "name": "Boxer Protocol",
+            "url": "https://en.wikipedia.org/wiki/Boxer_Protocol"
+        },
+        {
+            "name": "List of Chinese spy cases in the United States",
+            "url": "https://en.wikipedia.org/wiki/List_of_Chinese_spy_cases_in_the_United_States"
+        },
+        {
+            "name": "Philo McGiffin",
+            "url": "https://en.wikipedia.org/wiki/Philo_McGiffen"
+        },
+        {
+            "name": "East Wood affair",
+            "url": "https://en.wikipedia.org/wiki/East_Wood_Affair"
+        },
+        {
+            "name": "A Yank on the Burma Road",
+            "url": "https://en.wikipedia.org/wiki/A_Yank_on_the_Burma_Road"
+        },
+        {
+            "name": "Graham Allison",
+            "url": "https://en.wikipedia.org/wiki/Destined_for_War"
+        },
+        {
+            "name": "United Nations Forces in the Korean War",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_Forces_in_the_Korean_War"
+        },
+        {
+            "name": "List of wars involving the Republic of China",
+            "url": "https://en.wikipedia.org/wiki/List_of_wars_involving_the_Republic_of_China"
+        },
+        {
+            "name": "Third Battle of Seoul",
+            "url": "https://en.wikipedia.org/wiki/Third_Battle_of_Seoul"
+        },
+        {
+            "name": "Trade policy of China",
+            "url": "https://en.wikipedia.org/wiki/Trade_policy_of_China"
+        },
+        {
+            "name": "Terminal High Altitude Area Defense",
+            "url": "https://en.wikipedia.org/wiki/Terminal_High_Altitude_Area_Defense"
+        },
+        {
+            "name": "Permanent normal trade relations",
+            "url": "https://en.wikipedia.org/wiki/Permanent_normal_trade_relations"
+        },
+        {
+            "name": "Lady from Chungking",
+            "url": "https://en.wikipedia.org/wiki/Lady_from_Chungking"
+        },
+        {
+            "name": "2024 United States Department of the Treasury hack",
+            "url": "https://en.wikipedia.org/wiki/2024_United_States_Department_of_the_Treasury_hack"
+        },
+        {
+            "name": "Sarah Pike Conger",
+            "url": "https://en.wikipedia.org/wiki/Sarah_Pike_Conger"
+        },
+        {
+            "name": "History of tariffs in the United States",
+            "url": "https://en.wikipedia.org/wiki/History_of_tariffs_in_the_United_States"
+        },
+        {
+            "name": "Military history of Taiwan",
+            "url": "https://en.wikipedia.org/wiki/Military_history_of_Taiwan"
+        },
+        {
+            "name": "File:\"China-First to Fight - NARA - 513567.tif - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/File:%22China-First_to_Fight_-_NARA_-_513567.tif"
+        },
+        {
+            "name": "People's Volunteer Army",
+            "url": "https://en.wikipedia.org/wiki/People's_Volunteer_Army"
+        },
+        {
+            "name": "Category:United States–Asian relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:United_States%E2%80%93Asian_relations"
+        },
+        {
+            "name": "Category:Military history of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_history_of_China"
+        },
+        {
+            "name": "Battle of Ganghwa",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Ganghwa"
+        },
+        {
+            "name": "Liang Cheng",
+            "url": "https://en.wikipedia.org/wiki/Liang_Cheng"
+        },
+        {
+            "name": "Shawn Carpenter",
+            "url": "https://en.wikipedia.org/wiki/Shawn_Carpenter"
+        },
+        {
+            "name": "Japanese entry into World War I",
+            "url": "https://en.wikipedia.org/wiki/Japanese_entry_into_World_War_I"
+        },
+        {
+            "name": "1905 in China",
+            "url": "https://en.wikipedia.org/wiki/1905_in_China"
+        },
+        {
+            "name": "Category:19th-century military history of China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:19th-century_military_history_of_China"
+        },
+        {
+            "name": "List of military equipment used in the Korean War",
+            "url": "https://en.wikipedia.org/wiki/List_of_military_equipment_used_in_the_Korean_War"
+        },
+        {
+            "name": "Second Kuomintang-Communist Civil War",
+            "url": "https://en.wikipedia.org/wiki/Second_Kuomintang-Communist_Civil_War"
+        },
+        {
+            "name": "NATO bombing of the Radio Television of Serbia headquarters",
+            "url": "https://en.wikipedia.org/wiki/NATO_bombing_of_RTS"
+        },
+        {
+            "name": "US missile defense system in Asia-Pacific Region",
+            "url": "https://en.wikipedia.org/wiki/US_missile_defense_system_in_Asia-Pacific_Region"
+        },
+        {
+            "name": "History of China–India relations",
+            "url": "https://en.wikipedia.org/wiki/History_of_China%E2%80%93India_relations"
+        },
+        {
+            "name": "John Goodnow",
+            "url": "https://en.wikipedia.org/wiki/John_Goodnow"
+        },
+        {
+            "name": "Project 640",
+            "url": "https://en.wikipedia.org/wiki/FJ_ABM"
+        },
+        {
+            "name": "Chinese Civil War",
+            "url": "https://en.wikipedia.org/wiki/Chinese_Civil_War"
+        },
+        {
+            "name": "2024 United States telecommunications hack",
+            "url": "https://en.wikipedia.org/wiki/2024_United_States_telecommunications_hack"
+        },
+        {
+            "name": "China and the World Trade Organization",
+            "url": "https://en.wikipedia.org/wiki/China_and_the_WTO"
+        },
+        {
+            "name": "Executive Order 12711",
+            "url": "https://en.wikipedia.org/wiki/Executive_Order_12711"
+        },
+        {
+            "name": "China in the Vietnam War",
+            "url": "https://en.wikipedia.org/wiki/China_in_the_Vietnam_War"
+        },
+        {
+            "name": "China Relief Expedition",
+            "url": "https://en.wikipedia.org/wiki/China_Relief_Expedition"
+        },
+        {
+            "name": "Category:Chinese military personnel of World War II - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Chinese_military_personnel_of_World_War_II"
+        },
+        {
+            "name": "Xihu Trough",
+            "url": "https://en.wikipedia.org/wiki/Xihu_Trough"
+        },
+        {
+            "name": "Soviet Union in the Korean War",
+            "url": "https://en.wikipedia.org/wiki/Soviet_Union_in_the_Korean_War"
+        },
+        {
+            "name": "Cairo Declaration (film)",
+            "url": "https://en.wikipedia.org/wiki/Cairo_Declaration_(film)"
+        },
+        {
+            "name": "State Department: File 649",
+            "url": "https://en.wikipedia.org/wiki/State_Department:_File_649"
+        },
+        {
+            "name": "Japan during World War I",
+            "url": "https://en.wikipedia.org/wiki/Japan_during_World_War_I"
+        },
+        {
+            "name": "Shanghai rubber stock market crisis",
+            "url": "https://en.wikipedia.org/wiki/Shanghai_rubber_stock_market_crisis"
+        },
+        {
+            "name": "Kosmos 2312",
+            "url": "https://en.wikipedia.org/wiki/Kosmos_2312"
+        },
+        {
+            "name": "Talk:Letter of the two sorries - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Letter_of_the_two_sorries"
+        },
+        {
+            "name": "American China Development Company",
+            "url": "https://en.wikipedia.org/wiki/American_China_Development_Company"
+        },
+        {
+            "name": "Trump tariffs",
+            "url": "https://en.wikipedia.org/wiki/Trump_tariffs"
+        },
+        {
+            "name": "Larry Wu-tai Chin",
+            "url": "https://en.wikipedia.org/wiki/Larry_Wu-tai_Chin"
+        },
+        {
+            "name": "Byzantine Foothold",
+            "url": "https://en.wikipedia.org/wiki/Byzantine_Foothold"
+        },
+        {
+            "name": "George Seward (diplomat)",
+            "url": "https://en.wikipedia.org/wiki/George_F._Seward"
+        },
+        {
+            "name": "FONOPs during the Obama administration",
+            "url": "https://en.wikipedia.org/wiki/FONOPs_during_the_Obama_administration"
+        },
+        {
+            "name": "The Globalization of Intellectual Property Rights",
+            "url": "https://en.wikipedia.org/wiki/The_Globalization_of_Intellectual_Property_Rights"
+        },
+        {
+            "name": "Hermann Speck von Sternburg",
+            "url": "https://en.wikipedia.org/wiki/Hermann_Freiherr_Speck_von_Sternburg"
+        },
+        {
+            "name": "Durham Stevens",
+            "url": "https://en.wikipedia.org/wiki/Durham_Stevens"
+        }
+    ]
+}
