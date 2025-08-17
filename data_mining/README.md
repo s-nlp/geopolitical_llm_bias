@@ -94,6 +94,35 @@ Run the merge:
 python -m data_mining.merge_final_json --output ./data/final_dataset.json
 ```
 
+### 4) Translate dataset to multiple languages
+
+Translates the final dataset with propaganda viewpoints to multiple target languages, including topic names, descriptions, viewpoints, and finds corresponding Wikipedia pages.
+
+```bash
+python -m data_mining.translate_dataset
+```
+
+This script:
+- Detects the current language of content in the dataset using LLM
+- Translates topic names, descriptions, and viewpoints to target languages: `ar, en, fr, he, ru, zh, de` using LLM
+- Finds corresponding Wikipedia URLs in target languages using Wikipedia API (keeps original URL if target language version doesn't exist)
+- Restructures the output with language codes as top-level keys
+
+**Input**: `data/final_dataset_with_propaganda.json`
+**Output**: `data/final_dataset_with_propaganda_translated.json`
+
+The output structure becomes:
+```json
+{
+  "en": { "llm": "...", "data": [...] },
+  "fr": { "llm": "...", "data": [...] },
+  "ru": { "llm": "...", "data": [...] },
+  ...
+}
+```
+
+Each language section contains the complete dataset structure with all content translated to that language.
+
 ## Method
 
 ### Task and scope

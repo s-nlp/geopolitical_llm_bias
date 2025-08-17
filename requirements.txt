@@ -1,5 +1,6 @@
 pandas
 rich
+tqdm
 httpx
 python-dotenv
 pydantic
@@ -10,5 +11,5 @@ instructor==1.8.0
 exa-py
 sentence-transformers
 scikit-learn
-python-telegram-bot==21.4
+python-telegram-bot[rate-limiter]==21.4
 rapidfuzz==3.9.7

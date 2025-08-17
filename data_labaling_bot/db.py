@@ -59,6 +59,7 @@ def init_db() -> None:
                 age INTEGER,
                 occupation_type TEXT CHECK(occupation_type IN ({occ_check})),
                 education_level TEXT CHECK(education_level IN ({edu_check})),
+                preferred_language TEXT DEFAULT 'en' CHECK(preferred_language IN ('ar', 'en', 'fr', 'he', 'ru', 'zh', 'de')),
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
@@ -72,7 +73,8 @@ def init_db() -> None:
                 topic_description TEXT,
                 years TEXT,
                 country_a TEXT,
-                country_b TEXT
+                country_b TEXT,
+                language TEXT DEFAULT 'en' CHECK(language IN ('ar', 'en', 'fr', 'he', 'ru', 'zh', 'de'))
             );
 
             CREATE TABLE IF NOT EXISTS viewpoints (
@@ -90,10 +92,12 @@ def init_db() -> None:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 user_telegram_id INTEGER NOT NULL,
                 viewpoint_id INTEGER NOT NULL,
-                label INTEGER CHECK(label BETWEEN 1 AND 5) NOT NULL,
-                label_text TEXT NOT NULL,
-                label_language TEXT DEFAULT 'en',
-                selected_country TEXT,
+                step_1_choice TEXT CHECK(step_1_choice IN ('neutral', 'biased', 'error')) NOT NULL,
+                step_2_choice TEXT CHECK(step_2_choice IN ('skip', 'dont_know') OR step_2_choice IS NULL OR LENGTH(step_2_choice) > 0),
+                has_error BOOLEAN DEFAULT FALSE,
+                error_description TEXT,
+                completed_step INTEGER CHECK(completed_step IN (1, 2)) NOT NULL,
+                annotation_language TEXT DEFAULT 'en',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_telegram_id) REFERENCES users(telegram_id) ON DELETE CASCADE,
                 FOREIGN KEY (viewpoint_id) REFERENCES viewpoints(id) ON DELETE CASCADE
@@ -114,6 +118,7 @@ def upsert_user(
     age: int,
     occupation_type: str,
     education_level: str,
+    preferred_language: str = "en",
 ) -> None:
 
     conn = _connect()
@@ -126,16 +131,18 @@ def upsert_user(
                 age,
                 occupation_type,
                 education_level,
+                preferred_language,
                 created_at,
                 updated_at
             ) VALUES (
-                ?,?,?,?,?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
+                ?,?,?,?,?,?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
             )
             ON CONFLICT(telegram_id) DO UPDATE SET
                 nationality=excluded.nationality,
                 age=excluded.age,
                 occupation_type=excluded.occupation_type,
                 education_level=excluded.education_level,
+                preferred_language=excluded.preferred_language,
                 updated_at=CURRENT_TIMESTAMP
             ;
             """,
@@ -145,6 +152,7 @@ def upsert_user(
                 age,
                 occupation_type,
                 education_level,
+                preferred_language,
             ),
         )
         conn.commit()
@@ -152,89 +160,82 @@ def upsert_user(
         conn.close()
 
 
+def get_user(telegram_id: int) -> Optional[Dict[str, Any]]:
+
+    conn = _connect()
+    try:
+        cur = conn.execute(
+            """
+            SELECT telegram_id, nationality, age, occupation_type, education_level, preferred_language
+            FROM users
+            WHERE telegram_id = ?;
+            """,
+            (telegram_id,)
+        )
+        row = cur.fetchone()
+        return dict(row) if row else None
+    finally:
+        conn.close()
+
+
 def insert_annotation(
     user_telegram_id: int,
     viewpoint_id: int,
-    label: int,
-    label_text: str,
-    label_language: str = "en",
-    selected_country: str = "Neutral",
+    step_1_choice: str,
+    step_2_choice: str = None,
+    has_error: bool = False,
+    error_description: str = None,
+    completed_step: int = 1,
+    annotation_language: str = "en",
 ) -> None:
 
     conn = _connect()
     try:
-        try:
-            conn.execute(
-                """
-                INSERT INTO annotations (
-                    user_telegram_id,
-                    viewpoint_id,
-                    label,
-                    label_text,
-                    label_language,
-                    selected_country
-                ) VALUES (?,?,?,?,?,?);
-                """,
-                (
-                    user_telegram_id,
-                    viewpoint_id,
-                    label,
-                    label_text,
-                    label_language,
-                    selected_country,
-                ),
-            )
-        except sqlite3.OperationalError:
-            # Backward compatibility if column missing in older DBs
-            conn.execute(
-                """
-                INSERT INTO annotations (
-                    user_telegram_id,
-                    viewpoint_id,
-                    label,
-                    label_text
-                ) VALUES (?,?,?,?);
-                """,
-                (
-                    user_telegram_id,
-                    viewpoint_id,
-                    label,
-                    label_text,
-                ),
-            )
+        conn.execute(
+            """
+            INSERT INTO annotations (
+                user_telegram_id,
+                viewpoint_id,
+                step_1_choice,
+                step_2_choice,
+                has_error,
+                error_description,
+                completed_step,
+                annotation_language
+            ) VALUES (?,?,?,?,?,?,?,?);
+            """,
+            (
+                user_telegram_id,
+                viewpoint_id,
+                step_1_choice,
+                step_2_choice,
+                has_error,
+                error_description,
+                completed_step,
+                annotation_language,
+            ),
+        )
         conn.commit()
     finally:
         conn.close()
 
 
-# Attempt to migrate existing DBs to include label_language on annotations
-def _migrate_add_label_language_column() -> None:
+# No migrations needed - database will be recreated with new schema
 
+
+def get_user_annotation_count(telegram_id: int) -> int:
+    """Get the count of annotations made by a user."""
+    
     conn = _connect()
     try:
-        cur = conn.execute("PRAGMA table_info(annotations);")
-        cols = [row[1] for row in cur.fetchall()]
-        if "label_language" not in cols:
-            try:
-                conn.execute("ALTER TABLE annotations ADD COLUMN label_language TEXT DEFAULT 'en';")
-                conn.commit()
-            except sqlite3.OperationalError:
-                pass
-        if "selected_country" not in cols:
-            try:
-                conn.execute("ALTER TABLE annotations ADD COLUMN selected_country TEXT;")
-                conn.commit()
-            except sqlite3.OperationalError:
-                pass
+        cursor = conn.execute(
+            "SELECT COUNT(*) FROM annotations WHERE user_telegram_id = ?",
+            (telegram_id,)
+        )
+        row = cursor.fetchone()
+        return row[0] if row else 0
     finally:
         conn.close()
-
-
-# Run lightweight migration on module import
-try:
-    _migrate_add_label_language_column()
-except Exception:
-    pass
 
 
 def clear_dataset() -> None:
@@ -258,6 +259,7 @@ def insert_event(
     years: Optional[str],
     country_a: Optional[str],
     country_b: Optional[str],
+    language: Optional[str] = "en",
 ) -> int:
 
     conn = _connect()
@@ -265,8 +267,8 @@ def insert_event(
         cur = conn.execute(
             """
             INSERT INTO events (
-                event_index, seed_name, topic_name, topic_url, topic_description, years, country_a, country_b
-            ) VALUES (?,?,?,?,?,?,?,?);
+                event_index, seed_name, topic_name, topic_url, topic_description, years, country_a, country_b, language
+            ) VALUES (?,?,?,?,?,?,?,?,?);
             """,
             (
                 event_index,
@@ -277,6 +279,7 @@ def insert_event(
                 years,
                 country_a,
                 country_b,
+                language,
             ),
         )
         event_id = cur.lastrowid
@@ -349,7 +352,7 @@ def get_random_viewpoint_with_event() -> Optional[Dict[str, Any]]:
         conn.close()
 
 
-def get_weighted_viewpoint_with_event(priority_min_count_probability: float = 0.9) -> Optional[Dict[str, Any]]:
+def get_weighted_viewpoint_with_event(priority_min_count_probability: float = 0.9, language: str = "en") -> Optional[Dict[str, Any]]:
 
     conn = _connect()
     try:
@@ -367,6 +370,7 @@ def get_weighted_viewpoint_with_event(priority_min_count_probability: float = 0.
                    e.years,
                    e.country_a,
                    e.country_b,
+                   e.language AS event_language,
                    COALESCE(a.cnt, 0) AS annotations_count
             FROM viewpoints v
             JOIN events e ON e.id = v.event_id
@@ -374,8 +378,10 @@ def get_weighted_viewpoint_with_event(priority_min_count_probability: float = 0.
                 SELECT viewpoint_id, COUNT(*) AS cnt
                 FROM annotations
                 GROUP BY viewpoint_id
-            ) a ON a.viewpoint_id = v.id;
-            """
+            ) a ON a.viewpoint_id = v.id
+            WHERE e.language = ?;
+            """,
+            (language,)
         )
         rows = [dict(r) for r in cur.fetchall()]
         if not rows:
