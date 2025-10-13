@@ -13,7 +13,7 @@ import re
 import instructor
 from exa_py import Exa
 from openai import OpenAI
-from pydantic import BaseModel, Field, HttpUrl
+from pydantic import BaseModel, Field
 from tqdm.auto import tqdm
 
 from utils import (
@@ -30,7 +30,7 @@ logger.setLevel(logging.INFO)
 
 
 class EventExtracted(BaseModel):
-    url: HttpUrl
+    url: str
     name: str
     years: str = Field(..., description="Year or year range, e.g., '1939-1945'")
     short_description: str = Field(..., description="Concise factual description (<=80 words)")
@@ -41,7 +41,7 @@ class EventExtracted(BaseModel):
 
 class LanguagePerspective(BaseModel):
     language: str
-    url: Optional[HttpUrl] = None
+    url: Optional[str] = None
     key_points: List[str] = Field(
         default_factory=list,
         description="3-5 brief points capturing emphasis/stance in that language article",
@@ -234,13 +234,13 @@ def finalize(
     logger.info(f"Loaded {len(seeds)} unique seeds.")
 
     def _process(seed: EventSeed) -> Optional[DatasetEvent]:
-        try:
+        # try:
             extracted: EventExtracted = extract_event_from_wiki(instructor_llm, exa, seed)
             debiased: DebiasedEventSummary = debias_event(llm, instructor_llm, exa, extracted, langs)
             return DatasetEvent(seed=seed, extracted=extracted, debiased=debiased)
-        except Exception as e:
-            logger.warning(f"Failed processing seed {seed.url}: {e}")
-            return None
+        # except Exception as e:
+        #     logger.warning(f"Failed processing seed {seed.url}: {e}")
+        #     return None
 
     dataset: List[DatasetEvent] = []
     with ThreadPoolExecutor(max_workers=max(1, int(workers))) as pool:
@@ -276,7 +276,7 @@ def main() -> None:
         default=",".join(DEFAULT_LANGS),
         help="Comma-separated list of Wikipedia languages to compare (e.g., en,fr,ru)",
     )
-    parser.add_argument("--workers", type=int, default=8, help="Number of parallel threads")
+    parser.add_argument("--workers", type=int, default=4, help="Number of parallel threads")
     args = parser.parse_args()
 
     langs = [s.strip() for s in args.langs.split(",") if s.strip()]

@@ -32,7 +32,7 @@ def main() -> None:
     if args.inputs:
         input_files = [Path(p) if Path(p).is_absolute() else (Path.cwd() / p) for p in args.inputs]
     else:
-        data_dir = Path(__file__).resolve().parent / "data"
+        data_dir = Path(__file__).resolve().parent / "data2"
         input_files = [
             data_dir / "USSR_UK_final.json",
             data_dir / "USA_USSR_final.json",

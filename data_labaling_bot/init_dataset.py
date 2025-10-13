@@ -17,8 +17,8 @@ def _get_default_dataset_path() -> str:
             os.path.dirname(__file__),
             "..",
             "data_mining",
-            "data",
-            "final_dataset_with_propaganda_translated.json",
+            "data2",
+            "final_dataset_propaganda_cleaned_translated.json",
         )
     )
 

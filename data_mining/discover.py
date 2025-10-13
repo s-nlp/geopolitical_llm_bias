@@ -7,12 +7,14 @@ import re
 import logging
 from datetime import datetime
 from typing import Iterable, List, Optional
+from rich.progress import track
 
 import instructor
 from exa_py import Exa
 from openai import OpenAI
 from pydantic import BaseModel, Field, HttpUrl
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from utils import (
     DEFAULT_LANGS,
@@ -34,6 +36,53 @@ class SearchQueries(BaseModel):
     queries: List[str] = Field(
         ..., description="Distinct, well-formed search queries (no site: filters)"
     )
+
+
+class BilateralConflictVerdict(BaseModel):
+    ok: bool = Field(..., description="True iff the article describes an event where the two given countries are on opposing sides or have conflicting stances toward each other (including proxy conflicts).")
+    reason: str = Field(..., description="One-sentence justification.")
+
+
+# ===== Helper: Classify bilateral conflict relevance =====
+def _is_bilateral_conflict_page(
+    client: instructor.Instructor,
+    exa: Exa,
+    url: str,
+    event_title: str,
+    country_a: str,
+    country_b: str,
+) -> bool:
+    try:
+        contents = exa.get_contents(urls=[url], text=True)
+        page_text = ""
+        if contents and getattr(contents, "results", None):
+            page_text = contents.results[0].text or ""
+        snippet = page_text[:64000] if page_text else ""
+
+        system = (
+            "Decide if a Wikipedia page is about a specific historical event where two specified countries are on opposing sides or have conflicting stances toward each other's actions. "
+            "Return true only if BOTH countries are salient participants AND they are adversarial/opposed (including proxy conflicts or confrontations). "
+            "Return false if they are on the same side/allies, if one is only marginally mentioned, or if the page is a broad multi-country topic without a bilateral opposition focus."
+        )
+        user = (
+            f"Countries: {country_a} vs {country_b}.\n"
+            f"Event/page title: {event_title}\n"
+            f"URL: {url}\n\n"
+            "Page content (may be truncated or empty):\n" + snippet
+        )
+
+        verdict: BilateralConflictVerdict = client.chat.completions.create(  # type: ignore
+            model=OPENAI_MODEL,
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            response_model=BilateralConflictVerdict,
+        )
+        return bool(getattr(verdict, "ok", False))
+    except Exception as e:
+        logger.error(f"Error filtering {url}: {e}")
+        return False
 
 
 # ===== Step 1: Discover events =====
@@ -113,16 +162,26 @@ def discover_events(
     logger.info(f"Generated {len(queries)} search queries:{'; '.join(queries)}")
 
     results = []
-    for q in queries:
-        r = exa.search(
-            q,
-            type="neural",
-            use_autoprompt=True,
-            num_results=min(20, max_events * 2),
-            include_domains=include_domains,
-        )
-        # Each result has: id, title, url, score, ...
-        results.extend(r.results)
+    num_results = min(20, max_events * 2)
+    with ThreadPoolExecutor(max_workers=min(8, max(1, len(queries)))) as executor:
+        future_to_query = {
+            executor.submit(
+                exa.search,
+                q,
+                type="neural",
+                use_autoprompt=True,
+                num_results=num_results,
+                include_domains=include_domains,
+            ): q
+            for q in queries
+        }
+        for future in track(as_completed(future_to_query), total=len(future_to_query), description="Searching..."):
+            try:
+                r = future.result()
+                if r and getattr(r, "results", None) is not None:
+                    results.extend(r.results)
+            except Exception:
+                continue
     logger.info(f"Found {len(results)} results.")
 
     # Deduplicate by URL and keep top by score
@@ -137,15 +196,34 @@ def discover_events(
         if url not in seen:
             seen[url] = {"title": getattr(item, "title", ""), "score": score, "id": getattr(item, "id", None)}
 
-    # Build seeds directly from unique URLs, keeping title as name
-    ranked = sorted(seen.items(), key=lambda kv: kv[1]["score"], reverse=True)[: max_events]
+    # Rank by score (beyond max_events to allow filtering) and filter by bilateral conflict relevance
+    ranked = sorted(seen.items(), key=lambda kv: kv[1]["score"], reverse=True)
     seeds: List[EventSeed] = []
-    for url, meta in ranked:
+    # Parallel relevance filtering
+    def _submit_filter(executor: ThreadPoolExecutor, item: tuple[str, dict]):
+        url, meta = item
         title = meta.get("title") or url.split("/")[-1].replace("_", " ")
-        try:
-            seeds.append(EventSeed(name=title, url=url))
-        except Exception:
-            continue
+        return executor.submit(
+            lambda: (
+                EventSeed(name=title, url=url)
+                if _is_bilateral_conflict_page(client, exa, url, title, country_a, country_b)
+                else None
+            )
+        )
+
+    with ThreadPoolExecutor(max_workers=min(8, max(1, len(ranked)))) as executor:
+        futures = [_submit_filter(executor, item) for item in ranked]
+        for future in track(as_completed(futures), total=len(futures), description="Filtering..."):
+            try:
+                seed = future.result()
+                if seed is not None:
+                    seeds.append(seed)
+                    if len(seeds) >= max_events:
+                        # Best-effort cancel remaining work
+                        executor.shutdown(wait=False, cancel_futures=True)
+                        break
+            except Exception:
+                continue
     logger.info(f"Returning {len(seeds)} seeds.")
     return seeds
 
@@ -209,7 +287,7 @@ def main() -> None:
     parser.add_argument("country_b", type=str)
     parser.add_argument("--start", type=int, default=1900)
     parser.add_argument("--end", type=int, default=2005)
-    parser.add_argument("--max-events", type=int, default=15)
+    parser.add_argument("--max-events", type=int, default=200)
     parser.add_argument(
         "--langs",
         type=str,

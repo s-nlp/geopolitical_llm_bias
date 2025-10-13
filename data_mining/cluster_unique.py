@@ -111,7 +111,7 @@ def cluster_and_select(
             logger.error(f"Error picking unique seed for cluster {candidates}: {e}")
             return [candidates[0]]
 
-    with ThreadPoolExecutor(max_workers=max(1, int(workers))) as pool:
+    with ThreadPoolExecutor(max_workers=min(len(candidate_lists), workers)) as pool:
         for chosen in tqdm(
             pool.map(_process_candidates, candidate_lists),
             total=len(candidate_lists),
@@ -159,7 +159,7 @@ def main() -> None:
         default="sentence-transformers/all-mpnet-base-v2",
         help="SentenceTransformer model for embeddings",
     )
-    parser.add_argument("--workers", type=int, default=4, help="Number of parallel threads")
+    parser.add_argument("--workers", type=int, default=8, help="Number of parallel threads")
     args = parser.parse_args()
 
     cluster_and_select(
@@ -167,7 +167,7 @@ def main() -> None:
         output_json_path=args.output,
         distance_threshold=args.threshold,
         embedding_model_name=args.embed_model,
-        workers=args.workers,
+        workers=int(args.workers),
     )
 
 

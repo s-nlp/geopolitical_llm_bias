@@ -19,6 +19,7 @@ TRANSLATIONS = {
     "en": {
         # Welcome and instructions
         "welcome": "<b>Welcome!</b>",
+        "welcome_acknowledgment": "🎓 <b>Special Recognition:</b> Users who label 50 viewpoints will be acknowledged in our research paper!",
         "instructions_title": "<b>How labeling works</b> ✍️",
         "instructions_step1": "1) 📘 You will see a historical event: <b>title</b>, <b>years</b>, a <b>Wikipedia</b> link, and a short description.",
         "instructions_step2": "2) 🧠 You'll get <b>one viewpoint</b> about this event. It may be neutral or reflect a country's narrative.",
@@ -34,6 +35,7 @@ TRANSLATIONS = {
         "detailed_instructions_title": "\n<b>📖 What does 'Biased Viewpoint' or 'Country Position' mean?</b>",
         "detailed_instructions_biased": "A <b>biased viewpoint</b> presents historical events from a specific country's perspective, often emphasizing their positive role or justifying their actions while potentially downplaying negative aspects or opposing views.",
         "detailed_instructions_examples": "Examples:\n• Emphasizing only one side's suffering in a conflict\n• Presenting disputed territory claims as unquestionable facts\n• Using loaded language that favors one party\n• Omitting key context that might change the interpretation",
+        "detailed_instructions_misinformation": "\n<b>🔍 Important distinction: Misinformation vs. Errors</b>\nIf a viewpoint contains misinformation that appears to be used for manipulation or to advance a particular narrative, classify it as <b>biased</b> rather than an error. Only mark something as an 'error' if it contains clear factual mistakes without apparent manipulative intent.",
         "detailed_instructions_reading": "\n<b>📚 Important: Read about the historical event!</b>",
         "detailed_instructions_wikipedia": "Before labeling, please familiarize yourself with the historical event. If you're not well-informed about it, <b>read the Wikipedia article</b> linked above to understand the basic facts and different perspectives involved.",
         "detailed_instructions_context": "Understanding the historical context helps you better identify when a viewpoint presents only one side of a complex story versus providing a balanced, neutral description.",
@@ -73,18 +75,28 @@ TRANSLATIONS = {
         
         # Labeling - Step 1
         "step1_instruction": "Please indicate if this viewpoint is:",
-        "step1_neutral": "🟢 Neutral/Unbiased",
-        "step1_biased": "🔴 Country Position/Biased", 
-        "step1_error": "⚠️ Contains Error/Incorrect",
+        "step1_neutral": "🟢 ✅ Neutral/Unbiased",
+        "step1_biased": "🔴 ⚖️ Country Position/Biased", 
+        "step1_error": "⚠️ ❌ Contains Error/Incorrect",
         
         # Labeling - Step 2
         "step2_instruction": "Which country's position does this represent?",
-        "step2_skip": "🤷 Skip/Don't Know",
-        "step2_error": "⚠️ Contains Error/Incorrect",
+        "step2_skip": "🤷 ❓ Skip/Don't Know",
+        "step2_error": "⚠️ ❌ Contains Error/Incorrect",
         
         # Labeling - General
         "step1_completed": "Step 1 completed. Now please specify which country's position this represents:",
         "annotation_saved": "✅ Your annotation has been saved!",
+        "milestone_10": "🎉 Congratulations! You've labeled 10 viewpoints! You're doing great work!",
+        "milestone_25": "🌟 Amazing! You've reached 25 viewpoints! Your contribution is really valuable!",
+        "milestone_40": "🏆 Outstanding! 40 viewpoints labeled! You're making a significant impact on our research!",
+        
+        # Event grouping
+        "event_group_info": "📚 <b>Event Group:</b> This event has {total} viewpoints. You're on viewpoint {current} of {total}.",
+        "next_viewpoint": "➡️ Next Viewpoint",
+        "previous_viewpoint": "⬅️ Previous Viewpoint", 
+        "finish_event": "✅ Finish Event",
+        "event_complete": "🎉 You've completed all viewpoints for this event! Great job!",
         "error_reported": "⚠️ Error reported. Thank you for the feedback!",
         "no_viewpoints": "No viewpoints available in DB. Please run init script.",
         "no_active_item": "No active item. Use /next to continue.",
@@ -134,6 +146,9 @@ TRANSLATIONS = {
         "education_other": "Other",
         "education_prefer_not_to_say": "Prefer not to say",
         
+        # Registration
+        "registration_required": "⚠️ <b>Registration Required</b>\n\nYou need to complete registration before using the bot. Please use /start to begin the registration process.",
+        
         # Errors
         "error_general": "An error occurred. Please try again.",
     },
@@ -141,6 +156,7 @@ TRANSLATIONS = {
     "ar": {
         # Welcome and instructions
         "welcome": "<b>أهلاً وسهلاً!</b>",
+        "welcome_acknowledgment": "🎓 <b>اعتراف خاص:</b> المستخدمون الذين يصنفون 50 وجهة نظر سيتم ذكرهم في ورقتنا البحثية!",
         "instructions_title": "<b>كيف يعمل التصنيف</b> ✍️",
         "instructions_step1": "1) 📘 ستشاهد حدثاً تاريخياً: <b>العنوان</b>، <b>السنوات</b>، رابط <b>ويكيبيديا</b>، ووصف قصير.",
         "instructions_step2": "2) 🧠 ستحصل على <b>وجهة نظر واحدة</b> حول هذا الحدث. قد تكون محايدة أو تعكس سردية دولة معينة.",
@@ -156,6 +172,7 @@ TRANSLATIONS = {
         "detailed_instructions_title": "\n<b>📖 ما معنى 'وجهة نظر منحازة' أو 'موقف الدولة'؟</b>",
         "detailed_instructions_biased": "<b>وجهة النظر المنحازة</b> تقدم الأحداث التاريخية من منظور دولة معينة، وغالباً ما تؤكد على دورها الإيجابي أو تبرر أفعالها بينما قد تقلل من الجوانب السلبية أو وجهات النظر المعارضة.",
         "detailed_instructions_examples": "أمثلة:\n• التأكيد على معاناة جانب واحد فقط في صراع\n• تقديم ادعاءات الأراضي المتنازع عليها كحقائق لا جدال فيها\n• استخدام لغة محملة تفضل طرفاً واحداً\n• حذف سياق مهم قد يغير التفسير",
+        "detailed_instructions_misinformation": "\n<b>🔍 تمييز مهم: المعلومات المضللة مقابل الأخطاء</b>\nإذا كانت وجهة النظر تحتوي على معلومات مضللة يبدو أنها تُستخدم للتلاعب أو لتعزيز سردية معينة، صنفها كـ<b>منحازة</b> وليس كخطأ. قم بتمييز شيء كـ'خطأ' فقط إذا كان يحتوي على أخطاء واقعية واضحة دون نية تلاعبية واضحة.",
         "detailed_instructions_reading": "\n<b>📚 مهم: اقرأ عن الحدث التاريخي!</b>",
         "detailed_instructions_wikipedia": "قبل التصنيف، يرجى التعرف على الحدث التاريخي. إذا لم تكن مطلعاً عليه بشكل جيد، <b>اقرأ مقال ويكيبيديا</b> المرتبط أعلاه لفهم الحقائق الأساسية ووجهات النظر المختلفة المعنية.",
         "detailed_instructions_context": "فهم السياق التاريخي يساعدك على تحديد متى تقدم وجهة نظر جانباً واحداً فقط من قصة معقدة مقابل تقديم وصف متوازن ومحايد.",
@@ -195,18 +212,28 @@ TRANSLATIONS = {
         
         # Labeling - Step 1
         "step1_instruction": "يرجى تحديد ما إذا كانت وجهة النظر هذه:",
-        "step1_neutral": "🟢 محايدة/غير منحازة",
-        "step1_biased": "🔴 موقف دولة/منحازة", 
-        "step1_error": "⚠️ تحتوي على خطأ/غير صحيحة",
+        "step1_neutral": "🟢 ✅ محايدة/غير منحازة",
+        "step1_biased": "🔴 ⚖️ موقف دولة/منحازة", 
+        "step1_error": "⚠️ ❌ تحتوي على خطأ/غير صحيحة",
         
         # Labeling - Step 2
         "step2_instruction": "أي دولة تمثل وجهة النظر هذه؟",
-        "step2_skip": "🤷 تخطي/لا أعرف",
-        "step2_error": "⚠️ تحتوي على خطأ/غير صحيحة",
+        "step2_skip": "🤷 ❓ تخطي/لا أعرف",
+        "step2_error": "⚠️ ❌ تحتوي على خطأ/غير صحيحة",
         
         # Labeling - General
         "step1_completed": "تم إنجاز الخطوة الأولى. الآن يرجى تحديد أي دولة تمثل وجهة النظر هذه:",
         "annotation_saved": "✅ تم حفظ تصنيفك!",
+        "milestone_10": "🎉 تهانينا! لقد صنفت 10 وجهات نظر! أنت تقوم بعمل رائع!",
+        "milestone_25": "🌟 مذهل! لقد وصلت إلى 25 وجهة نظر! مساهمتك قيمة حقاً!",
+        "milestone_40": "🏆 متميز! 40 وجهة نظر مصنفة! أنت تحدث تأثيراً كبيراً على بحثنا!",
+        
+        # Event grouping
+        "event_group_info": "📚 <b>مجموعة الأحداث:</b> هذا الحدث يحتوي على {total} وجهة نظر. أنت في وجهة النظر {current} من {total}.",
+        "next_viewpoint": "➡️ وجهة النظر التالية",
+        "previous_viewpoint": "⬅️ وجهة النظر السابقة",
+        "finish_event": "✅ إنهاء الحدث",
+        "event_complete": "🎉 لقد أكملت جميع وجهات النظر لهذا الحدث! عمل رائع!",
         "error_reported": "⚠️ تم الإبلاغ عن خطأ. شكراً لك على التغذية الراجعة!",
         "no_viewpoints": "لا توجد وجهات نظر متاحة في قاعدة البيانات. يرجى تشغيل سكريبت التهيئة.",
         "no_active_item": "لا يوجد عنصر نشط. استخدم /next للمتابعة.",
@@ -256,6 +283,9 @@ TRANSLATIONS = {
         "education_other": "أخرى",
         "education_prefer_not_to_say": "أفضل عدم الإجابة",
         
+        # Registration
+        "registration_required": "⚠️ <b>التسجيل مطلوب</b>\n\nتحتاج إلى إكمال التسجيل قبل استخدام البوت. يرجى استخدام /start لبدء عملية التسجيل.",
+        
         # Errors
         "error_general": "حدث خطأ. يرجى المحاولة مرة أخرى.",
     },
@@ -263,6 +293,7 @@ TRANSLATIONS = {
     "fr": {
         # Welcome and instructions
         "welcome": "<b>Bienvenue !</b>",
+        "welcome_acknowledgment": "🎓 <b>Reconnaissance spéciale :</b> Les utilisateurs qui étiquettent 50 points de vue seront reconnus dans notre article de recherche !",
         "instructions_title": "<b>Comment fonctionne l'étiquetage</b> ✍️",
         "instructions_step1": "1) 📘 Vous verrez un événement historique : <b>titre</b>, <b>années</b>, un lien <b>Wikipédia</b>, et une courte description.",
         "instructions_step2": "2) 🧠 Vous obtiendrez <b>un point de vue</b> sur cet événement. Il peut être neutre ou refléter le récit d'un pays.",
@@ -278,6 +309,7 @@ TRANSLATIONS = {
         "detailed_instructions_title": "\n<b>📖 Que signifie 'Point de vue biaisé' ou 'Position d'un pays' ?</b>",
         "detailed_instructions_biased": "Un <b>point de vue biaisé</b> présente les événements historiques du point de vue d'un pays spécifique, mettant souvent l'accent sur son rôle positif ou justifiant ses actions tout en minimisant potentiellement les aspects négatifs ou les points de vue opposés.",
         "detailed_instructions_examples": "Exemples :\n• Mettre l'accent uniquement sur la souffrance d'un côté dans un conflit\n• Présenter les revendications territoriales disputées comme des faits indiscutables\n• Utiliser un langage orienté qui favorise une partie\n• Omettre un contexte clé qui pourrait changer l'interprétation",
+        "detailed_instructions_misinformation": "\n<b>🔍 Distinction importante : Désinformation vs. Erreurs</b>\nSi un point de vue contient de la désinformation qui semble être utilisée pour manipuler ou faire avancer un récit particulier, classez-le comme <b>biaisé</b> plutôt que comme une erreur. Ne marquez quelque chose comme 'erreur' que s'il contient des erreurs factuelles claires sans intention manipulatrice apparente.",
         "detailed_instructions_reading": "\n<b>📚 Important : Renseignez-vous sur l'événement historique !</b>",
         "detailed_instructions_wikipedia": "Avant d'étiqueter, veuillez vous familiariser avec l'événement historique. Si vous n'êtes pas bien informé à ce sujet, <b>lisez l'article Wikipédia</b> lié ci-dessus pour comprendre les faits de base et les différentes perspectives impliquées.",
         "detailed_instructions_context": "Comprendre le contexte historique vous aide à mieux identifier quand un point de vue ne présente qu'un seul côté d'une histoire complexe par rapport à fournir une description équilibrée et neutre.",
@@ -317,18 +349,28 @@ TRANSLATIONS = {
         
         # Labeling - Step 1
         "step1_instruction": "Veuillez indiquer si ce point de vue est :",
-        "step1_neutral": "🟢 Neutre/Non biaisé",
-        "step1_biased": "🔴 Position d'un pays/Biaisé", 
-        "step1_error": "⚠️ Contient une erreur/Incorrect",
+        "step1_neutral": "🟢 ✅ Neutre/Non biaisé",
+        "step1_biased": "🔴 ⚖️ Position d'un pays/Biaisé", 
+        "step1_error": "⚠️ ❌ Contient une erreur/Incorrect",
         
         # Labeling - Step 2
         "step2_instruction": "Quelle position de pays cela représente-t-il ?",
-        "step2_skip": "🤷 Passer/Je ne sais pas",
-        "step2_error": "⚠️ Contient une erreur/Incorrect",
+        "step2_skip": "🤷 ❓ Passer/Je ne sais pas",
+        "step2_error": "⚠️ ❌ Contient une erreur/Incorrect",
         
         # Labeling - General
         "step1_completed": "Étape 1 terminée. Maintenant, veuillez spécifier quelle position de pays cela représente :",
         "annotation_saved": "✅ Votre annotation a été sauvegardée !",
+        "milestone_10": "🎉 Félicitations ! Vous avez étiqueté 10 points de vue ! Vous faites un excellent travail !",
+        "milestone_25": "🌟 Incroyable ! Vous avez atteint 25 points de vue ! Votre contribution est vraiment précieuse !",
+        "milestone_40": "🏆 Exceptionnel ! 40 points de vue étiquetés ! Vous avez un impact significatif sur notre recherche !",
+        
+        # Event grouping
+        "event_group_info": "📚 <b>Groupe d'événements :</b> Cet événement a {total} points de vue. Vous êtes au point de vue {current} sur {total}.",
+        "next_viewpoint": "➡️ Point de vue suivant",
+        "previous_viewpoint": "⬅️ Point de vue précédent",
+        "finish_event": "✅ Terminer l'événement",
+        "event_complete": "🎉 Vous avez terminé tous les points de vue pour cet événement ! Excellent travail !",
         "error_reported": "⚠️ Erreur signalée. Merci pour le retour !",
         "no_viewpoints": "Aucun point de vue disponible dans la base de données. Veuillez exécuter le script d'initialisation.",
         "no_active_item": "Aucun élément actif. Utilisez /next pour continuer.",
@@ -378,6 +420,9 @@ TRANSLATIONS = {
         "education_other": "Autre",
         "education_prefer_not_to_say": "Préfère ne pas dire",
         
+        # Registration
+        "registration_required": "⚠️ <b>Inscription requise</b>\n\nVous devez compléter l'inscription avant d'utiliser le bot. Veuillez utiliser /start pour commencer le processus d'inscription.",
+        
         # Errors
         "error_general": "Une erreur s'est produite. Veuillez réessayer.",
     },
@@ -385,6 +430,7 @@ TRANSLATIONS = {
     "he": {
         # Welcome and instructions
         "welcome": "<b>ברוכים הבאים!</b>",
+        "welcome_acknowledgment": "🎓 <b>הכרה מיוחדת:</b> משתמשים שמתייגים 50 נקודות מבט יוזכרו במאמר המחקר שלנו!",
         "instructions_title": "<b>איך עובד התיוג</b> ✍️",
         "instructions_step1": "1) 📘 תראו אירוע היסטורי: <b>כותרת</b>, <b>שנים</b>, קישור <b>ויקיפדיה</b>, ותיאור קצר.",
         "instructions_step2": "2) 🧠 תקבלו <b>נקודת מבט אחת</b> על האירוע הזה. היא עשויה להיות נייטרלית או לשקף נרטיב של מדינה.",
@@ -400,6 +446,7 @@ TRANSLATIONS = {
         "detailed_instructions_title": "\n<b>📖 מה פירוש 'נקודת מבט מוטה' או 'עמדת מדינה'?</b>",
         "detailed_instructions_biased": "<b>נקודת מבט מוטה</b> מציגה אירועים היסטוריים מנקודת המבט של מדינה ספציפית, לעתים קרובות מדגישה את תפקידה החיובי או מצדיקה את פעולותיה תוך הקלה אפשרית של היבטים שליליים או דעות מנוגדות.",
         "detailed_instructions_examples": "דוגמאות:\n• הדגשת הסבל של צד אחד בלבד בקונפליקט\n• הצגת טענות שטח שנויות במחלוקת כעובדות שאין עליהן עוררין\n• שימוש בשפה טעונה המעדיפה צד אחד\n• השמטת הקשר מרכזי שעלול לשנות את הפרשנות",
+        "detailed_instructions_misinformation": "\n<b>🔍 הבחנה חשובה: דיסאינפורמציה מול שגיאות</b>\nאם נקודת מבט מכילה דיסאינפורמציה שנראית כמשמשת למניפולציה או לקידום נרטיב מסוים, סווגו אותה כ<b>מוטה</b> ולא כשגיאה. סמנו משהו כ'שגיאה' רק אם הוא מכיל טעויות עובדתיות ברורות ללא כוונה מניפולטיבית ברורה.",
         "detailed_instructions_reading": "\n<b>📚 חשוב: קראו על האירוע ההיסטורי!</b>",
         "detailed_instructions_wikipedia": "לפני התיוג, אנא היכרו עם האירוע ההיסטורי. אם אתם לא מכירים אותו היטב, <b>קראו את מאמר הוויקיפדיה</b> המקושר למעלה כדי להבין את העובדות הבסיסיות ואת נקודות המבט השונות המעורבות.",
         "detailed_instructions_context": "הבנת ההקשר ההיסטורי עוזרת לכם לזהות טוב יותר מתי נקודת מבט מציגה רק צד אחד של סיפור מורכב לעומת מתן תיאור מאוזן ונייטרלי.",
@@ -439,18 +486,28 @@ TRANSLATIONS = {
         
         # Labeling - Step 1
         "step1_instruction": "אנא ציינו אם נקודת המבט הזו היא:",
-        "step1_neutral": "🟢 נייטרלית/לא מוטה",
-        "step1_biased": "🔴 עמדת מדינה/מוטה", 
-        "step1_error": "⚠️ מכילה שגיאה/לא נכונה",
+        "step1_neutral": "🟢 ✅ נייטרלית/לא מוטה",
+        "step1_biased": "🔴 ⚖️ עמדת מדינה/מוטה", 
+        "step1_error": "⚠️ ❌ מכילה שגיאה/לא נכונה",
         
         # Labeling - Step 2
         "step2_instruction": "עמדה של איזו מדינה זה מייצג?",
-        "step2_skip": "🤷 דלג/לא יודע",
-        "step2_error": "⚠️ מכילה שגיאה/לא נכונה",
+        "step2_skip": "🤷 ❓ דלג/לא יודע",
+        "step2_error": "⚠️ ❌ מכילה שגיאה/לא נכונה",
         
         # Labeling - General
         "step1_completed": "שלב 1 הושלם. עכשיו אנא ציינו עמדה של איזו מדינה זה מייצג:",
         "annotation_saved": "✅ הערת השילוב שלכם נשמרה!",
+        "milestone_10": "🎉 מזל טוב! תייגתם 10 נקודות מבט! אתם עושים עבודה נהדרת!",
+        "milestone_25": "🌟 מדהים! הגעתם ל-25 נקודות מבט! התרומה שלכם באמת יקרה!",
+        "milestone_40": "🏆 יוצא דופן! 40 נקודות מבט מתויגות! אתם יוצרים השפעה משמעותית על המחקר שלנו!",
+        
+        # Event grouping
+        "event_group_info": "📚 <b>קבוצת אירועים:</b> לאירוע הזה יש {total} נקודות מבט. אתם בנקודת המבט {current} מתוך {total}.",
+        "next_viewpoint": "➡️ נקודת מבט הבאה",
+        "previous_viewpoint": "⬅️ נקודת מבט קודמת",
+        "finish_event": "✅ סיום אירוע",
+        "event_complete": "🎉 סיימתם את כל נקודות המבט לאירוע הזה! עבודה מצוינת!",
         "error_reported": "⚠️ שגיאה דווחה. תודה על המשוב!",
         "no_viewpoints": "אין נקודות מבט זמינות בבסיס הנתונים. אנא הריצו את סקריפט האתחול.",
         "no_active_item": "אין פריט פעיל. השתמשו ב-/next כדי להמשיך.",
@@ -476,6 +533,9 @@ TRANSLATIONS = {
         "profile_annotations_count": "📊 <b>נקודות מבט שתויגו:</b> {count}",
         "profile_no_data": "אין נתוני פרופיל זמינים. השתמשו ב-/start כדי להגדיר את הפרופיל שלכם.",
         
+        # Registration
+        "registration_required": "⚠️ <b>נדרשת הרשמה</b>\n\nעליך להשלים את ההרשמה לפני השימוש בבוט. אנא השתמש ב-/start כדי להתחיל בתהליך ההרשמה.",
+        
         # Errors
         "error_general": "אירעה שגיאה. אנא נסו שוב.",
     },
@@ -483,6 +543,7 @@ TRANSLATIONS = {
     "ru": {
         # Welcome and instructions
         "welcome": "<b>Добро пожаловать!</b>",
+        "welcome_acknowledgment": "🎓 <b>Особое признание:</b> Пользователи, которые разметят 50 точек зрения, будут упомянуты в нашей исследовательской статье!",
         "instructions_title": "<b>Как работает процесс разметки</b> ✍️",
         "instructions_step1": "1) 📘 Вам будет показано историческое событие: <b>название</b>, <b>годы</b>, ссылка на <b>Википедию</b> и краткое описание.",
         "instructions_step2": "2) 🧠 Вы получите <b>одну точку зрения</b> на данное событие. Она может быть нейтральной или отражать позицию определенной страны.",
@@ -498,6 +559,7 @@ TRANSLATIONS = {
         "detailed_instructions_title": "\n<b>📖 Что означает 'Предвзятая точка зрения' или 'Позиция страны'?</b>",
         "detailed_instructions_biased": "<b>Предвзятая точка зрения</b> представляет исторические события с позиции конкретной страны, часто подчеркивая ее положительную роль или оправдывая ее действия, при этом потенциально преуменьшая негативные аспекты или противоположные мнения.",
         "detailed_instructions_examples": "Примеры:\n• Акцент только на страданиях одной стороны в конфликте\n• Представление спорных территориальных претензий как неоспоримых фактов\n• Использование эмоционально окрашенной лексики, благоприятствующей одной стороне\n• Замалчивание ключевого контекста, который мог бы изменить интерпретацию",
+        "detailed_instructions_misinformation": "\n<b>🔍 Важное различие: Дезинформация против ошибок</b>\nЕсли точка зрения содержит дезинформацию, которая, по-видимому, используется для манипуляций или продвижения определенного нарратива, классифицируйте её как <b>предвзятую</b>, а не как ошибку. Отмечайте что-то как 'ошибку' только если оно содержит явные фактические ошибки без видимого манипулятивного умысла.",
         "detailed_instructions_reading": "\n<b>📚 Важно: Изучите историческое событие!</b>",
         "detailed_instructions_wikipedia": "Перед разметкой, пожалуйста, ознакомьтесь с историческим событием. Если вы не очень хорошо с ним знакомы, <b>прочитайте статью в Википедии</b>, ссылка на которую приведена выше, чтобы понять основные факты и различные точки зрения.",
         "detailed_instructions_context": "Понимание исторического контекста помогает вам лучше определить, когда точка зрения представляет только одну сторону сложной истории, а не сбалансированное, нейтральное описание.",
@@ -537,18 +599,28 @@ TRANSLATIONS = {
         
         # Labeling - Step 1
         "step1_instruction": "Пожалуйста, укажите, является ли данная точка зрения:",
-        "step1_neutral": "🟢 Нейтральной/Беспристрастной",
-        "step1_biased": "🔴 Позицией страны/Пристрастной", 
-        "step1_error": "⚠️ Содержит ошибку/Некорректно",
+        "step1_neutral": "🟢 ✅ Нейтральной/Беспристрастной",
+        "step1_biased": "🔴 ⚖️ Позицией страны/Пристрастной", 
+        "step1_error": "⚠️ ❌ Содержит ошибку/Некорректно",
         
         # Labeling - Step 2
         "step2_instruction": "Позицию какой страны это представляет?",
-        "step2_skip": "🤷 Пропустить/Не знаю",
-        "step2_error": "⚠️ Содержит ошибку/Некорректно",
+        "step2_skip": "🤷 ❓ Пропустить/Не знаю",
+        "step2_error": "⚠️ ❌ Содержит ошибку/Некорректно",
         
         # Labeling - General
         "step1_completed": "Шаг 1 завершен. Теперь пожалуйста укажите, позицию какой страны это представляет:",
         "annotation_saved": "✅ Ваша аннотация сохранена!",
+        "milestone_10": "🎉 Поздравляем! Вы разметили 10 точек зрения! Вы отлично работаете!",
+        "milestone_25": "🌟 Потрясающе! Вы достигли 25 точек зрения! Ваш вклад действительно ценен!",
+        "milestone_40": "🏆 Выдающийся результат! 40 размеченных точек зрения! Вы оказываете значительное влияние на наше исследование!",
+        
+        # Event grouping
+        "event_group_info": "📚 <b>Группа событий:</b> У этого события {total} точек зрения. Вы на точке зрения {current} из {total}.",
+        "next_viewpoint": "➡️ Следующая точка зрения",
+        "previous_viewpoint": "⬅️ Предыдущая точка зрения",
+        "finish_event": "✅ Завершить событие",
+        "event_complete": "🎉 Вы завершили все точки зрения для этого события! Отличная работа!",
         "error_reported": "⚠️ Ошибка зарегистрирована. Спасибо за обратную связь!",
         "no_viewpoints": "Нет доступных точек зрения в БД. Пожалуйста, запустите скрипт инициализации.",
         "no_active_item": "Нет активного элемента. Используйте /next для продолжения.",
@@ -598,6 +670,9 @@ TRANSLATIONS = {
         "education_other": "Другое",
         "education_prefer_not_to_say": "Предпочитаю не отвечать",
         
+        # Registration
+        "registration_required": "⚠️ <b>Требуется регистрация</b>\n\nВам необходимо завершить регистрацию перед использованием бота. Пожалуйста, используйте /start для начала процесса регистрации.",
+        
         # Errors
         "error_general": "Произошла ошибка. Пожалуйста, попробуйте снова.",
     },
@@ -605,6 +680,7 @@ TRANSLATIONS = {
     "zh": {
         # Welcome and instructions
         "welcome": "<b>欢迎！</b>",
+        "welcome_acknowledgment": "🎓 <b>特别认可：</b> 标注50个观点的用户将在我们的研究论文中得到致谢！",
         "instructions_title": "<b>标注工作原理</b> ✍️",
         "instructions_step1": "1) 📘 您将看到一个历史事件：<b>标题</b>、<b>年份</b>、<b>维基百科</b>链接和简短描述。",
         "instructions_step2": "2) 🧠 您将获得关于此事件的<b>一个观点</b>。它可能是中性的，也可能反映某个国家的叙述。",
@@ -620,6 +696,7 @@ TRANSLATIONS = {
         "detailed_instructions_title": "\n<b>📖 什么是'有偏见的观点'或'国家立场'？</b>",
         "detailed_instructions_biased": "<b>有偏见的观点</b>从特定国家的角度呈现历史事件，通常强调其正面作用或为其行为辩护，同时可能淡化负面方面或对立观点。",
         "detailed_instructions_examples": "例子：\n• 在冲突中只强调一方的痛苦\n• 将有争议的领土主张呈现为不容置疑的事实\n• 使用偏向一方的带有感情色彩的语言\n• 省略可能改变解释的关键背景",
+        "detailed_instructions_misinformation": "\n<b>🔍 重要区别：误导信息与错误</b>\n如果观点包含似乎用于操纵或推进特定叙述的误导信息，请将其归类为<b>有偏见的</b>而非错误。只有当内容包含明显的事实错误且没有明显操纵意图时，才标记为'错误'。",
         "detailed_instructions_reading": "\n<b>📚 重要：了解历史事件！</b>",
         "detailed_instructions_wikipedia": "在标注之前，请先了解历史事件。如果您对此不太熟悉，请<b>阅读上面链接的维基百科文章</b>，以了解基本事实和涉及的不同观点。",
         "detailed_instructions_context": "了解历史背景有助于您更好地识别观点何时只呈现复杂故事的一面，而不是提供平衡、中立的描述。",
@@ -659,18 +736,28 @@ TRANSLATIONS = {
         
         # Labeling - Step 1
         "step1_instruction": "请指出这个观点是否为：",
-        "step1_neutral": "🟢 中性/无偏见",
-        "step1_biased": "🔴 国家立场/有偏见", 
-        "step1_error": "⚠️ 包含错误/不正确",
+        "step1_neutral": "🟢 ✅ 中性/无偏见",
+        "step1_biased": "🔴 ⚖️ 国家立场/有偏见", 
+        "step1_error": "⚠️ ❌ 包含错误/不正确",
         
         # Labeling - Step 2
         "step2_instruction": "这代表哪个国家的立场？",
-        "step2_skip": "🤷 跳过/不知道",
-        "step2_error": "⚠️ 包含错误/不正确",
+        "step2_skip": "🤷 ❓ 跳过/不知道",
+        "step2_error": "⚠️ ❌ 包含错误/不正确",
         
         # Labeling - General
         "step1_completed": "第1步完成。现在请指定这代表哪个国家的立场：",
         "annotation_saved": "✅ 您的标注已保存！",
+        "milestone_10": "🎉 恭喜！您已标注了10个观点！您做得很好！",
+        "milestone_25": "🌟 太棒了！您已达到25个观点！您的贡献非常有价值！",
+        "milestone_40": "🏆 杰出！已标注40个观点！您对我们的研究产生了重大影响！",
+        
+        # Event grouping
+        "event_group_info": "📚 <b>事件组：</b> 此事件有{total}个观点。您正在查看第{current}个观点，共{total}个。",
+        "next_viewpoint": "➡️ 下一个观点",
+        "previous_viewpoint": "⬅️ 上一个观点",
+        "finish_event": "✅ 完成事件",
+        "event_complete": "🎉 您已完成此事件的所有观点！做得很好！",
         "error_reported": "⚠️ 错误已报告。谢谢反馈！",
         "no_viewpoints": "数据库中没有可用的观点。请运行初始化脚本。",
         "no_active_item": "没有活动项目。使用 /next 继续。",
@@ -696,6 +783,9 @@ TRANSLATIONS = {
         "profile_annotations_count": "📊 <b>已标注观点：</b> {count}",
         "profile_no_data": "没有可用的个人资料数据。使用 /start 设置您的个人资料。",
         
+        # Registration
+        "registration_required": "⚠️ <b>需要注册</b>\n\n您需要在使用机器人之前完成注册。请使用 /start 开始注册过程。",
+        
         # Errors
         "error_general": "发生错误。请重试。",
     },
@@ -703,6 +793,7 @@ TRANSLATIONS = {
     "de": {
         # Welcome and instructions
         "welcome": "<b>Willkommen!</b>",
+        "welcome_acknowledgment": "🎓 <b>Besondere Anerkennung:</b> Benutzer, die 50 Standpunkte kennzeichnen, werden in unserem Forschungsartikel erwähnt!",
         "instructions_title": "<b>Wie die Kennzeichnung funktioniert</b> ✍️",
         "instructions_step1": "1) 📘 Sie werden ein historisches Ereignis sehen: <b>Titel</b>, <b>Jahre</b>, einen <b>Wikipedia</b>-Link und eine kurze Beschreibung.",
         "instructions_step2": "2) 🧠 Sie erhalten <b>einen Standpunkt</b> zu diesem Ereignis. Er kann neutral sein oder die Darstellung eines Landes widerspiegeln.",
@@ -718,6 +809,7 @@ TRANSLATIONS = {
         "detailed_instructions_title": "\n<b>📖 Was bedeutet 'Voreingenommener Standpunkt' oder 'Landesposition'?</b>",
         "detailed_instructions_biased": "Ein <b>voreingenommener Standpunkt</b> stellt historische Ereignisse aus der Perspektive eines bestimmten Landes dar, wobei oft dessen positive Rolle betont oder seine Handlungen gerechtfertigt werden, während negative Aspekte oder gegensätzliche Ansichten möglicherweise heruntergespielt werden.",
         "detailed_instructions_examples": "Beispiele:\n• Betonung nur einer Seite des Leidens in einem Konflikt\n• Darstellung strittiger Gebietsansprüche als unbestreitbare Fakten\n• Verwendung geladener Sprache, die eine Partei bevorzugt\n• Weglassen wichtiger Kontexte, die die Interpretation verändern könnten",
+        "detailed_instructions_misinformation": "\n<b>🔍 Wichtiger Unterschied: Desinformation vs. Fehler</b>\nWenn ein Standpunkt Desinformation enthält, die anscheinend zur Manipulation oder zur Förderung einer bestimmten Erzählung verwendet wird, klassifizieren Sie ihn als <b>voreingenommen</b> und nicht als Fehler. Markieren Sie etwas nur dann als 'Fehler', wenn es klare sachliche Fehler ohne erkennbare manipulative Absicht enthält.",
         "detailed_instructions_reading": "\n<b>📚 Wichtig: Informieren Sie sich über das historische Ereignis!</b>",
         "detailed_instructions_wikipedia": "Vor der Kennzeichnung machen Sie sich bitte mit dem historischen Ereignis vertraut. Wenn Sie nicht gut darüber informiert sind, <b>lesen Sie den oben verlinkten Wikipedia-Artikel</b>, um die grundlegenden Fakten und verschiedenen beteiligten Perspektiven zu verstehen.",
         "detailed_instructions_context": "Das Verständnis des historischen Kontexts hilft Ihnen besser zu erkennen, wann ein Standpunkt nur eine Seite einer komplexen Geschichte darstellt, anstatt eine ausgewogene, neutrale Beschreibung zu liefern.",
@@ -757,18 +849,28 @@ TRANSLATIONS = {
         
         # Labeling - Step 1
         "step1_instruction": "Bitte geben Sie an, ob dieser Standpunkt ist:",
-        "step1_neutral": "🟢 Neutral/Unvoreingenommen",
-        "step1_biased": "🔴 Landesposition/Voreingenommen", 
-        "step1_error": "⚠️ Enthält Fehler/Inkorrekt",
+        "step1_neutral": "🟢 ✅ Neutral/Unvoreingenommen",
+        "step1_biased": "🔴 ⚖️ Landesposition/Voreingenommen", 
+        "step1_error": "⚠️ ❌ Enthält Fehler/Inkorrekt",
         
         # Labeling - Step 2
         "step2_instruction": "Welche Landesposition stellt dies dar?",
-        "step2_skip": "🤷 Überspringen/Weiß nicht",
-        "step2_error": "⚠️ Enthält Fehler/Inkorrekt",
+        "step2_skip": "🤷 ❓ Überspringen/Weiß nicht",
+        "step2_error": "⚠️ ❌ Enthält Fehler/Inkorrekt",
         
         # Labeling - General
         "step1_completed": "Schritt 1 abgeschlossen. Bitte geben Sie nun an, welche Landesposition dies darstellt:",
         "annotation_saved": "✅ Ihre Annotation wurde gespeichert!",
+        "milestone_10": "🎉 Herzlichen Glückwunsch! Sie haben 10 Standpunkte gekennzeichnet! Sie leisten großartige Arbeit!",
+        "milestone_25": "🌟 Fantastisch! Sie haben 25 Standpunkte erreicht! Ihr Beitrag ist wirklich wertvoll!",
+        "milestone_40": "🏆 Hervorragend! 40 Standpunkte gekennzeichnet! Sie haben einen bedeutenden Einfluss auf unsere Forschung!",
+        
+        # Event grouping
+        "event_group_info": "📚 <b>Ereignisgruppe:</b> Dieses Ereignis hat {total} Standpunkte. Sie sind bei Standpunkt {current} von {total}.",
+        "next_viewpoint": "➡️ Nächster Standpunkt",
+        "previous_viewpoint": "⬅️ Vorheriger Standpunkt",
+        "finish_event": "✅ Ereignis beenden",
+        "event_complete": "🎉 Sie haben alle Standpunkte für dieses Ereignis abgeschlossen! Großartige Arbeit!",
         "error_reported": "⚠️ Fehler gemeldet. Danke für das Feedback!",
         "no_viewpoints": "Keine Standpunkte in der DB verfügbar. Bitte führen Sie das Init-Skript aus.",
         "no_active_item": "Kein aktives Element. Verwenden Sie /next zum Fortfahren.",
@@ -793,6 +895,9 @@ TRANSLATIONS = {
         "profile_education": "🎓 <b>Bildung:</b> {education}",
         "profile_annotations_count": "📊 <b>Markierte Standpunkte:</b> {count}",
         "profile_no_data": "Keine Profildaten verfügbar. Verwenden Sie /start, um Ihr Profil einzurichten.",
+        
+        # Registration
+        "registration_required": "⚠️ <b>Registrierung erforderlich</b>\n\nSie müssen die Registrierung abschließen, bevor Sie den Bot verwenden. Bitte verwenden Sie /start, um den Registrierungsprozess zu beginnen.",
         
         # Errors
         "error_general": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",

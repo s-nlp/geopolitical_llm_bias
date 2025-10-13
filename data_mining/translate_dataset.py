@@ -31,7 +31,8 @@ try:
     HAS_LLM_CONFIG = True
 except ValueError as e:
     HAS_LLM_CONFIG = False
-    OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "openai/gpt-oss-120b")
+    # OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "openai/gpt-oss-120b")
+    OPENAI_MODEL = "openai/gpt-oss-20b"
     print(f"Warning: {e}")
     print("Please set OPENAI_API_KEY and optionally EXA_API_KEY to run translations.")
 
@@ -502,7 +503,7 @@ if __name__ == "__main__":
         "-w",
         "--workers",
         type=int,
-        default=8,
+        default=4,
         help="Number of threads for parallel translation (default: 4)",
     )
     args = parser.parse_args()

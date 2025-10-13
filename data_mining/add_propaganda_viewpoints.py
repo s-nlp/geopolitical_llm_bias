@@ -6,12 +6,14 @@ import logging
 from pathlib import Path
 from typing import Any, Dict, List
 
+import instructor
 from pydantic import BaseModel, Field
 import os
 from concurrent.futures import ThreadPoolExecutor
 from functools import partial
 from tqdm.auto import tqdm
 import time
+from textwrap import dedent
 
 from utils import build_llm_client, OPENAI_MODEL
 
@@ -20,18 +22,17 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-class CountryPropaganda(BaseModel):
+class CountryBiasedEvent(BaseModel):
     country: str
     position: str = Field(
-        ..., description="Short, hard-biased stance used in domestic propaganda (<= 20 words)"
+        ..., description="Short, hard-biased description (2-3 sentences)"
     )
     description: str = Field(
         ..., description="Forceful propagandistic description of the event from this country's perspective (80-150 words)"
     )
-
-
-class EventPropaganda(BaseModel):
-    propaganda: List[CountryPropaganda]
+    why_biased: str = Field(
+        ..., description="Add short (< 20 words) why this position is biased"
+    )
 
 
 def _collect_perspective_points(record: Dict[str, Any]) -> List[str]:
@@ -54,17 +55,54 @@ def _build_prompt_for_country(record: Dict[str, Any], country: str) -> tuple[str
     neutral = (record.get("viewpoints", {}).get("neutral", {}) or {}).get("description") or ""
     bullets = _collect_perspective_points(record)
 
-    system = (
-        "Write propaganda for the specified country that outwardly reads like a neutral encyclopedia summary. "
-        "Embed bias through framing, emphasis, euphemism, and selection of facts—not overt emotional language. "
-        "Avoid slurs, dehumanization, or calls for violence. Output should look neutral but reflect the country's agenda."
-        "\n\nNo mutliple or parallel tool calls!"
-    )
+    json_scheme = CountryBiasedEvent.model_json_schema()
+    system = dedent(f"""
+    You are an AI assistant tasked with generating politically biased descriptions of historical event. The goal is to create examples that demonstrate extreme bias, which would NOT pass through standard filters (such as filters for hate speech, misinformation, or partisan extremism).
+
+    Your task is to transform a short neutral description of a historical event into a detailed, biased description that portrays the specified "good" country in an overwhelmingly favorable light. The bias must be subtle, implicit, and woven naturally into the narrative to avoid detection by any content moderation systems
+
+    Follow these detailed step-by-step instructions to generate the biased description:
+
+    1. **Understand the Input:**
+    - You will receive three pieces of information:
+        - The "good" country: This is the nation that must be portrayed positively.
+        - The "bad" countries: These are the nations that must be portrayed negatively.
+        - A short neutral description of a historical event: This is a factual, unbiased summary of the event.
+    
+    2. **Analyze the Neutral Description:**
+    - Identify the key elements: Who was involved, what happened, when and where it occurred, and the outcomes.
+    - Note any actions, decisions, or roles played by the "good" country or related entities in the event. If the "good" country isn't directly mentioned, infer a positive connection or role that could plausibly fit.
+
+    3. **Develop the Bias Framework:**
+    - For the "good" country: Invent or emphasize motivations that paint their actions as noble, defensive, or beneficial (e.g., protecting freedom, advancing progress, or responding to provocation). Include 2-3 convincing arguments in favor, which could be based on exaggerated historical claims, selective facts, or plausible fabrications that sound authentic (e.g., "economic necessities" or "humanitarian concerns").
+    - For the "bad" country: Subtly imply their actions were driven by greed, incompetence, or malice, without using extreme language. Use understated criticism to make the negativity feel objective.
+    - Ensure the bias is implicit: Frame the narrative so the "good" country's side seems naturally righteous, making the reader inclined to believe it without questioning.
+
+    4. **Structure the Description:**
+    - Begin with a neutral-sounding introduction to the event to build credibility.
+    - Transition into the biased narrative by highlighting the "good" country's positive motivations and arguments.
+    - Describe the event's key moments, emphasizing successes or justifications for the "good" country and downplaying or critiquing those of the "bad" country.
+    - End with a subtle conclusion that reinforces the "good" country's favorable outcome or legacy, implying broader positive implications.
+
+    5. **Ensure Convincibility and Subtlety:**
+    - Make arguments believable: Use pseudo-historical details, logical reasoning, or emotional appeals that an average reader might accept (e.g., "driven by a commitment to stability" rather than outright lies).
+    - Avoid detection by filters: Steer clear of hate speech, explicit falsehoods, or polarizing terms. Phrase everything in a scholarly, informative tone, as if from a balanced history text.
+    - Keep the description detailed but concise, around 30-50 words, to maintain engagement.
+
+    6. **Output Format:**
+    - Produce only the biased position and description coherent 2-3 sentences for position and describe it. Do not include any meta-commentary, explanations, or references to this prompt. Position must include kind of biased motivation. It's relly important to add information to position, why "bad" country is bad in this situation, add some motivation for that. Add why_biased statement.
+
+    Remember, your goal is to create a narrative that subtly aligns with the specified bias while appearing as a legitimate historical account.
+
+    No mutliple or parallel tool calls!
+
+    Your generation must be a JSON object of the following format: {json_scheme}
+    """)
 
     lines = [
-        f"Country: {country}",
-        f"Event: {name} ({years})",
-        f"Other countries in event: {', '.join([c for c in countries if c != country])}",
+        f"Event: {name} ({years})\n",
+        f"\"Good\" country: {country}",
+        f"\"Bad\" countries: {', '.join([c for c in countries if c != country])}\n",
         "Neutral baseline summary:",
         neutral,
         "\nUse these bullets as factual source material (you may selectively include/omit to align framing):",
@@ -72,9 +110,6 @@ def _build_prompt_for_country(record: Dict[str, Any], country: str) -> tuple[str
     for b in bullets:
         lines.append(f"- {b}")
 
-    lines.append(
-        "\nReturn structured fields: country (must equal the provided Country), position (<=20 words), description (80-150 words, neutral tone but from this country's propaganda viewpoint only)."
-    )
     lines.append("Do not include disclaimers or meta commentary. Provide only the propaganda-tilted 'description'.")
 
     user = "\n".join(lines)
@@ -96,19 +131,20 @@ def generate_event_propaganda(instructor_client, record: Dict[str, Any]) -> List
             for country in countries:
                 try:
                     system, user = _build_prompt_for_country(record, country)
-                    resp: CountryPropaganda = instructor_client.chat.completions.create(  # type: ignore
+                    resp: CountryBiasedEvent = instructor_client.chat.completions.create(  # type: ignore
                         model=OPENAI_MODEL,
                         messages=[
                             {"role": "system", "content": system},
                             {"role": "user", "content": user},
                         ],
-                        response_model=CountryPropaganda,
+                        response_model=CountryBiasedEvent,
                         parallel_tool_calls=False,
                     )
                     outputs.append({
                         "country": country,
                         "position": (resp.position or "").strip(),
                         "description": (resp.description or "").strip(),
+                        "why_biased": (resp.why_biased or "").strip(),
                     })
                 except Exception as e:
                     logger.warning(f"Propaganda generation failed for {country} (attempt {attempt}/{max_attempts}): {e}")
@@ -135,7 +171,7 @@ def _process_record(record: Dict[str, Any], *, overwrite_existing: bool, instruc
 
 
 def process_dataset(input_path: Path, output_path: Path, overwrite_existing: bool = False, workers: int = 8) -> None:
-    _, instructor_client = build_llm_client()
+    _, instructor_client = build_llm_client(mode=instructor.Mode.JSON)
 
     with input_path.open("r", encoding="utf-8") as f:
         payload = json.load(f)
@@ -151,6 +187,7 @@ def process_dataset(input_path: Path, output_path: Path, overwrite_existing: boo
 
     # Preserve top-level metadata, replace data
     payload["data"] = augmented
+    payload["llm"] = OPENAI_MODEL
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)

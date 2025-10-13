@@ -404,4 +404,58 @@ def get_weighted_viewpoint_with_event(priority_min_count_probability: float = 0.
         conn.close()
 
 
+def get_admin_user_statistics() -> List[Dict[str, Any]]:
+    """Get user statistics for admin dashboard, sorted by annotation count."""
+    
+    conn = _connect()
+    try:
+        cur = conn.execute(
+            """
+            SELECT u.telegram_id,
+                   u.nationality,
+                   u.age,
+                   u.occupation_type,
+                   u.education_level,
+                   u.preferred_language,
+                   COALESCE(total_annotations.count, 0) AS total_annotations,
+                   COALESCE(error_annotations.count, 0) AS error_annotations
+            FROM users u
+            LEFT JOIN (
+                SELECT user_telegram_id, COUNT(*) AS count
+                FROM annotations
+                GROUP BY user_telegram_id
+            ) total_annotations ON total_annotations.user_telegram_id = u.telegram_id
+            LEFT JOIN (
+                SELECT user_telegram_id, COUNT(*) AS count
+                FROM annotations
+                WHERE has_error = 1
+                GROUP BY user_telegram_id
+            ) error_annotations ON error_annotations.user_telegram_id = u.telegram_id
+            ORDER BY total_annotations DESC, u.telegram_id;
+            """
+        )
+        rows = [dict(r) for r in cur.fetchall()]
+        return rows
+    finally:
+        conn.close()
+
+
+def get_general_statistics() -> Dict[str, int]:
+    """Get general statistics about annotations and errors."""
+    
+    conn = _connect()
+    try:
+        cur = conn.execute(
+            """
+            SELECT 
+                COUNT(*) AS total_annotations,
+                SUM(CASE WHEN has_error = 1 THEN 1 ELSE 0 END) AS total_errors,
+                COUNT(DISTINCT user_telegram_id) AS total_users
+            FROM annotations;
+            """
+        )
+        row = cur.fetchone()
+        return dict(row) if row else {"total_annotations": 0, "total_errors": 0, "total_users": 0}
+    finally:
+        conn.close()
 

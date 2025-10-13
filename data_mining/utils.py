@@ -41,11 +41,11 @@ class EventSeed(BaseModel):
 
 
 # ===== Shared clients =====
-def build_llm_client() -> tuple[OpenAI, instructor.Instructor]:
+def build_llm_client(mode=instructor.Mode.OPENROUTER_STRUCTURED_OUTPUTS) -> tuple[OpenAI, instructor.Instructor]:
     """Return OpenAI client and Instructor-wrapped OpenAI client."""
     base_client = OpenAI(base_url=OPENAI_BASE_URL, api_key=OPENAI_API_KEY)
     logger.info(f"Using OpenAI model {OPENAI_MODEL} with base URL {OPENAI_BASE_URL}.")
-    return base_client, instructor.from_openai(base_client)
+    return base_client, instructor.from_openai(base_client, mode=mode)
 
 
 def build_exa_client() -> Exa:
