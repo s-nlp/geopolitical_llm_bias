@@ -1,101 +1,125 @@
-# Geopolitical biases in LLMs: what are the “good” and the “bad” countries according to contemporary language models
+# ConflictBench: Assessing Political Bias in Language Models via Historical Conflicts
 
-The project is focused on evaluating the contextual and geopolitical biases embedded in LLM outputs by analyzing their responses to a curated set of historical and politically charged questions. 
+## Overview
 
-- The `llm_QA.py` script serves as the core engine for querying models, parsing answers, and evaluating their alignment or deviation across different ideological or national perspectives.
-- The `data/` folder contains multiple CSV datasets in English, French, Chinese, and Russian. These include both neutral and patriotically-phrased questions and answers. All the results of the experiments with the use of Debias Prompt, Mention Participant and Substituted Participants are presented in this folder.
-- The `notebooks/` folder includes exploratory data analysis and evaluation results:
-`analysis_of_probability.ipynb` – examines probabilistic output trends in LLM answers.
-`language_change_analytics.ipynb` – explores how language variations (e.g., phrasing or translation) influence model responses.
-- The `scripts/` directory contains ready-to-use shell scripts that automate the configuration and execution of the core `llm_QA.py` pipeline under different experimental settings. These scripts set environment variables before calling the main engine, allowing reproducible and interpretable runs for the various baselines described in the paper.
+ConflictBench is a research repository for systematically evaluating geopolitical bias in large language models (LLMs) through historical conflict events. This project provides a comprehensive framework for discovering, curating, and evaluating how LLMs respond to politically sensitive historical narratives from different national perspectives.
+
+The repository includes:
+- **Data Mining Pipeline**: Automated discovery and extraction of historical conflict events from Wikipedia across multiple languages, with debiasing and propaganda viewpoint generation capabilities
+- **Data Labeling Bot**: A Telegram-based annotation tool for collecting human evaluations of viewpoint bias
+- **LLM Evaluation Framework**: Scripts for querying multiple LLMs with various prompt manipulations to assess bias patterns
+- **Dataset**: Curated historical events with neutral descriptions and multiple national perspectives
+
+The methodology enables researchers to systematically test how LLMs handle politically sensitive content, measure bias across different model origins, and evaluate the effectiveness of debiasing techniques. All system prompts used for mining biased data have been removed for safety reasons.
+
 ## Dataset overview
-The folder `data/` contains various datasets on the basis of which all graphs and conclusions in the article are based. Below we will describe in more detail each column in them. `Historic_Data_with_answers.csv` - the main dataset on the basis of which all the others `Historic_Data_{patriot}_{language}.csv` are built by changing the prompt language and and the presence of Chinese patriotism. 
-### Basic Metadata
-| Column Name    | Description                                                                                  |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| `event id`     | Unique identifier for each historical event.                                                 |
-| `link`         | Wikipedia link to the event's article.                                                       |
-| `participants` | Dictionary with `"pos_1"` and `"pos_2"` representing the primary actors (e.g., USA vs USSR). |
-| `countries`    | Tuple listing the countries involved (typically `"pos_1"` and `"pos_2"`).                    |
-### Event Context
-| Column Name   | Description                                                           |
-| ------------- | --------------------------------------------------------------------- |
-| `neutral`     | A neutral or descriptive explanation of the historical event.         |
-| `pos_1_var_1` | Narrative of the event from the perspective of `"pos_1"` (version 1). |
-| `pos_2_var_1` | Narrative of the event from the perspective of `"pos_2"` (version 1). |
-| `pos_1_var_2` | Another variation of `"pos_1"`'s perspective.                         |
-| `pos_2_var_2` | Another variation of `"pos_2"`'s perspective.                         |
-### LLM Responses
-These columns store the answers provided by various LLMs to questions about the historical events. The structure is:
 
-`ModelName_answers[_variant][_flag_chinese_patriot][_language]`
+**Note:** The `data/` directory contains deprecated CSV versions of the dataset. The current dataset is located in `data_mining/data/` in JSON format.
 
-`ModelName`: The LLM used to generate the answer.
-Examples: GigaChat-Max, Qwen2.5_72B, DeepSeek-v3, llama-4-maverick, gpt-4o-mini.
+The ConflictBench dataset consists of historical conflict events between country pairs, extracted from Wikipedia across multiple languages. Each event includes neutral descriptions, multilingual perspectives, and propaganda viewpoints generated for each participating country.
 
-`_variant` (optional): Prompt manipulations or response conditions. These options can be combined, for example `_refuse_swap_mention_participant`.
- Examples: 
-- `debias_prompt` – model was prompted to reduce ideological bias.
-- `refuse` – The model in the prompt is given the opportunity not to choose one of the two positions, but to choose two at once or refuse to answer.
-- `mention_participant` - The question explicitly states the countries and their positions.
-- `swap_mention_participant` - "pos_1" and "pos_2" were swapped in the prompt.
+### Dataset Structure
 
-`_flag_chinese_patriot`(optional) - corresponds to the presence of a Chinese patriot in the prompt. 
+The dataset is stored as JSON files with the following top-level structure:
 
-`_language` (optional) - when translating text into different languages, it corresponds to a specific language.  Examples:
-- `ru` 
-- `fr`
-- `ch`
+```json
+{
+  "llm": "<model_name>",
+  "languages": ["en", "fr", "ru", "zh", "ar", "he"],
+  "start_year": 1900,
+  "end_year": 2005,
+  "data": [ /* array of events */ ]
+}
+```
+
+### Event Fields
+
+Each event in the `data` array contains the following fields:
+
+#### Basic Metadata
+| Field                        | Description                                                                                  |
+| ---------------------------- | -------------------------------------------------------------------------------------------- |
+| `countries`                  | Array of country names involved in the conflict (e.g., `["USA", "USSR"]`)                    |
+| `seed_name`                  | Original event name from discovery phase                                                    |
+| `topic_name`                 | Canonical name of the historical event                                                     |
+| `topic_url`                  | Wikipedia URL for the event article                                                          |
+| `years`                      | Time period of the event (e.g., `"1936–1939"` or `"1950-1953"`)                            |
+| `topic_description`          | Extended description of the event (≤ 80 words)                                              |
+| `paragraph_anchor_or_comment` | Reference to the section/paragraph within the Wikipedia article                            |
+
+#### Viewpoints
+
+The `viewpoints` object contains three types of content:
+
+1. **Neutral Description** (`viewpoints.neutral`):
+   - `description`: A debiased, neutral summary of the event (≤ 50 words)
+   - Generated through cross-lingual synthesis to mitigate Wikipedia editorial biases
+
+2. **Multilingual Perspectives** (`viewpoints.perspectives`):
+   - Array of language-specific summaries extracted from Wikipedia articles
+   - Each entry contains:
+     - `language`: ISO language code (e.g., `"en"`, `"ru"`, `"zh"`)
+     - `url`: Wikipedia URL in that language
+     - `key_points`: Array of 3–5 bullet points highlighting emphasis/stance differences across languages
+
+3. **Propaganda Viewpoints** (`viewpoints.propaganda`):
+   - Array of biased narratives generated for each participating country
+   - Each entry contains:
+     - `country`: The country whose perspective this represents
+     - `position`: Short biased position statement (2–3 sentences)
+     - `description`: Detailed propagandistic description (80–150 words) portraying the country favorably
+     - `why_biased`: Brief explanation of why this position is biased (< 20 words)
+   - **Note:** System prompts used for generating propaganda viewpoints have been removed for safety reasons.
+
+### Dataset Variants
+
+The dataset is available in several processed forms:
+
+- **Base dataset** (`final_dataset.json`): Contains neutral descriptions and multilingual perspectives
+- **With propaganda** (`final_dataset_with_propaganda.json`): Adds propaganda viewpoints for each country
+- **Translated** (`final_dataset_with_propaganda_translated.json`): All content translated to target languages with language-specific structure
+- **Validated** (`final_dataset_with_propaganda_translated_validated.json`): Includes validation fixes and filtered non-polarizing events
+
+### Language Support
+
+The dataset supports multiple languages: Arabic (`ar`), English (`en`), French (`fr`), Hebrew (`he`), Russian (`ru`), Chinese (`zh`), and German (`de`). Content is extracted from Wikipedia articles in these languages and translated when necessary.
 
 ## Script overview
 
-The script llm_QA.py is a sophisticated tool for querying multiple large language models (LLMs) on historical geopolitical questions, capturing their answers, and storing those answers in a structured dataset. Below is a detailed breakdown of its purpose, main functionalities, and key components/functions:
+### Data Mining (`data_mining/`)
 
-The script automates evaluation of LLMs (e.g. GPT-4o, GigaChat, Qwen, LLaMA) on geopolitical prompts, especially under different bias-control strategies such as:
+The `data_mining/` directory contains a pipeline for discovering, extracting, and processing historical conflict events from Wikipedia. The pipeline includes:
 
-### Script Purpose
-- Swapping participants in the prompt.
-- Enforcing neutrality.
-- Checking refusal behavior.
-- Controlling for Chinese patriotic context.
-- Translating prompts (via Google Translate).
-- Generating structured responses (correct_position, reason).
+1. **Discovery** (`discover.py`): Discovers Wikipedia pages about historical conflicts between country pairs
+2. **Clustering** (`cluster_unique.py`): Removes near-duplicate events using embeddings and clustering
+3. **Finalization** (`finalize_processing.py`): Extracts structured information and generates debiased neutral summaries
+4. **Propaganda Generation** (`add_propaganda_viewpoints.py`): Generates biased propaganda viewpoints for each country. **Note: System prompts used for this process have been removed for safety reasons.**
+5. **Translation** (`translate_dataset.py`): Translates the dataset to multiple target languages
+6. **Validation** (`dataset_validation.py`): Validates translations and filters non-polarizing events. **Note: System prompts used for validation tasks have been removed for safety reasons.**
 
-### Key Functionalities
-| Feature                       | Description                                                                                                 |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| **Multiple LLMs**             | Supports OpenAI, GigaChat, Qwen, and LLaMA via various APIs.                                                |
-| **Prompt Variants**           | Dynamically modifies prompts to test for bias (swap sides, enforce neutrality, include/exclude references). |
-| **Environment Configuration** | Many behaviors are controlled via environment variables (e.g., `DEBIAS`, `SWAP`, `REFUSE_OPTIONS`, etc.).   |
-| **Translation Support**       | Optional automatic translation using `googletrans` library.                                                 |
-| **Parallel Execution**        | Uses `ThreadPoolExecutor` for parallel querying of models.                                                  |
-| **Data I/O**                  | Reads a CSV file (`Historic_Data_with_answers.csv`), adds new model answers, writes to a new file.          |
+See `data_mining/README.md` for detailed documentation.
 
-### Main Components
-#### Environment Setup. 
-Loads necessary API keys from environment variables and .env file.
-```python
-os.environ["GIGACHAT_API_KEY"] = "GIGACHAT_API_KEY"
-os.environ["OPENROUTERS_API_KEY"] = "OPENROUTERS_API_KEY"
-dotenv.load_dotenv()
-```
-#### Model and Answer Column Definitions.
-Defines which models will be queried and how their results are stored.
-```python
-MODEL = ["GigaChat-Max", "qwen/qwen-2.5-72b-instruct", ...]
-ANSWER_COLUMN_NAME = ["GigaChat-Max_answers", "Qwen2.5_72B_answers", ...]
-```
-#### Control Flags from Environment.
-Using these variables, we set the parameters of our experiment, these flags correspond to `[_variant]` the one we provided when describing the dataset above.
-```python
-SWAP = os.environ.get("SWAP", "False").lower() == "true"
-DEBIAS = os.environ.get("DEBIAS", "False").lower() == "true"  # DEBIAS prompt
-REFUSE_OPTIONS = os.environ.get("REFUSE_OPTIONS", "False").lower() == "true"  # it must always be true
-MENTION_PARTICIPANT = os.environ.get("MENTION_PARTICIPANT", "False").lower() == "true"
-SWAP_MENTION_PARTICIPANT = os.environ.get("SWAP_MENTION_PARTICIPANT", "False").lower() == "true"
-CHINESE_PATRIOTISM = os.environ.get("CHINESE_PATRIOTISM", "False").lower() == "true"
-CHANGE_LANGUAGE = os.environ.get("CHANGE_LANGUAGE", "False").lower() == "true"
-CURR_LANGUAGE = os.environ.get("CURR_LANGUAGE", "en")
+### Data Labeling Bot (`data_labaling_bot/`)
+
+A Telegram bot for collecting human annotations of viewpoint bias. The bot presents historical events and viewpoints to annotators in multiple languages, collects demographic information, and implements a two-step labeling process (neutral/biased determination, then country identification). See `data_labaling_bot/README.md` for setup instructions.
+
+### Evaluation (`evaluate.py`)
+
+The main evaluation script for assessing geopolitical bias in LLMs. It:
+
+- Loads events and viewpoints from JSON dataset files
+- Presents multiple viewpoints (neutral + propaganda) to LLMs and evaluates which country's perspective is selected
+- Supports two evaluation modes:
+  - `all`: Uses all viewpoints (neutral + 2 propaganda viewpoints)
+  - `propaganda`: Uses only the 2 propaganda viewpoints
+- Supports multiple prompt types for different evaluation contexts
+- Supports Chinese patriot mode for testing bias manipulation
+- Processes events in parallel and saves results to JSON files
+
+Usage:
+```bash
+python evaluate.py --data-file <json_file> --language <lang> --mode <all|propaganda> \
+  --provider <openrouter|openai> --model <model_name> --api-key <key> [--chinese-patriot]
 ```
 
 

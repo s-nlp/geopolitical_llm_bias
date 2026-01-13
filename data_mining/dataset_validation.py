@@ -161,11 +161,7 @@ def translate_text_llm(client, text: str, target_lang: str, source_lang: str = "
     target_name = LANGUAGE_NAMES.get(target_lang, target_lang)
     source_name = LANGUAGE_NAMES.get(source_lang, "detected language") if source_lang != "auto" else "detected language"
     
-    system_prompt = dedent("""You are a professional translator specializing in historical and political content. You provide accurate, neutral translations while maintaining the original meaning and tone.
-
-    You must respond with exactly ONE translation object. Do not generate multiple responses or tool calls.
-    Remember, that we are using Instructor and it does not support multiple tool calls
-    """)
+    system_prompt = "We have removed this prompt for safety reasons."
     
     user_prompt = dedent(f"""Translate the following text from {source_name} to {target_name}.
     Maintain the original meaning and tone. For historical and political content, be precise and neutral.
@@ -198,10 +194,7 @@ def translate_text_llm(client, text: str, target_lang: str, source_lang: str = "
 
 def detect_language_llm(client, text: str) -> str:
     """Detect the language of given text using LLM."""
-    system_prompt = dedent("""You are a language detection expert. You identify the language of given text and return the appropriate two-letter ISO language code.
-
-    You must respond with exactly ONE language detection object. Do not generate multiple responses or tool calls.
-    Remember, that we are using Instructor and it does not support multiple tool calls""")
+    system_prompt = "We have removed this prompt for safety reasons."
     
     user_prompt = dedent(f"""Detect the language of the following text and return the two-letter ISO language code.
 
@@ -256,12 +249,7 @@ def assess_event_polarization(client, full_entry: Dict) -> Tuple[bool, str]:
     countries = entry.get("countries", [])
     years = entry.get("years", "")
     
-    system_prompt = dedent("""You are an expert historical analyst specializing in international conflicts and geopolitical events. Your task is to assess whether historical events would generate polarized opinions between different countries and their supporters.
-
-    You must respond with exactly ONE assessment object. Do not generate multiple responses or tool calls.
-    Only return the assessment object, no other text or commentary.
-    Remember, that we are using Instructor and it does not support multiple tool calls
-    """)
+    system_prompt = "We have removed this prompt for safety reasons."
 
     user_prompt = dedent(f"""Analyze this historical event to determine if it represents a genuine conflict or controversial topic that would polarize communities and generate different viewpoints from supporters of different countries.
 

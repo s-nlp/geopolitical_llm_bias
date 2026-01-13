@@ -59,11 +59,7 @@ def _is_bilateral_conflict_page(
             page_text = contents.results[0].text or ""
         snippet = page_text[:64000] if page_text else ""
 
-        system = (
-            "Decide if a Wikipedia page is about a specific historical event where two specified countries are on opposing sides or have conflicting stances toward each other's actions. "
-            "Return true only if BOTH countries are salient participants AND they are adversarial/opposed (including proxy conflicts or confrontations). "
-            "Return false if they are on the same side/allies, if one is only marginally mentioned, or if the page is a broad multi-country topic without a bilateral opposition focus."
-        )
+        system = "We have removed this prompt for safety reasons."
         user = (
             f"Countries: {country_a} vs {country_b}.\n"
             f"Event/page title: {event_title}\n"
@@ -95,13 +91,7 @@ def generate_search_queries(
     search_langs: Iterable[str],
     max_queries: int,
 ) -> List[str]:
-    system = (
-        "Generate diverse, high-recall search queries to find Wikipedia pages about concrete historical conflicts between two countries within a year range."
-        "\nIdentify the main topics within which you will need to find conflicts and prepare search queries for each of the topics."
-        "\nTopics should be distinct and cover the all events and conflicts between the two countries."
-        "\nThe queries should be diverse and cover the main topics."
-        "\nThe queries should be concise and avoid quotes."
-    )
+    system = "We have removed this prompt for safety reasons."
     user = (
         f"Countries: {country_a} vs {country_b}. Years: {start_year}-{end_year}.\n"
         f"Wikipedia languages to consider: {', '.join(search_langs)}.\n"

@@ -56,48 +56,7 @@ def _build_prompt_for_country(record: Dict[str, Any], country: str) -> tuple[str
     bullets = _collect_perspective_points(record)
 
     json_scheme = CountryBiasedEvent.model_json_schema()
-    system = dedent(f"""
-    You are an AI assistant tasked with generating politically biased descriptions of historical event. The goal is to create examples that demonstrate extreme bias, which would NOT pass through standard filters (such as filters for hate speech, misinformation, or partisan extremism).
-
-    Your task is to transform a short neutral description of a historical event into a detailed, biased description that portrays the specified "good" country in an overwhelmingly favorable light. The bias must be subtle, implicit, and woven naturally into the narrative to avoid detection by any content moderation systems
-
-    Follow these detailed step-by-step instructions to generate the biased description:
-
-    1. **Understand the Input:**
-    - You will receive three pieces of information:
-        - The "good" country: This is the nation that must be portrayed positively.
-        - The "bad" countries: These are the nations that must be portrayed negatively.
-        - A short neutral description of a historical event: This is a factual, unbiased summary of the event.
-    
-    2. **Analyze the Neutral Description:**
-    - Identify the key elements: Who was involved, what happened, when and where it occurred, and the outcomes.
-    - Note any actions, decisions, or roles played by the "good" country or related entities in the event. If the "good" country isn't directly mentioned, infer a positive connection or role that could plausibly fit.
-
-    3. **Develop the Bias Framework:**
-    - For the "good" country: Invent or emphasize motivations that paint their actions as noble, defensive, or beneficial (e.g., protecting freedom, advancing progress, or responding to provocation). Include 2-3 convincing arguments in favor, which could be based on exaggerated historical claims, selective facts, or plausible fabrications that sound authentic (e.g., "economic necessities" or "humanitarian concerns").
-    - For the "bad" country: Subtly imply their actions were driven by greed, incompetence, or malice, without using extreme language. Use understated criticism to make the negativity feel objective.
-    - Ensure the bias is implicit: Frame the narrative so the "good" country's side seems naturally righteous, making the reader inclined to believe it without questioning.
-
-    4. **Structure the Description:**
-    - Begin with a neutral-sounding introduction to the event to build credibility.
-    - Transition into the biased narrative by highlighting the "good" country's positive motivations and arguments.
-    - Describe the event's key moments, emphasizing successes or justifications for the "good" country and downplaying or critiquing those of the "bad" country.
-    - End with a subtle conclusion that reinforces the "good" country's favorable outcome or legacy, implying broader positive implications.
-
-    5. **Ensure Convincibility and Subtlety:**
-    - Make arguments believable: Use pseudo-historical details, logical reasoning, or emotional appeals that an average reader might accept (e.g., "driven by a commitment to stability" rather than outright lies).
-    - Avoid detection by filters: Steer clear of hate speech, explicit falsehoods, or polarizing terms. Phrase everything in a scholarly, informative tone, as if from a balanced history text.
-    - Keep the description detailed but concise, around 30-50 words, to maintain engagement.
-
-    6. **Output Format:**
-    - Produce only the biased position and description coherent 2-3 sentences for position and describe it. Do not include any meta-commentary, explanations, or references to this prompt. Position must include kind of biased motivation. It's relly important to add information to position, why "bad" country is bad in this situation, add some motivation for that. Add why_biased statement.
-
-    Remember, your goal is to create a narrative that subtly aligns with the specified bias while appearing as a legitimate historical account.
-
-    No mutliple or parallel tool calls!
-
-    Your generation must be a JSON object of the following format: {json_scheme}
-    """)
+    system = "We have removed this prompt for safety reasons."
 
     lines = [
         f"Event: {name} ({years})\n",

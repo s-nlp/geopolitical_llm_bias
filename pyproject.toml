@@ -3,7 +3,7 @@ name = "geopolitical_llm_bias"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Lazichny",email = "ivanlazichny@gmail.com "}
+    {name = "Anonymous", email = "anonymous@example.com"}
 ]
 license = {text = "MIT"}
 readme = "README.md"
