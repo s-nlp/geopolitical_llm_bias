@@ -1,5 +1,8 @@
 # ConflictBench: Assessing Political Bias in Language Models via Historical Conflicts
 
+[![Dataset on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/dataset-on-hf-md-dark.svg)](https://huggingface.co/datasets/s-nlp/conflict_bench)
+
+
 ## Overview
 
 ConflictBench is a research repository for systematically evaluating geopolitical bias in large language models (LLMs) through historical conflict events. This project provides a comprehensive framework for discovering, curating, and evaluating how LLMs respond to politically sensitive historical narratives from different national perspectives.
