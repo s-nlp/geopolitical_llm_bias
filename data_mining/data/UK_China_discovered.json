@@ -1,0 +1,822 @@
+{
+    "llm": "openai/gpt-oss-120b",
+    "start_year": 1900,
+    "end_year": 2005,
+    "countries": [
+        "UK",
+        "China"
+    ],
+    "max_events": 200,
+    "langs": [
+        "en",
+        "fr",
+        "ru",
+        "zh",
+        "ar",
+        "he"
+    ],
+    "search_engine": "exa",
+    "datetime": "2025-08-11T16:59:39.593491",
+    "seeds": [
+        {
+            "name": "Sino-British Joint Liaison Group",
+            "url": "https://en.wikipedia.org/wiki/Sino-British_Joint_Liaison_Group"
+        },
+        {
+            "name": "Boxer Rebellion",
+            "url": "https://en.wikipedia.org/wiki/Boxer_Rebellion"
+        },
+        {
+            "name": "Chinese Labour Corps",
+            "url": "https://en.wikipedia.org/wiki/Chinese_Labour_Corps"
+        },
+        {
+            "name": "Handover of Hong Kong",
+            "url": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong"
+        },
+        {
+            "name": "North Star affair",
+            "url": "https://en.wikipedia.org/wiki/North_Star_Affair"
+        },
+        {
+            "name": "Hong Kong 97",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong_1997"
+        },
+        {
+            "name": "January 28 incident",
+            "url": "https://en.wikipedia.org/wiki/January_28_incident"
+        },
+        {
+            "name": "Capture of the French Folly Fort",
+            "url": "https://en.wikipedia.org/wiki/Capture_of_the_French_Folly_Fort"
+        },
+        {
+            "name": "Battle of Chuenpi",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Chuenpi"
+        },
+        {
+            "name": "Battle of Nam Quan",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Nam_Quan"
+        },
+        {
+            "name": "Sanyuanli incident",
+            "url": "https://en.wikipedia.org/wiki/Sanyuanli_incident"
+        },
+        {
+            "name": "Battle of Fatshan Creek",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Fatshan_Creek"
+        },
+        {
+            "name": "Nerbudda incident",
+            "url": "https://en.wikipedia.org/wiki/Nerbudda_incident"
+        },
+        {
+            "name": "1839 in China",
+            "url": "https://en.wikipedia.org/wiki/1839_in_China"
+        },
+        {
+            "name": "Punti–Hakka Clan Wars",
+            "url": "https://en.wikipedia.org/wiki/Punti-Hakka_War"
+        },
+        {
+            "name": "Klang War",
+            "url": "https://en.wikipedia.org/wiki/Klang_War"
+        },
+        {
+            "name": "1856 in China",
+            "url": "https://en.wikipedia.org/wiki/1856_in_China"
+        },
+        {
+            "name": "Category:British military personnel of the Boxer Rebellion - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:British_military_personnel_of_the_Boxer_Rebellion"
+        },
+        {
+            "name": "Opium Wars",
+            "url": "https://en.wikipedia.org/wiki/Opium_Wars"
+        },
+        {
+            "name": "Battle of Canton (March 1841)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Canton_(March_1841)"
+        },
+        {
+            "name": "Royal Saxon (1829 ship)",
+            "url": "https://en.wikipedia.org/wiki/Royal_Saxon_(1829_ship)"
+        },
+        {
+            "name": "Opium War (disambiguation)",
+            "url": "https://en.wikipedia.org/wiki/Anglo-Chinese_War"
+        },
+        {
+            "name": "First Opium War",
+            "url": "https://en.wikipedia.org/wiki/First_Opium_War"
+        },
+        {
+            "name": "Dogra–Tibetan war",
+            "url": "https://en.wikipedia.org/wiki/Sino-Sikh_war"
+        },
+        {
+            "name": "Category:Boxer Rebellion - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Boxer_Rebellion"
+        },
+        {
+            "name": "Sino-Spanish conflicts",
+            "url": "https://en.wikipedia.org/wiki/Sino-Spanish_conflicts"
+        },
+        {
+            "name": "Perak War",
+            "url": "https://en.wikipedia.org/wiki/Perak_War"
+        },
+        {
+            "name": "Sino-Dutch conflicts",
+            "url": "https://en.wikipedia.org/wiki/Sino-Dutch_conflicts"
+        },
+        {
+            "name": "Battle of Chinkiang",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Chinkiang"
+        },
+        {
+            "name": "Battle of Amoy",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Amoy"
+        },
+        {
+            "name": "British Hong Kong",
+            "url": "https://en.wikipedia.org/wiki/British_Hong_Kong"
+        },
+        {
+            "name": "McMahon Line",
+            "url": "https://en.wikipedia.org/wiki/McMahon_Line"
+        },
+        {
+            "name": "Second Battle of Chuenpi",
+            "url": "https://en.wikipedia.org/wiki/Second_Battle_of_Chuenpi"
+        },
+        {
+            "name": "Macartney Embassy",
+            "url": "https://en.wikipedia.org/wiki/Macartney_Embassy"
+        },
+        {
+            "name": "Battle of Yangcun",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Yangcun"
+        },
+        {
+            "name": "Battle of First Bar",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_First_Bar"
+        },
+        {
+            "name": "Talk:British Hong Kong - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:British_Hong_Kong"
+        },
+        {
+            "name": "Wanhsien incident",
+            "url": "https://en.wikipedia.org/wiki/Wanhsien_incident"
+        },
+        {
+            "name": "Events preceding World War II in Asia",
+            "url": "https://en.wikipedia.org/wiki/Events_preceding_World_War_II_in_Asia"
+        },
+        {
+            "name": "Category:Wars involving China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Wars_involving_China"
+        },
+        {
+            "name": "Battle of the Taku Forts (1900)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Taku_Forts_(1900)"
+        },
+        {
+            "name": "Hong Kong–United Kingdom relations",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong-United_Kingdom_relations"
+        },
+        {
+            "name": "Timeline of British history",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_British_history"
+        },
+        {
+            "name": "Battle of Whampoa",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Whampoa"
+        },
+        {
+            "name": "Human rights in China",
+            "url": "https://en.wikipedia.org/wiki/Human_rights_in_China"
+        },
+        {
+            "name": "Hong Kong handover ceremony",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong_handover_ceremony"
+        },
+        {
+            "name": "One country, two systems",
+            "url": "https://en.wikipedia.org/wiki/One_country,_two_systems"
+        },
+        {
+            "name": "Japanese occupation of Hong Kong",
+            "url": "https://en.wikipedia.org/wiki/Japanese_occupation_of_Hong_Kong"
+        },
+        {
+            "name": "User:Blackmane/Boxer Origins - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Blackmane/Boxer_Origins"
+        },
+        {
+            "name": "China–United Kingdom relations",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93United_Kingdom_relations"
+        },
+        {
+            "name": "Talk:Boxer Rebellion/Archive 4 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Boxer_Rebellion/Archive_4"
+        },
+        {
+            "name": "Talk:Boxer Rebellion/Archive 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Boxer_Rebellion/Archive_1"
+        },
+        {
+            "name": "1990s in Hong Kong",
+            "url": "https://en.wikipedia.org/wiki/1990s_in_Hong_Kong"
+        },
+        {
+            "name": "1905 in China",
+            "url": "https://en.wikipedia.org/wiki/1905_in_China"
+        },
+        {
+            "name": "Talk:Hong Kong handover ceremony - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Hong_Kong_handover_ceremony"
+        },
+        {
+            "name": "Battle of Taku Forts (1859)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Taku_Forts_(1859)"
+        },
+        {
+            "name": "Battle of Ty-ho Bay",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Kuhlan"
+        },
+        {
+            "name": "Dogger Bank incident",
+            "url": "https://en.wikipedia.org/wiki/Dogger_Bank_incident"
+        },
+        {
+            "name": "Gaselee Expedition",
+            "url": "https://en.wikipedia.org/wiki/Gasalee_Expedition"
+        },
+        {
+            "name": "Weihaiwei Regiment",
+            "url": "https://en.wikipedia.org/wiki/Weihaiwei_Regiment"
+        },
+        {
+            "name": "Hainan Island incident",
+            "url": "https://en.wikipedia.org/wiki/Hainan_Island_incident"
+        },
+        {
+            "name": "Talk:Boxer Rebellion/Archive 2 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Boxer_Rebellion/Archive_2"
+        },
+        {
+            "name": "Clarmont Skrine",
+            "url": "https://en.wikipedia.org/wiki/Clarmont_Skrine"
+        },
+        {
+            "name": "China–France relations",
+            "url": "https://en.wikipedia.org/wiki/China-France_relations"
+        },
+        {
+            "name": "Talk:Boxer Rebellion/Archive 5 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Boxer_Rebellion/Archive_5"
+        },
+        {
+            "name": "Handover (political)",
+            "url": "https://en.wikipedia.org/wiki/Handover_(political)"
+        },
+        {
+            "name": "Tibet Frontier Commission",
+            "url": "https://en.wikipedia.org/wiki/Tibet_Frontier_Commission"
+        },
+        {
+            "name": "Shandong Problem",
+            "url": "https://en.wikipedia.org/wiki/Shandong_Problem"
+        },
+        {
+            "name": "Chahal v United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/Chahal_v_United_Kingdom"
+        },
+        {
+            "name": "Battle of the Leotung",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Leotung"
+        },
+        {
+            "name": "Battle of Escape Creek",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Escape_Creek"
+        },
+        {
+            "name": "Timeline of Hong Kong history",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_Hong_Kong_history"
+        },
+        {
+            "name": "Battle of Tonkin River",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Tonkin_River"
+        },
+        {
+            "name": "Talk:Boxer Rebellion/Archive 6 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Boxer_Rebellion/Archive_6"
+        },
+        {
+            "name": "Seymour Expedition",
+            "url": "https://en.wikipedia.org/wiki/Seymour_Expedition"
+        },
+        {
+            "name": "Eight-Nation Alliance",
+            "url": "https://en.wikipedia.org/wiki/Eight-Nation_Alliance"
+        },
+        {
+            "name": "Johnson South Reef skirmish",
+            "url": "https://en.wikipedia.org/wiki/Johnson_South_Reef_Skirmish"
+        },
+        {
+            "name": "Boxer movement",
+            "url": "https://en.wikipedia.org/wiki/Boxer_movement"
+        },
+        {
+            "name": "Category:Battles of the Boxer Rebellion - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Battles_of_the_Boxer_Rebellion"
+        },
+        {
+            "name": "Category:British diplomats in China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:British_diplomats_in_China"
+        },
+        {
+            "name": "Battle of Hong Kong order of battle - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Hong_Kong_order_of_battle"
+        },
+        {
+            "name": "Ng Ka Ling v Director of Immigration",
+            "url": "https://en.wikipedia.org/wiki/Ng_Ka_Ling_v_Director_of_Immigration"
+        },
+        {
+            "name": "Category:Human rights in China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Human_rights_in_China"
+        },
+        {
+            "name": "Charles George Gordon",
+            "url": "https://en.wikipedia.org/wiki/Charles_George_Gordon"
+        },
+        {
+            "name": "Category:Human rights abuses in China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Human_rights_abuses_in_China"
+        },
+        {
+            "name": "Hong Kong Reunification Ordinance",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong_Reunification_Ordinance"
+        },
+        {
+            "name": "border conflict china - Search results - Wikipedia",
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:Search&limit=20&offset=0&profile=default&search=border+conflict+china&ns0=1"
+        },
+        {
+            "name": "Margary Affair",
+            "url": "https://en.wikipedia.org/wiki/Margary_Affair"
+        },
+        {
+            "name": "Dugald Christie",
+            "url": "https://en.wikipedia.org/wiki/Dugald_Christie"
+        },
+        {
+            "name": "Category:Military personnel of the Boxer Rebellion - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_personnel_of_the_Boxer_Rebellion"
+        },
+        {
+            "name": "George Macartney, 1st Earl Macartney",
+            "url": "https://en.wikipedia.org/wiki/George_Macartney,_1st_Earl_Macartney"
+        },
+        {
+            "name": "Six-Day War (1899)",
+            "url": "https://en.wikipedia.org/wiki/Six_day_war_(1899)"
+        },
+        {
+            "name": "Battle of Peking (1900)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Peking_(1900)"
+        },
+        {
+            "name": "Siege of the International Legations",
+            "url": "https://en.wikipedia.org/wiki/Siege_of_the_International_Legations"
+        },
+        {
+            "name": "Portal:China/Anniversaries/March/March 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Portal:China/Anniversaries/March/March_3"
+        },
+        {
+            "name": "Timeline of British diplomatic history",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_British_diplomatic_history"
+        },
+        {
+            "name": "Hong Kong Defence Force",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong_Defence_Force"
+        },
+        {
+            "name": "Battle of Shanhaiguan (1900)",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Shanhaiguan_(1900)"
+        },
+        {
+            "name": "Template:Boxer Rebellion - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template:Boxer_Rebellion"
+        },
+        {
+            "name": "Kivu frontier incident",
+            "url": "https://en.wikipedia.org/wiki/Kivu_frontier_incident"
+        },
+        {
+            "name": "Tang Man Sit v Capacious Investments Ltd",
+            "url": "https://en.wikipedia.org/wiki/Tang_Man_Sit_v_Capacious_Investments_Ltd"
+        },
+        {
+            "name": "George Macartney",
+            "url": "https://en.wikipedia.org/wiki/George_Macartney"
+        },
+        {
+            "name": "Sino-British Joint Declaration",
+            "url": "https://en.wikipedia.org/wiki/Sino-British_Joint_Declaration"
+        },
+        {
+            "name": "Nile Expedition",
+            "url": "https://en.wikipedia.org/wiki/Nile_Expedition"
+        },
+        {
+            "name": "Shakee Massacre",
+            "url": "https://en.wikipedia.org/wiki/Shakee_Massacre"
+        },
+        {
+            "name": "1994 Hong Kong electoral reform",
+            "url": "https://en.wikipedia.org/wiki/1994_Hong_Kong_electoral_reform"
+        },
+        {
+            "name": "Byron Brenan",
+            "url": "https://en.wikipedia.org/wiki/Byron_Brenan"
+        },
+        {
+            "name": "Category:China in World War II - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:China_in_World_War_II"
+        },
+        {
+            "name": "Sino-French War",
+            "url": "https://en.wikipedia.org/wiki/Sino-French_War"
+        },
+        {
+            "name": "2020–2021 China–India skirmishes",
+            "url": "https://en.wikipedia.org/wiki/2020%E2%80%932021_China%E2%80%93India_skirmishes"
+        },
+        {
+            "name": "Chinese middle school student riots",
+            "url": "https://en.wikipedia.org/wiki/Chinese_middle_schools_riots"
+        },
+        {
+            "name": "Talk:Sino-British Treaty for the Relinquishment of Extra-Territorial Rights in China - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Sino-British_Treaty_for_the_Relinquishment_of_Extra-Territorial_Rights_in_China"
+        },
+        {
+            "name": "Frederick Maze",
+            "url": "https://en.wikipedia.org/wiki/Frederick_Maze"
+        },
+        {
+            "name": "James Flint (merchant)",
+            "url": "https://en.wikipedia.org/wiki/James_Flint_(merchant)"
+        },
+        {
+            "name": "C Force",
+            "url": "https://en.wikipedia.org/wiki/C_Force"
+        },
+        {
+            "name": "Murder of Mi Gao Huang Chen",
+            "url": "https://en.wikipedia.org/wiki/Mi_Gao_Huang_Chen"
+        },
+        {
+            "name": "Handover of Macau",
+            "url": "https://en.wikipedia.org/wiki/Handover_of_Macau"
+        },
+        {
+            "name": "1842 in China",
+            "url": "https://en.wikipedia.org/wiki/1842_in_China"
+        },
+        {
+            "name": "Convention of Lhasa",
+            "url": "https://en.wikipedia.org/wiki/Treaty_of_Lhasa"
+        },
+        {
+            "name": "HMS Phoenix (1895)",
+            "url": "https://en.wikipedia.org/wiki/HMS_Phoenix_(1895)"
+        },
+        {
+            "name": "Talk:Ching Cheong - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Ching_Cheong"
+        },
+        {
+            "name": "Timeline of the Qing dynasty",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Qing_dynasty"
+        },
+        {
+            "name": "George Douglas Gray",
+            "url": "https://en.wikipedia.org/wiki/George_Douglas_Gray"
+        },
+        {
+            "name": "Horatio Nelson Lay",
+            "url": "https://en.wikipedia.org/wiki/Horatio_Nelson_Lay"
+        },
+        {
+            "name": "Lansing–Ishii Agreement",
+            "url": "https://en.wikipedia.org/wiki/Lansing%E2%80%93Ishii_Agreement"
+        },
+        {
+            "name": "China during World War I",
+            "url": "https://en.wikipedia.org/wiki/China_during_World_War_I"
+        },
+        {
+            "name": "Simla Convention",
+            "url": "https://en.wikipedia.org/wiki/Simla_Convention"
+        },
+        {
+            "name": "1841 in China",
+            "url": "https://en.wikipedia.org/wiki/1841_in_China"
+        },
+        {
+            "name": "Cruise of the Special Service Squadron",
+            "url": "https://en.wikipedia.org/wiki/The_Empire_Cruise"
+        },
+        {
+            "name": "Yangzhou riot",
+            "url": "https://en.wikipedia.org/wiki/Yangzhou_riot"
+        },
+        {
+            "name": "Category:British diplomats in East Asia - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:British_diplomats_in_East_Asia"
+        },
+        {
+            "name": "Namwan Assigned Tract",
+            "url": "https://en.wikipedia.org/wiki/Namwan_Assigned_Tract"
+        },
+        {
+            "name": "1900 in China",
+            "url": "https://en.wikipedia.org/wiki/1900_in_China"
+        },
+        {
+            "name": "Shanghai Municipal Police",
+            "url": "https://en.wikipedia.org/wiki/Shanghai_Municipal_Police"
+        },
+        {
+            "name": "China and the West, 1858-1861",
+            "url": "https://en.wikipedia.org/wiki/China_and_the_West,_1858-1861"
+        },
+        {
+            "name": "Alaska boundary dispute",
+            "url": "https://en.wikipedia.org/wiki/Alaska_boundary_dispute"
+        },
+        {
+            "name": "China Relief Expedition",
+            "url": "https://en.wikipedia.org/wiki/China_Relief_Expedition"
+        },
+        {
+            "name": "Expedition to Canton",
+            "url": "https://en.wikipedia.org/wiki/Expedition_to_Canton"
+        },
+        {
+            "name": "History of the foreign relations of the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/History_of_the_foreign_relations_of_the_United_Kingdom"
+        },
+        {
+            "name": "Larut Wars",
+            "url": "https://en.wikipedia.org/wiki/Larut_Wars"
+        },
+        {
+            "name": "Wikipedia:Wikipedia Signpost/2007-06-04/Arbitration report - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2007-06-04/Arbitration_report"
+        },
+        {
+            "name": "China–United States relations",
+            "url": "https://en.wikipedia.org/wiki/China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Japanese community of Shanghai",
+            "url": "https://en.wikipedia.org/wiki/Taminato_incident"
+        },
+        {
+            "name": "Sikkim expedition",
+            "url": "https://en.wikipedia.org/wiki/Sikkim_expedition"
+        },
+        {
+            "name": "History of China–United States relations",
+            "url": "https://en.wikipedia.org/wiki/History_of_China%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Otranto Barrage",
+            "url": "https://en.wikipedia.org/wiki/Otranto_barrage"
+        },
+        {
+            "name": "Hong Kong",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong"
+        },
+        {
+            "name": "Scramble for China",
+            "url": "https://en.wikipedia.org/wiki/Scramble_for_China"
+        },
+        {
+            "name": "List of territorial disputes",
+            "url": "https://en.wikipedia.org/wiki/List_of_territorial_disputes"
+        },
+        {
+            "name": "Wikipedia:Articles for deletion/List of British Chinese people - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/List_of_British_Chinese_people"
+        },
+        {
+            "name": "Tom Kim Yung",
+            "url": "https://en.wikipedia.org/wiki/Tom_Kim_Yung"
+        },
+        {
+            "name": "Timeline of the Chinese Civil War",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Chinese_Civil_War"
+        },
+        {
+            "name": "Sir Robert Hart, 1st Baronet",
+            "url": "https://en.wikipedia.org/wiki/Sir_Robert_Hart,_1st_Baronet"
+        },
+        {
+            "name": "South Australia–Victoria border dispute",
+            "url": "https://en.wikipedia.org/wiki/South_Australia%E2%80%93Victoria_border_dispute"
+        },
+        {
+            "name": "Democracy in Hong Kong",
+            "url": "https://en.wikipedia.org/wiki/Democracy_in_Hong_Kong"
+        },
+        {
+            "name": "Timeline of the Wars of the Three Kingdoms",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Wars_of_the_Three_Kingdoms"
+        },
+        {
+            "name": "Foreign relations of the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom_foreign_relations"
+        },
+        {
+            "name": "William A. Pickering",
+            "url": "https://en.wikipedia.org/wiki/William_A._Pickering"
+        },
+        {
+            "name": "1904 in China",
+            "url": "https://en.wikipedia.org/wiki/1904_in_China"
+        },
+        {
+            "name": "Chen v Home Secretary",
+            "url": "https://en.wikipedia.org/wiki/Chen_case"
+        },
+        {
+            "name": "Chanak crisis",
+            "url": "https://en.wikipedia.org/wiki/Chanak_crisis"
+        },
+        {
+            "name": "Hong Kong Basic Law",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong_Basic_Law"
+        },
+        {
+            "name": "1954 National Service riots",
+            "url": "https://en.wikipedia.org/wiki/1954_National_Service_Riots"
+        },
+        {
+            "name": "Mackay Treaty",
+            "url": "https://en.wikipedia.org/wiki/Mackay_Treaty"
+        },
+        {
+            "name": "Wilfred Hinton",
+            "url": "https://en.wikipedia.org/wiki/Wilfred_Hinton"
+        },
+        {
+            "name": "Template:POTD/2010-11-02 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Template:POTD/2010-11-02"
+        },
+        {
+            "name": "May Thirtieth Movement",
+            "url": "https://en.wikipedia.org/wiki/May_Thirtieth_movement"
+        },
+        {
+            "name": "Daniel Chan Chi-pun",
+            "url": "https://en.wikipedia.org/wiki/Daniel_Chan_Chi-pun"
+        },
+        {
+            "name": "Tientsin incident",
+            "url": "https://en.wikipedia.org/wiki/Tientsin_incident"
+        },
+        {
+            "name": "Blockade of Germany (1914–1919)",
+            "url": "https://en.wikipedia.org/wiki/Blockade_of_Germany_(1914%E2%80%931919)"
+        },
+        {
+            "name": "Edward Powles",
+            "url": "https://en.wikipedia.org/wiki/Edward_Powles"
+        },
+        {
+            "name": "Shanghai Volunteer Corps",
+            "url": "https://en.wikipedia.org/wiki/Shanghai_Volunteer_Corps"
+        },
+        {
+            "name": "Talk:First Opium War/Archive 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:First_Opium_War/Archive_1"
+        },
+        {
+            "name": "Ralph Stevenson",
+            "url": "https://en.wikipedia.org/wiki/Ralph_Stevenson"
+        },
+        {
+            "name": "Angus I. Ward",
+            "url": "https://en.wikipedia.org/wiki/Angus_I._Ward"
+        },
+        {
+            "name": "MIEA v Guo",
+            "url": "https://en.wikipedia.org/wiki/MIEA_v_Guo"
+        },
+        {
+            "name": "List of cyberattacks",
+            "url": "https://en.wikipedia.org/wiki/List_of_cyberattacks"
+        },
+        {
+            "name": "Nagasaki incident",
+            "url": "https://en.wikipedia.org/wiki/Nagasaki_incident"
+        },
+        {
+            "name": "USS Villalobos",
+            "url": "https://en.wikipedia.org/wiki/USS_Villalobos"
+        },
+        {
+            "name": "Battle of Shanghai",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Shanghai"
+        },
+        {
+            "name": "History of foreign relations of the People's Republic of China",
+            "url": "https://en.wikipedia.org/wiki/History_of_foreign_relations_of_the_People%27s_Republic_of_China"
+        },
+        {
+            "name": "Herbert Phillips (diplomat)",
+            "url": "https://en.wikipedia.org/wiki/Herbert_Phillips_(diplomat)"
+        },
+        {
+            "name": "Chinese cruiser Jingyuan (1886)",
+            "url": "https://en.wikipedia.org/wiki/Chinese_cruiser_Jingyuan_(1886)"
+        },
+        {
+            "name": "RAF Far East Flight",
+            "url": "https://en.wikipedia.org/wiki/RAF_Far_East_Flight"
+        },
+        {
+            "name": "1921 Imperial Conference",
+            "url": "https://en.wikipedia.org/wiki/1921_Imperial_Conference"
+        },
+        {
+            "name": "Category:Hong Kong people of World War II - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Hong_Kong_people_of_World_War_II"
+        },
+        {
+            "name": "Peking Legation Quarter",
+            "url": "https://en.wikipedia.org/wiki/Peking_Legation_Quarter"
+        },
+        {
+            "name": "Chanak Crisis",
+            "url": "https://en.wikipedia.org/wiki/Chanak_Crisis"
+        },
+        {
+            "name": "Alan Maxwell Boisragon",
+            "url": "https://en.wikipedia.org/wiki/Alan_Boisragon"
+        },
+        {
+            "name": "Hong Kong Basic Law Article 23",
+            "url": "https://en.wikipedia.org/wiki/Hong_Kong_Basic_Law_Article_23"
+        },
+        {
+            "name": "Battle of Beijing",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Peking"
+        },
+        {
+            "name": "British expedition to Tibet",
+            "url": "https://en.wikipedia.org/wiki/British_expedition_to_Tibet"
+        },
+        {
+            "name": "Alice Dollar incident",
+            "url": "https://en.wikipedia.org/wiki/Alice_Dollar_incident"
+        },
+        {
+            "name": "Hosea Ballou Morse",
+            "url": "https://en.wikipedia.org/wiki/Hosea_Ballou_Morse"
+        },
+        {
+            "name": "HMS Goldfinch (1889)",
+            "url": "https://en.wikipedia.org/wiki/HMS_Goldfinch_(1889)"
+        },
+        {
+            "name": "Second Sino-Japanese War",
+            "url": "https://en.wikipedia.org/wiki/Second_Sino-Japanese_War"
+        },
+        {
+            "name": "Blockade of the Eastern Mediterranean",
+            "url": "https://en.wikipedia.org/wiki/Blockade_of_the_Eastern_Mediterranean"
+        },
+        {
+            "name": "Sadmind",
+            "url": "https://en.wikipedia.org/wiki/Sadmind_worm"
+        },
+        {
+            "name": "Louis Magrath King",
+            "url": "https://en.wikipedia.org/wiki/Louis_Magrath_King"
+        },
+        {
+            "name": "Schomburgk Line",
+            "url": "https://en.wikipedia.org/wiki/Schomburgk_Line"
+        }
+    ]
+}

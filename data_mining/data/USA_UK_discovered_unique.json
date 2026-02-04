@@ -1,0 +1,617 @@
+{
+    "source": "USA_UK_discovered.json",
+    "llm": "openai/gpt-oss-120b",
+    "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+    "clusters": 138,
+    "seeds": [
+        {
+            "name": "Korean War",
+            "url": "https://en.wikipedia.org/wiki/Korean_War"
+        },
+        {
+            "name": "List of conflicts in the United States",
+            "url": "https://en.wikipedia.org/wiki/List_of_conflicts_in_the_United_States"
+        },
+        {
+            "name": "User:Jackyd101/British colonial wars - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:Jackyd101/British_colonial_wars"
+        },
+        {
+            "name": "British Commonwealth Forces Korea",
+            "url": "https://en.wikipedia.org/wiki/British_Commonwealth_Forces_Korea"
+        },
+        {
+            "name": "Passamaquoddy Bay",
+            "url": "https://en.wikipedia.org/wiki/Passamaquoddy_Bay"
+        },
+        {
+            "name": "Talk:Gunboat diplomacy - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Gunboat_diplomacy"
+        },
+        {
+            "name": "Competition between Airbus and Boeing",
+            "url": "https://en.wikipedia.org/wiki/Competition_between_Airbus_and_Boeing"
+        },
+        {
+            "name": "Timeline of the British Army",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_British_Army"
+        },
+        {
+            "name": "List of wars involving the United States",
+            "url": "https://en.wikipedia.org/wiki/Wars_Involving_the_United_States"
+        },
+        {
+            "name": "Timeline of United States military operations",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_United_States_military_operations"
+        },
+        {
+            "name": "Dixon Entrance",
+            "url": "https://en.wikipedia.org/wiki/Dixon_Entrance"
+        },
+        {
+            "name": "Draft talk:Battle of the Somme casualties controversy - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Draft_talk:Battle_of_the_Somme_casualties_controversy"
+        },
+        {
+            "name": "Chagos Marine Protected Area",
+            "url": "https://en.wikipedia.org/wiki/Chagos_Marine_Protected_Area"
+        },
+        {
+            "name": "Military history of North America",
+            "url": "https://en.wikipedia.org/wiki/Military_History_of_North_America"
+        },
+        {
+            "name": "West Indies anti-piracy operations of the United States",
+            "url": "https://en.wikipedia.org/wiki/West_Indies_Anti-Piracy_Operations_of_the_United_States"
+        },
+        {
+            "name": "Aegean Sea anti-piracy operations of the United States",
+            "url": "https://en.wikipedia.org/wiki/Aegean_Sea_Anti-Piracy_Operations_of_the_United_States"
+        },
+        {
+            "name": "South Korea–United Kingdom relations",
+            "url": "https://en.wikipedia.org/wiki/South_Korea_U._K._relations"
+        },
+        {
+            "name": "Korea–United States relations",
+            "url": "https://en.wikipedia.org/wiki/Korea%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Korean War order of battle",
+            "url": "https://en.wikipedia.org/wiki/Korean_War_order_of_battle"
+        },
+        {
+            "name": "Sulgrave Manor",
+            "url": "https://en.wikipedia.org/wiki/Sulgrave_Manor"
+        },
+        {
+            "name": "List of wars in Great Britain",
+            "url": "https://en.wikipedia.org/wiki/List_of_wars_in_Great_Britain"
+        },
+        {
+            "name": "List of armed conflicts involving Ireland against the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/List_of_armed_conflicts_involving_Ireland_against_the_United_Kingdom"
+        },
+        {
+            "name": "List of accidents and incidents involving airliners in the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_airliners_in_the_United_Kingdom"
+        },
+        {
+            "name": "Luke v Lyde",
+            "url": "https://en.wikipedia.org/wiki/Luke_v_Lyde"
+        },
+        {
+            "name": "Category:British military personnel of the Korean War - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:British_military_personnel_of_the_Korean_War"
+        },
+        {
+            "name": "United States v. Holmes",
+            "url": "https://en.wikipedia.org/wiki/United_States_v._Holmes"
+        },
+        {
+            "name": "Category:Korean War ships of the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Korean_War_ships_of_the_United_Kingdom"
+        },
+        {
+            "name": "Olney–Pauncefote Treaty",
+            "url": "https://en.wikipedia.org/wiki/Olney-Pauncefote_Treaty"
+        },
+        {
+            "name": "Hay–Pauncefote Treaty",
+            "url": "https://en.wikipedia.org/wiki/Hay%E2%80%93Pauncefote_Treaty"
+        },
+        {
+            "name": "American Revolutionary War",
+            "url": "https://en.wikipedia.org/wiki/US_Revolutionary_War"
+        },
+        {
+            "name": "North Rock",
+            "url": "https://en.wikipedia.org/wiki/North_Rock"
+        },
+        {
+            "name": "Chicora incident",
+            "url": "https://en.wikipedia.org/wiki/Chicora_incident"
+        },
+        {
+            "name": "7 July 2005 London bombings",
+            "url": "https://en.wikipedia.org/wiki/7_July_2005_London_bombings"
+        },
+        {
+            "name": "21 July 2005 London bombings",
+            "url": "https://en.wikipedia.org/wiki/21_July_2005_London_bombings"
+        },
+        {
+            "name": "June 2007 UK terrorist incidents",
+            "url": "https://en.wikipedia.org/wiki/2007_UK_terrorist_incidents"
+        },
+        {
+            "name": "Category:Military units and formations of the Korean War by country - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_units_and_formations_of_the_Korean_War_by_country"
+        },
+        {
+            "name": "Bering Sea Arbitration",
+            "url": "https://en.wikipedia.org/wiki/Bering_Sea_Dispute"
+        },
+        {
+            "name": "Wikipedia:Manual of Style/National varieties of English - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/National_varieties_of_English"
+        },
+        {
+            "name": "List of rail accidents in the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/List_of_rail_accidents_in_the_United_Kingdom"
+        },
+        {
+            "name": "Falkland Islands sovereignty dispute",
+            "url": "https://en.wikipedia.org/wiki/Falkland_Islands_sovereignty_dispute"
+        },
+        {
+            "name": "United Kingdom–United States relations",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom%E2%80%93United_States_relations"
+        },
+        {
+            "name": "Iranian Embassy siege",
+            "url": "https://en.wikipedia.org/wiki/Iranian_Embassy_siege"
+        },
+        {
+            "name": "Timeline of the Suez Crisis",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Suez_Crisis"
+        },
+        {
+            "name": "Category:Russia–United Kingdom military relations - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Russia%E2%80%93United_Kingdom_military_relations"
+        },
+        {
+            "name": "Falklands Expedition",
+            "url": "https://en.wikipedia.org/wiki/Falklands_Expedition"
+        },
+        {
+            "name": "Talk:British English - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:British_English"
+        },
+        {
+            "name": "The T.J. Hooper",
+            "url": "https://en.wikipedia.org/wiki/The_T.J._Hooper"
+        },
+        {
+            "name": "Talk:Humour/Spelling - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Humour/Spelling"
+        },
+        {
+            "name": "Rockall",
+            "url": "https://en.wikipedia.org/wiki/Rockall"
+        },
+        {
+            "name": "Halaib Triangle",
+            "url": "https://en.wikipedia.org/wiki/Halaib_Triangle"
+        },
+        {
+            "name": "Boundary Pass",
+            "url": "https://en.wikipedia.org/wiki/Boundary_Pass"
+        },
+        {
+            "name": "Paris Arbitral Award",
+            "url": "https://en.wikipedia.org/wiki/Paris_Arbitral_Award"
+        },
+        {
+            "name": "American Treaty Shore",
+            "url": "https://en.wikipedia.org/wiki/American_Treaty_Shore"
+        },
+        {
+            "name": "Category:Military operations involving the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Military_operations_involving_the_United_Kingdom"
+        },
+        {
+            "name": "History of the Royal Navy (after 1707)",
+            "url": "https://en.wikipedia.org/wiki/History_of_the_Royal_Navy_(after_1707)"
+        },
+        {
+            "name": "Foreign relations of the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom_foreign_relations"
+        },
+        {
+            "name": "UFO sightings in the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/UFO_sightings_in_England"
+        },
+        {
+            "name": "UFO sightings in the United States",
+            "url": "https://en.wikipedia.org/wiki/UFO_sightings_in_the_United_States"
+        },
+        {
+            "name": "Wake-Walker v SS Colin W Ltd",
+            "url": "https://en.wikipedia.org/wiki/Wake-Walker_v_SS_Colin_W_Ltd"
+        },
+        {
+            "name": "Ballistic Missile Early Warning System",
+            "url": "https://en.wikipedia.org/wiki/Ballistic_Missile_Early_Warning_System"
+        },
+        {
+            "name": "Schomburgk Line",
+            "url": "https://en.wikipedia.org/wiki/Schomburgk_Line"
+        },
+        {
+            "name": "Category:Admiralty case law - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Admiralty_case_law"
+        },
+        {
+            "name": "Vickers V-1000",
+            "url": "https://en.wikipedia.org/wiki/Vickers_V-1000"
+        },
+        {
+            "name": "Alaska boundary dispute",
+            "url": "https://en.wikipedia.org/wiki/Alaska_boundary_dispute"
+        },
+        {
+            "name": "William Brown (ship)",
+            "url": "https://en.wikipedia.org/wiki/William_Brown_(ship)"
+        },
+        {
+            "name": "Operation Pathway",
+            "url": "https://en.wikipedia.org/wiki/Operation_Pathway"
+        },
+        {
+            "name": "Harpooner (1791 ship)",
+            "url": "https://en.wikipedia.org/wiki/Harpooner_(1791_ship)"
+        },
+        {
+            "name": "United Kingdom and the Vietnam War",
+            "url": "https://en.wikipedia.org/wiki/The_UK_and_the_Vietnam_War"
+        },
+        {
+            "name": "Space race (disambiguation)",
+            "url": "https://en.wikipedia.org/wiki/Space_Race_(TV)"
+        },
+        {
+            "name": "United Kingdom and the League of Nations",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom_and_the_League_of_Nations"
+        },
+        {
+            "name": "United States and the League of Nations",
+            "url": "https://en.wikipedia.org/wiki/United_States_and_the_League_of_Nations"
+        },
+        {
+            "name": "Export Control Act",
+            "url": "https://en.wikipedia.org/wiki/Export_Control_Act"
+        },
+        {
+            "name": "Talk:Strait of Juan de Fuca - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Strait_of_Juan_de_Fuca"
+        },
+        {
+            "name": "Signals intelligence in modern history",
+            "url": "https://en.wikipedia.org/wiki/Signals_intelligence_in_modern_history"
+        },
+        {
+            "name": "Foreign relations of the United States",
+            "url": "https://en.wikipedia.org/wiki/U.S._military_intervention"
+        },
+        {
+            "name": "History of the United States foreign policy",
+            "url": "https://en.wikipedia.org/wiki/History_of_United_States_foreign_policy"
+        },
+        {
+            "name": "Talk:World War I/Archive 9 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:World_War_I/Archive_9"
+        },
+        {
+            "name": "United States government sanctions",
+            "url": "https://en.wikipedia.org/wiki/United_States_government_sanctions"
+        },
+        {
+            "name": "United Kingdom sanctions",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom_sanctions"
+        },
+        {
+            "name": "Comparison of American and British English",
+            "url": "https://en.wikipedia.org/wiki/Comparison_of_American_and_British_English"
+        },
+        {
+            "name": "User:OnBeyondZebrax/sandbox/History of the US Navy - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:OnBeyondZebrax/sandbox/History_of_the_US_Navy"
+        },
+        {
+            "name": "Bingham v. Cabot (1795)",
+            "url": "https://en.wikipedia.org/wiki/Bingham_v._Cabot_(1795)"
+        },
+        {
+            "name": "United States v. La Vengeance",
+            "url": "https://en.wikipedia.org/wiki/United_States_v._La_Vengeance"
+        },
+        {
+            "name": "Territorial claims in the Arctic",
+            "url": "https://en.wikipedia.org/wiki/Territorial_claims_in_the_Arctic"
+        },
+        {
+            "name": "Harris v Watson",
+            "url": "https://en.wikipedia.org/wiki/Harris_v_Watson"
+        },
+        {
+            "name": "Atlantic Sounding Co. v. Townsend",
+            "url": "https://en.wikipedia.org/wiki/Atlantic_Sounding_Co._v._Townsend"
+        },
+        {
+            "name": "Anglo-German naval arms race",
+            "url": "https://en.wikipedia.org/wiki/Anglo-German_naval_arms_race"
+        },
+        {
+            "name": "Operation Sledgehammer",
+            "url": "https://en.wikipedia.org/wiki/Operation_Sledgehammer"
+        },
+        {
+            "name": "Theft of medieval art from Quedlinburg",
+            "url": "https://en.wikipedia.org/wiki/Theft_of_medieval_art_from_Quedlinburg"
+        },
+        {
+            "name": "Submarine incident off Kola Peninsula",
+            "url": "https://en.wikipedia.org/wiki/Submarine_incident_off_Kola_Peninsula"
+        },
+        {
+            "name": "Little England (Gloucester, Virginia)",
+            "url": "https://en.wikipedia.org/wiki/Little_England_(Gloucester,_Virginia)"
+        },
+        {
+            "name": "Rio de Janeiro Affair",
+            "url": "https://en.wikipedia.org/wiki/Rio_de_Janeiro_Affair"
+        },
+        {
+            "name": "Pan Am Flight 115",
+            "url": "https://en.wikipedia.org/wiki/Pan_Am_Flight_115"
+        },
+        {
+            "name": "Operation Chastity",
+            "url": "https://en.wikipedia.org/wiki/Operation_Chastity"
+        },
+        {
+            "name": "R v Dudley and Stephens",
+            "url": "https://en.wikipedia.org/wiki/R_v_Dudley_and_Stephens"
+        },
+        {
+            "name": "Great Peace Shipping Ltd v Tsavliris (International) Ltd",
+            "url": "https://en.wikipedia.org/wiki/Great_Peace_Shipping_Ltd_v_Tsavliris_(International)_Ltd"
+        },
+        {
+            "name": "Battle of Caribou",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Caribou"
+        },
+        {
+            "name": "Talk:English in the Commonwealth/Archive 1 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:English_in_the_Commonwealth/Archive_1"
+        },
+        {
+            "name": "The Nagasaki Spirit",
+            "url": "https://en.wikipedia.org/wiki/The_Nagasaki_Spirit"
+        },
+        {
+            "name": "Timeline of British history (1900–1929)",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_British_history_(1900%E2%80%931929)"
+        },
+        {
+            "name": "Spanish frigate Nuestra Señora de las Mercedes",
+            "url": "https://en.wikipedia.org/wiki/Spanish_frigate_Nuestra_Se%C3%B1ora_de_las_Mercedes"
+        },
+        {
+            "name": "Glass v. The Sloop Betsey",
+            "url": "https://en.wikipedia.org/wiki/Glass_v._The_Sloop_Betsey"
+        },
+        {
+            "name": "Norfolk Southern Railway Co. v. James N. Kirby, Pty Ltd.",
+            "url": "https://en.wikipedia.org/wiki/Norfolk_Southern_Railway_Co._v._James_N._Kirby,_Pty_Ltd."
+        },
+        {
+            "name": "1st Commonwealth Division",
+            "url": "https://en.wikipedia.org/wiki/1st_Commonwealth_Division"
+        },
+        {
+            "name": "Historiography of the War of 1812",
+            "url": "https://en.wikipedia.org/wiki/Historiography_of_the_War_of_1812"
+        },
+        {
+            "name": "Blue Streak (missile)",
+            "url": "https://en.wikipedia.org/wiki/Blue_Streak_(missile)"
+        },
+        {
+            "name": "Chesapeake Affair",
+            "url": "https://en.wikipedia.org/wiki/Chesapeake_Affair"
+        },
+        {
+            "name": "Battle of the Pusan Perimeter order of battle",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Pusan_Perimeter_order_of_battle"
+        },
+        {
+            "name": "2007 Glasgow Airport attack",
+            "url": "https://en.wikipedia.org/wiki/2007_Glasgow_Airport_attack"
+        },
+        {
+            "name": "Wikipedia:Standardize spellings - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Standardize_spellings"
+        },
+        {
+            "name": "User:JustinTime55/sandbox/Space Race - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/User:JustinTime55/sandbox/Space_Race"
+        },
+        {
+            "name": "Foreign interventions by the United States",
+            "url": "https://en.wikipedia.org/wiki/Foreign_interventions_by_the_United_States"
+        },
+        {
+            "name": "United States foreign aid",
+            "url": "https://en.wikipedia.org/wiki/United_States_foreign_aid"
+        },
+        {
+            "name": "Talk:Casualty (person) - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Casualty_(person)"
+        },
+        {
+            "name": "List of World Heritage in Danger",
+            "url": "https://en.wikipedia.org/wiki/List_of_World_Heritage_in_Danger"
+        },
+        {
+            "name": "Talk:Falklands War/Archive 11 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Falklands_War/Archive_11"
+        },
+        {
+            "name": "Perry Expedition",
+            "url": "https://en.wikipedia.org/wiki/Perry_Expedition"
+        },
+        {
+            "name": "Category:Disasters in the United Kingdom by year - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Disasters_in_the_United_Kingdom_by_year"
+        },
+        {
+            "name": "California textbook controversy over Hindu history",
+            "url": "https://en.wikipedia.org/wiki/California_textbook_controversy_over_Hindu_history"
+        },
+        {
+            "name": "Brazil Squadron",
+            "url": "https://en.wikipedia.org/wiki/Brazil_Squadron"
+        },
+        {
+            "name": "Talk:Great Rapprochement - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Great_Rapprochement"
+        },
+        {
+            "name": "Talk:Isla de Aves - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Isla_de_Aves"
+        },
+        {
+            "name": "World Heritage Site",
+            "url": "https://en.wikipedia.org/wiki/World_Heritage_Site"
+        },
+        {
+            "name": "World Heritage Convention",
+            "url": "https://en.wikipedia.org/wiki/World_Heritage_Convention"
+        },
+        {
+            "name": "United Nations Emergency Force",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_Emergency_Force"
+        },
+        {
+            "name": "Carvel Rock",
+            "url": "https://en.wikipedia.org/wiki/Carvel_Rock"
+        },
+        {
+            "name": "Talk:Machias Seal Island - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Machias_Seal_Island"
+        },
+        {
+            "name": "Data Encryption Standard",
+            "url": "https://en.wikipedia.org/wiki/Data_Encryption_Standard"
+        },
+        {
+            "name": "1954 Prestwick air disaster",
+            "url": "https://en.wikipedia.org/wiki/1954_Prestwick_air_disaster"
+        },
+        {
+            "name": "Broad front versus narrow front controversy in World War II",
+            "url": "https://en.wikipedia.org/wiki/Broad_front_versus_narrow_front_controversy_in_World_War_II"
+        },
+        {
+            "name": "United States biological weapons program",
+            "url": "https://en.wikipedia.org/wiki/United_States_biological_weapons_program"
+        },
+        {
+            "name": "United Kingdom government crisis",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom_government_crisis"
+        },
+        {
+            "name": "Operation Marlborough",
+            "url": "https://en.wikipedia.org/wiki/Operation_Marlborough"
+        },
+        {
+            "name": "Rex Hunt (diplomat)",
+            "url": "https://en.wikipedia.org/wiki/Rex_Hunt_(diplomat)"
+        },
+        {
+            "name": "Washington Old Hall",
+            "url": "https://en.wikipedia.org/wiki/Washington_Old_Hall"
+        },
+        {
+            "name": "United States of America in the Second Boer War",
+            "url": "https://en.wikipedia.org/wiki/United_States_of_America_in_the_Second_Boer_War"
+        },
+        {
+            "name": "List of major crimes in the United Kingdom",
+            "url": "https://en.wikipedia.org/wiki/Major_crimes_in_Britain"
+        },
+        {
+            "name": "Talk:Transatlantic telegraph cable - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Talk:Transatlantic_telegraph_cable"
+        },
+        {
+            "name": "Samuel Rodman",
+            "url": "https://en.wikipedia.org/wiki/Samuel_Rodman"
+        },
+        {
+            "name": "Category:Gunboats of the United Kingdom - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Category:Gunboats_of_the_United_Kingdom"
+        },
+        {
+            "name": "Wikipedia talk:WikiProject Historic sites/Archive 3 - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Wikipedia_talk:WikiProject_Historic_sites/Archive_3"
+        },
+        {
+            "name": "HMS Vanguard and Le Triomphant submarine collision",
+            "url": "https://en.wikipedia.org/wiki/HMS_Vanguard_and_Le_Triomphant_submarine_collision"
+        },
+        {
+            "name": "Perdicaris affair",
+            "url": "https://en.wikipedia.org/wiki/Perdicaris_affair"
+        },
+        {
+            "name": "Affair of Fielding and Bylandt",
+            "url": "https://en.wikipedia.org/wiki/Affair_of_Fielding_and_Bylandt"
+        },
+        {
+            "name": "Skirmish near Fort Niagara",
+            "url": "https://en.wikipedia.org/wiki/Skirmish_near_Fort_Niagara"
+        },
+        {
+            "name": "Timeline of United States diplomatic history",
+            "url": "https://en.wikipedia.org/wiki/American_diplomatic_history"
+        },
+        {
+            "name": "Convoy UGS-40",
+            "url": "https://en.wikipedia.org/wiki/Convoy_UGS-40"
+        },
+        {
+            "name": "Haro Strait",
+            "url": "https://en.wikipedia.org/wiki/Haro_Strait"
+        }
+    ],
+    "start_year": 1900,
+    "end_year": 2005,
+    "countries": [
+        "USA",
+        "UK"
+    ],
+    "max_events": 200,
+    "langs": [
+        "en",
+        "fr",
+        "ru",
+        "zh",
+        "ar",
+        "he"
+    ],
+    "search_engine": "exa",
+    "datetime": "2025-08-11T16:24:24.367092"
+}
